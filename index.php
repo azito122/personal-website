@@ -2,20 +2,27 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="splash">
 
-<div class="title title_main">
+<section class="section section_title">
+<h1 class="title title_main">
 Andrew Zito
-</div>
+</h1>
+</section>
 
-<div>
-Who I am
-</div>
+<section class="section section_about">
+<h3 class="title title_section">
+Who I Am
+</h3>
+</section>
 
-<div>
-Stuff I have done
-</div>
+<section class="section section_projects">
+<h3 class="title title_section">
+Stuff I've Done
+</h3>
+</section>
 
 </body>
 </html>
