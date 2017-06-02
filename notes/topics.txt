@@ -1,0 +1,29 @@
+What will people come looking for?
+1. Examples of work
+2. Qualifications - educational, professional
+
+Who I am
+    |
+    |-> General Info
+    |-> Educational Qualifications
+        |
+        |-> Degrees
+        |-> Coursework
+    |-> Professional Experience
+        |
+        |-> Apps/web services
+        |-> MyRise
+        |-> Non-technical
+
+Things I've done
+    |
+    |-> Syntree (Senior Thesis)
+    |-> Academic E-Portfolio
+    |-> Professional Projects
+        |
+        |-> Temporary enrollments module (moodle)
+        |-> 
+    |-> Class Projects
+        |
+        |-> Monkeys evolving shakespeare
+        |-> 
