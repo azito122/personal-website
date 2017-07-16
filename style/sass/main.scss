@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body.splash {
+
+	section {
+		width: 100%;
+		background-color: lightblue;
+		border-bottom: 1px solid blue;
+		height: 10rem;
+	}
+	
+	.section_title {
+		height: 12rem;
+		background-color: lightgreen;
+	}
+
+	.title_section {
+		text-align: center;
+		line-height: 10rem;
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;
+	}
+
+	.title_main {
+		float: right;
+		line-height: 12rem;
+		margin-right: 3rem;
+		letter-spacing: 0.5rem;
+		text-transform: uppercase;
+	}
+}
+
+.title_main {
+	font-size: 5rem;
+}

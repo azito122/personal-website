@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/main.css">
 </head>
 <body class="splash">
 
