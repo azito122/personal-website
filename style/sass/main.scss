@@ -1,45 +1,110 @@
+@mixin background-image ($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Normalize */
+
 * {
 	margin: 0;
 	padding: 0;
+	outline: none !important;
+	outline-width: 0 !important;
+	position: relative;
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 0 !important;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 body, html {
 	border: none;
-	margin: 0;
-	padding: 0;
 	font-family: sans-serif;
 }
 
-body.splash {
+section {
+	display: block;	
+	width: 100%;
+	border-bottom: 1px solid black;
 
-	section {
+	@extend .clearfix;
+}
+
+.title_section {
+	font-variant: small-caps;
+	font-size: 2.5rem;
+}
+
+
+.section_title {
+	background-color: lightgreen;
+	height: 20rem;
+
+	.subsection_left {
+		float: none;
+		height: 100%;
 		width: 100%;
-		background-color: lightblue;
-		border-bottom: 1px solid blue;
-		height: 10rem;
-	}
 	
-	.section_title {
-		height: 12rem;
-		background-color: lightgreen;
+		.img {
+			@include background-image("../me.jpg");
+			background-position: left -100px;
+			height: 100%;
+			width: 100%;
+		}
 	}
 
-	.title_section {
-		text-align: center;
-		line-height: 10rem;
-		letter-spacing: 0.3rem;
-		text-transform: uppercase;
-	}
+	.subsection_right {
+		position: absolute;
+		bottom: 0;
+		right: 0;
 
-	.title_main {
-		float: right;
-		line-height: 12rem;
-		margin-right: 3rem;
-		letter-spacing: 0.5rem;
-		text-transform: uppercase;
+		.title_main {
+			font-size: 5rem;
+			letter-spacing: 0.5rem;
+			text-transform: uppercase;
+		}
 	}
 }
 
-.title_main {
-	font-size: 5rem;
+.content_section {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	white-space: pre-line;
+}
+
+.section_about {
+	background-color: #91c5ff;
+}
+
+.subsection {
+	display: block;
+
+	&_left {
+		float: left;
+	}
+
+	&_right {
+		float: right;
+	}
+}
+
+.section:not(.section_title) {
+	.subsection_left {
+		padding: 1rem;
+		width: 25%;
+		text-align: center;		
+	}
+
+	.subsection_right {
+		width: 75%;
+		padding: 2rem 4rem;
+	}
 }
