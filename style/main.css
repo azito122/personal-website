@@ -30,18 +30,36 @@ section {
 
 .section_title {
   background-color: lightgreen;
-  height: 20rem; }
+  height: 23rem; }
   .section_title .subsection_left {
     float: none;
     height: 100%;
-    width: 100%; }
+    width: 25%; }
     .section_title .subsection_left .img {
-      background-image: url("../me.jpg");
-      background-repeat: no-repeat;
+      position: absolute;
+      position: top left;
       background-size: cover;
-      background-position: left -100px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      display: none; }
+    .section_title .subsection_left .headshot_01 {
+      background-image: url("../headshots/01.png"); }
+    .section_title .subsection_left .headshot_02 {
+      background-image: url("../headshots/02.png"); }
+    .section_title .subsection_left .headshot_03 {
+      background-image: url("../headshots/03.png"); }
+    .section_title .subsection_left .headshot_04 {
+      background-image: url("../headshots/04.png"); }
+    .section_title .subsection_left .headshot_05 {
+      background-image: url("../headshots/05.png"); }
+    .section_title .subsection_left .headshot_06 {
+      background-image: url("../headshots/06.png"); }
+    .section_title .subsection_left .headshot_07 {
+      background-image: url("../headshots/07.png"); }
+    .section_title .subsection_left .headshot_08 {
+      background-image: url("../headshots/08.png"); }
   .section_title .subsection_right {
     position: absolute;
     bottom: 0;

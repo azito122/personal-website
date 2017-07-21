@@ -46,18 +46,47 @@ section {
 
 .section_title {
 	background-color: lightgreen;
-	height: 20rem;
+	height: 23rem;
 
 	.subsection_left {
 		float: none;
 		height: 100%;
-		width: 100%;
+		width: 25%;
 	
 		.img {
-			@include background-image("../me.jpg");
-			background-position: left -100px;
+			position: absolute;
+			position: top left;
+			background-size: cover;
+			background-position: left bottom;
+			background-repeat: no-repeat;
 			height: 100%;
 			width: 100%;
+			display: none;
+		}
+
+		.headshot_01 {
+			background-image: url("../headshots/01.png");
+		}
+		.headshot_02 {
+			background-image: url("../headshots/02.png");
+		}
+		.headshot_03 {
+			background-image: url("../headshots/03.png");
+		}
+		.headshot_04 {
+			background-image: url("../headshots/04.png");
+		}
+		.headshot_05 {
+			background-image: url("../headshots/05.png");
+		}
+		.headshot_06 {
+			background-image: url("../headshots/06.png");
+		}
+		.headshot_07 {
+			background-image: url("../headshots/07.png");
+		}
+		.headshot_08 {
+			background-image: url("../headshots/08.png");
 		}
 	}
 

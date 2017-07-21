@@ -4,12 +4,25 @@
 <head>
 <link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="style/main.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </head>
 <body class="splash">
 
 <section class="section section_title">
 	<div class="subsection subsection_left">
-		<div class="img img_headshot"></div>
+		<div class="img img_headshot headshot_01"></div>
+		<div class="img img_headshot headshot_02"></div>
+		<div class="img img_headshot headshot_03"></div>
+		<div class="img img_headshot headshot_04"></div>
+		<div class="img img_headshot headshot_05"></div>
+		<div class="img img_headshot headshot_06"></div>
+		<div class="img img_headshot headshot_07"></div>
+		<div class="img img_headshot headshot_08"></div>
 	</div>
 
 	<div class="subsection subsection_right">
