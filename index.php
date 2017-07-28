@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="style/main.css">
 
 <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 
@@ -18,28 +18,26 @@
 
 <header>
 
-  <table>
-    <tbody>
-      <tr class="first">
-        <td>
-          Andy
-        </td>
-        <td class="dynamic-header-content"></td>
-      </tr>
-      <tr class="second">
-        <td>
-          Codes
-        </td>
-        <td class="dynamic-header-content"></td>
-      </tr>
-      <tr class="third">
-        <td>
-          Things
-        </td>
-        <td class="dynamic-header-content"></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="wrapper wrapper-table">
+    <div class="row-first column-first">
+      Andy
+    </div>
+    <div class="dynamic-header-content row-first column-second">
+      (That's me)
+    </div>
+    <div class="row-second column-first">
+      Codes
+    </div>
+    <div class="dynamic-header-content row-second column-second">
+      (With <span>JavaScript</span>)
+    </div>
+    <div class="row-third column-first">
+      Things
+    </div>
+    <div class="dynamic-header-content row-third column-second">
+      (<span>A syntax tree drawing web app</span>)
+    </div>
+  </div>
 
 </header>
 

@@ -4,6 +4,16 @@
 	background-size: cover;
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 /* Normalize */
 
 * {
@@ -33,9 +43,67 @@ body, html {
 header {
 	width: 100%;
 
-	table {
-		border-collapse: collapse;
-		width: 100%;
+	div.wrapper-table {
+		div {
+			padding: 2rem;
+			font-size: 3rem;
+			text-transform: uppercase;
+			white-space: nowrap;
+			color: grey;
+			// animation-name: fadeIn;
+			animation-timing-function: linear;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			// opacity: 0;
+
+			$base: 100ms;
+			$d1: 0.8s;
+			$d2: 0.2s;
+			$g1: 0.2s;
+			$g2: 0.7s;
+
+			&.row-third.column-second {
+				font-size: 2rem;
+			}
+
+			&.column-first {
+				float: left;
+				clear: left;
+				width: 30%;
+				font-size: 4rem;
+				letter-spacing: 0.5rem;
+				color: black;
+				animation-duration: $d1;
+			}
+
+			&.column-second {
+				float: right;
+				clear: right;
+				width: 70%;
+				text-align: left;
+				animation-duration: $d2;
+			}
+
+			// &.row-first.column-first {
+			// 	animation-delay: $base;
+			// }
+			// &.row-first.column-second {
+			// 	animation-delay: $base+$d1+$g1;
+			// }
+			// &.row-second.column-first {
+			// 	animation-delay: $base+$d1+$g1+$d2+$g2;
+			// }
+			// &.row-second.column-second {
+			// 	animation-delay: $base+$d1+$g1+$d2+$g2+$d1+$g1;
+			// }
+			// &.row-third.column-first {
+			// 	animation-delay: $base+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2;
+			// }
+			// &.row-third.column-second {
+			// 	animation-delay: $base+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2+$d1+$g1;
+			// }
+
+		}
 	}
 
 }
