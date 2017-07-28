@@ -29,13 +29,20 @@
       Codes
     </div>
     <div class="dynamic-header-content row-second column-second">
-      (With <span>JavaScript</span>)
+      With
+        <ul>
+          <li class="visible">JavaScript</li>
+          <li>PHP</li>
+          <li>Python</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
     </div>
     <div class="row-third column-first">
       Things
     </div>
     <div class="dynamic-header-content row-third column-second">
-      (<span>A syntax tree drawing web app</span>)
+      <span>A syntax tree drawing web app</span>
     </div>
   </div>
 
