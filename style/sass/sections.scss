@@ -1,0 +1,31 @@
+section {
+	display: block;
+	border-top: 1px solid black;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.section-content {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2rem;
+	font-size: 1.3rem;
+}
+
+#skillsets .section-content > ul {
+
+	li {
+		list-style: none;
+	}
+
+	& > li {
+		display: inline-block;
+		width: 30%;
+		// margin-right: 3%;
+	}
+}

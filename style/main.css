@@ -1,3 +1,4 @@
+/* Mixins, keyframes, etc. */
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -22,7 +23,6 @@
   100% {
     opacity: 0; } }
 
-/* Normalize */
 * {
   margin: 0;
   padding: 0;
@@ -30,9 +30,6 @@
   outline-width: 0 !important;
   position: relative;
   box-sizing: border-box; }
-
-h1 {
-  margin: 0 !important; }
 
 .clearfix:after {
   content: "";
@@ -43,65 +40,132 @@ body, html {
   border: none;
   font-family: sans-serif; }
 
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
 header {
-  width: 90%;
-  margin-left: 5%; }
-  header div.wrapper-table div.row-second.column-second ul {
-    display: inline-block;
-    font-size: 0; }
-    header div.wrapper-table div.row-second.column-second ul li {
-      opacity: 0;
-      position: absolute;
-      bottom: -0.5rem;
-      line-height: 3rem;
-      list-style: none;
-      font-size: 3rem;
-      animation: rotateWord 15s linear infinite 5200ms; }
-    header div.wrapper-table div.row-second.column-second ul li:nth-child(2) {
-      animation-delay: 8200ms; }
-    header div.wrapper-table div.row-second.column-second ul li:nth-child(3) {
-      animation-delay: 11200ms; }
-    header div.wrapper-table div.row-second.column-second ul li:nth-child(4) {
-      animation-delay: 14200ms; }
-    header div.wrapper-table div.row-second.column-second ul li:nth-child(5) {
-      animation-delay: 17200ms; }
+  width: 100%;
+  /* Follow text hover */ }
+  header span.follow-text {
+    display: none; }
+  header div.wrapper-table {
+    /* Follow links */
+    /* Word/phrase rotation lists */
+    /* Main content */ }
+    header div.wrapper-table a.follow {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+    header div.wrapper-table div.column-second ul {
+      display: inline-block;
+      font-size: 0; }
+      header div.wrapper-table div.column-second ul li {
+        opacity: 0;
+        position: absolute;
+        bottom: -0.5rem;
+        line-height: 3rem;
+        font-size: 3rem; }
+    header div.wrapper-table div {
+      position: relative;
+      padding: 2rem;
+      text-transform: uppercase;
+      color: grey;
+      opacity: 0; }
+      header div.wrapper-table div.column-first {
+        font-size: 5rem;
+        float: left;
+        clear: left;
+        width: 40%;
+        letter-spacing: 0.5rem;
+        color: black;
+        text-align: right; }
+      header div.wrapper-table div.column-second {
+        font-size: 3rem;
+        line-height: 5rem;
+        float: right;
+        clear: right;
+        width: 60%;
+        text-align: left; }
+      header div.wrapper-table div.row-third.column-second ul {
+        width: 100%; }
+        header div.wrapper-table div.row-third.column-second ul li {
+          font-size: 2rem; }
+
+/* Animations */
+header div.wrapper-table {
+  /* Animation vals */
+  /* base delay for appearance animation */
+  /* duration of fade in for col1 text */
+  /* duration of fade in for col2 text */
+  /* time between end of col1 text fadein and beginning of col2 fade in */
+  /* time between end of col2 fade in and beginning of next col1 fade in */
+  /* base delay for rotation animation */
+  /* how long each rotated text should be visible */
+  /* Base animation properties for fading in*/
+  /* Rotating list animation */
+  /* Fade in animation */ }
   header div.wrapper-table div {
-    padding: 2rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-    color: grey;
     animation-name: fadeIn;
     animation-timing-function: linear;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    opacity: 0; }
-    header div.wrapper-table div.row-third.column-second {
-      font-size: 2rem; }
-    header div.wrapper-table div.column-first {
-      font-size: 5rem;
-      float: left;
-      clear: left;
-      width: 40%;
-      letter-spacing: 0.5rem;
-      color: black;
-      animation-duration: 2s; }
-    header div.wrapper-table div.column-second {
-      font-size: 3rem;
-      line-height: 5rem;
-      float: right;
-      clear: right;
-      width: 60%;
-      text-align: left;
-      animation-duration: 0.3s; }
-    header div.wrapper-table div.row-first.column-first {
-      animation-delay: 300ms; }
-    header div.wrapper-table div.row-first.column-second {
-      animation-delay: 2000ms; }
-    header div.wrapper-table div.row-second.column-first {
-      animation-delay: 3500ms; }
-    header div.wrapper-table div.row-second.column-second {
-      animation-delay: 5200ms; }
-    header div.wrapper-table div.row-third.column-first {
-      animation-delay: 6700ms; }
-    header div.wrapper-table div.row-third.column-second {
-      animation-delay: 8400ms; }
+    animation-fill-mode: forwards; }
+  header div.wrapper-table div.column-second ul li {
+    animation: rotateWord 15s linear infinite 3700ms; }
+  header div.wrapper-table div.column-second ul li:nth-child(1) {
+    color: orange; }
+  header div.wrapper-table div.column-second ul li:nth-child(2) {
+    animation-delay: 6700ms;
+    color: blue; }
+  header div.wrapper-table div.column-second ul li:nth-child(3) {
+    animation-delay: 9700ms;
+    color: green; }
+  header div.wrapper-table div.column-second ul li:nth-child(4) {
+    animation-delay: 12700ms;
+    color: lightblue; }
+  header div.wrapper-table div.column-second ul li:nth-child(5) {
+    animation-delay: 15700ms;
+    color: yellow; }
+  header div.wrapper-table div.row-third.column-second ul li {
+    color: inherit; }
+  header div.wrapper-table div.column-second {
+    animation-duration: 0.3s; }
+  header div.wrapper-table div.column-first {
+    animation-duration: 2s; }
+  header div.wrapper-table div.row-first.column-first {
+    animation-delay: 300ms; }
+  header div.wrapper-table div.row-first.column-second {
+    animation-delay: 2000ms; }
+  header div.wrapper-table div.row-second.column-first {
+    animation-delay: 3500ms; }
+  header div.wrapper-table div.row-second.column-second {
+    animation-delay: 5200ms; }
+  header div.wrapper-table div.row-third.column-first {
+    animation-delay: 6700ms; }
+  header div.wrapper-table div.row-third.column-second {
+    animation-delay: 8400ms; }
+
+section {
+  display: block;
+  border-top: 1px solid black; }
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+
+.section-content {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 2rem;
+  font-size: 1.3rem; }
+
+#skillsets .section-content > ul li {
+  list-style: none; }
+
+#skillsets .section-content > ul > li {
+  display: inline-block;
+  width: 30%; }

@@ -1,0 +1,158 @@
+$col1-fs: 5rem;
+$col2-fs: 3rem;
+
+header {
+	width: 100%;
+
+	/* Follow text hover */
+	span.follow-text {
+		display: none;
+	}
+
+	div.wrapper-table {
+
+		/* Follow links */
+
+		a.follow {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* Word/phrase rotation lists */
+
+		div.column-second ul {
+			display: inline-block;
+			font-size: 0;
+
+			li {
+				opacity: 0;
+				position: absolute;
+				bottom: -0.5rem;
+				line-height: 3rem;
+				font-size: 3rem;
+			}
+		}
+
+		/* Main content */
+
+		div {
+			position: relative;
+			padding: 2rem;
+			text-transform: uppercase;
+			color: grey;
+			opacity: 0;
+
+			&.column-first {
+				font-size: $col1-fs;
+				float: left;
+				clear: left;
+				width: 40%;
+				letter-spacing: 0.5rem;
+				color: black;
+				text-align: right;
+			}
+
+			&.column-second {
+				font-size: $col2-fs;
+				line-height: $col1-fs;
+				float: right;
+				clear: right;
+				width: 60%;
+				text-align: left;
+			}
+
+			&.row-third.column-second ul {
+				width: 100%;
+
+				li {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+/* Animations */
+
+header div.wrapper-table {
+
+		/* Animation vals */
+		$base1: 300ms; /* base delay for appearance animation */
+		$d1: 2s; /* duration of fade in for col1 text */
+		$d2: 0.3s; /* duration of fade in for col2 text */
+		$g1: -0.3s; /* time between end of col1 text fadein and beginning of col2 fade in */
+		$g2: 1.2s; /* time between end of col2 fade in and beginning of next col1 fade in */
+
+		$base2: $base1 + $d1 + $g1 + $d2 + $g2 + $d1 + $g1 - 1.5s; /* base delay for rotation animation */
+		$per: 3s; /* how long each rotated text should be visible */
+
+		/* Base animation properties for fading in*/
+		div {
+			animation-name: fadeIn;
+			animation-timing-function: linear;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+
+		/* Rotating list animation */
+		div.column-second ul {
+			li {
+				animation: rotateWord $per*5 linear infinite $base2;
+			}
+
+			li:nth-child(1) {
+				color: orange;
+			}
+
+			li:nth-child(2) {
+				animation-delay: $base2+$per*1;
+				color: blue;
+			}
+			li:nth-child(3) {
+				animation-delay: $base2+$per*2;
+				color: green;
+			}
+			li:nth-child(4) {
+				animation-delay: $base2+$per*3;
+				color: lightblue;
+			}
+			li:nth-child(5) {
+				animation-delay: $base2+$per*4;
+				color: yellow;
+			}
+		}
+
+		div.row-third.column-second ul li {
+			color: inherit;
+		}
+
+		/* Fade in animation */
+		div {
+			&.column-second {
+				animation-duration: $d2;
+			}
+
+			&.column-first {
+				animation-duration: $d1;
+			}
+
+			&.row-first.column-first {
+				animation-delay: $base1;
+			}
+			&.row-first.column-second {
+				animation-delay: $base1+$d1+$g1;
+			}
+			&.row-second.column-first {
+				animation-delay: $base1+$d1+$g1+$d2+$g2;
+			}
+			&.row-second.column-second {
+				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1;
+			}
+			&.row-third.column-first {
+				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2;
+			}
+			&.row-third.column-second {
+				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2+$d1+$g1;
+			}
+		}
+	}
