@@ -78,8 +78,8 @@
   <h1 class="section-title">Skillsets</h1>
   <div class="section-content">
 
-    <div class="_3-col col-1">
-      <h2>Languages</h2>
+    <div class="tile languages">
+      <h2 class="tile-title">Languages</h2>
       <ul>
         <li><i class="devicon-html5-plain colored"></i> HTML5</li>
         <li><i class="devicon-css3-plain colored"></i> CSS3</li>
@@ -89,20 +89,21 @@
         <li><i class="devicon-python-plain colored"></i> Python</li>
       </ul>
     </div>
-    <div class="_3-col col-2">
-      <h2>Systems/<br>Frameworks</h2>
+
+    <div class="tile systems">
+      <h2 class="tile-title">Systems</h2>
       <ul>
         <li><i class="devicon-git-plain colored"></i> Git</li>
         <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
         <li><i class="devicon-moodle-plain colored"></i> Moodle</li>
         <li><i class="devicon-drupal-plain colored"></i> Drupal</li>
         <li>LaTeX</li>
-        <li>Vagrant & VirtualBox</li>
+        <li>Vagrant</li>
       </ul>
     </div>
 
-    <div class="_3-col col-3">
-      <h2>Teamwork<br>Tools</h2>
+    <div class="tile teamwork">
+      <h2 class="tile-title">Teamwork Tools</h2>
       <ul>
         <li><i class="devicon-gitlab-plain colored"></i> GitLab</li>
         <li><i class="devicon-slack-plain colored"></i> Slack</li>
@@ -121,6 +122,7 @@
     </a>
   </h1>
 
+  <div class="tiles-wrapper">
   <div class="tile syntree">
     <div class="overlay"></div>
     <h3 class="tile-title">Syntree</h3>
@@ -141,6 +143,7 @@
     <h3 class="tile-title">Number Guessing Game</h3>
     <p class="tile-description">A simple number guessing game in Python.</p>
   </div>
+</div>
 
 </section>
 

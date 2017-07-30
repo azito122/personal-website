@@ -1,8 +1,25 @@
 $col1-fs: 5rem;
 $col2-fs: 4.3rem;
 
-header {
+.screen {
+	height: 100%;
+	position: relative;
+}
+
+.section-sep {
+	position: absolute;
+	top: 40rem;
+	bottom: 0 !important;
+	left: 0;
 	width: 100%;
+	background-image: url("../skyline.jpg");
+	background-size: contain;
+}
+
+header {
+	padding-top: 3rem;
+	width: 100%;
+	background-color: white;
 
 	@media (max-width: 1100px) {
 		div.column-second {
@@ -93,7 +110,7 @@ header {
 				float: right;
 				clear: right;
 				width: 60%;
-				font-family: 'Raleway', sans-serif;
+				font-family: 'Questrial', sans-serif;
 				font-size: $col2-fs;
 				line-height: $col1-fs;
 				text-align: left;

@@ -7,7 +7,7 @@ section {
 
 .section-title {
 	text-align: center;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	margin-bottom: 6rem;
 	margin-top: 0;
 	font-family: 'Raleway', sans-serif;
@@ -25,65 +25,76 @@ section {
 	}
 }
 
-.screen {
-	height: 100%;
-	position: relative;
-}
-
-.section-sep {
-	background: blue;
-	position: absolute;
-	top: 40rem;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background-image: url("../skyline.jpg");
-	// background-repeat: no-repeat;
-	background-size: contain;
-}
-
 #about-me {
 	background-color: #d6ebfa;
 }
 
 #skillsets  {
 	background-color: #c3ffc3;
+	text-align: center;
 
-	li {
-		margin-bottom: 1rem;
+	.section-content {
+		width: auto;
+		margin: 0;
 	}
 
-	h2 {
-		text-align: center;
+	.tile {
+		display: inline-block;
+		vertical-align: top;
+		// border: 1px solid black;
+		padding: 1rem 3rem;
+		width: 25rem;
 
-		&:before {
-			content: "";
-			background-repeat: no-repeat;
-			background-position: top center;
-			background-size: contain;
-			height: 8rem;
-			width: 100%;
-			display: block;
+		.tile-title {
+			text-align: center;
+
+			&:before {
+				content: "";
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-size: contain;
+				height: 8rem;
+				width: 100%;
+				display: block;
+				margin: 2rem 0;
+			}
 		}
-	}
 
-	.col-1 h2:before {
-		background-image: url("../code.svg");
-	}
+		ul {
+			display: inline-block;
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			text-align: left;
 
-	.col-2 h2:before {
-		background-image: url("../framework.svg")
-	}
+			i {
+				display: none;
+			}
 
-	.col-3 h2:before {
-		background-image: url("../team.svg");
+			li {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		&.languages .tile-title:before {
+			background-image: url("../code.svg");
+		}
+		&.systems .tile-title:before {
+			background-image: url("../framework.svg")
+		}
+		&.teamwork .tile-title:before {
+			background-image: url("../team.svg");
+		}
 	}
 }
 
 #portfolio {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	background-color: #d6ebfa;
+	background-color: #ededed;
+
+	.tiles-wrapper {
+		text-align: center;
+	}
 
 	a.icon-link {
 		margin-left: 5rem;
