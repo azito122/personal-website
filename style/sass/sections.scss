@@ -1,31 +1,99 @@
 section {
 	display: block;
-	border-top: 1px solid black;
+	overflow: hidden;
+	padding-top: 8rem;
+	padding-bottom: 10rem;
 }
 
 .section-title {
 	text-align: center;
 	font-size: 3rem;
-	margin-top: 1rem;
 	margin-bottom: 2rem;
+	margin-top: 0;
+	font-family: 'Raleway', sans-serif;
 }
 
 .section-content {
 	width: 80%;
 	margin-left: 10%;
-	margin-bottom: 2rem;
 	font-size: 1.3rem;
+	font-family: 'Open Sans', sans-serif;
+
+	.content {
+		white-space: pre-wrap;
+	}
 }
 
-#skillsets .section-content > ul {
+.screen {
+	height: 100%;
+	position: relative;
+}
+
+.section-sep {
+	background: blue;
+	position: absolute;
+	top: 40rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-image: url("../skyline.jpg");
+	// background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#about-me {
+	background-color: #d6ebfa;
+}
+
+#skillsets  {
+	background-color: #c3ffc3;
 
 	li {
-		list-style: none;
+		margin-bottom: 1rem;
 	}
 
-	& > li {
+	h2 {
+		text-align: center;
+
+		&:before {
+			content: "";
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: contain;
+			height: 8rem;
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.col-1 h2:before {
+		background-image: url("../code.svg");
+	}
+
+	.col-2 h2:before {
+		background-image: url("../framework.svg")
+	}
+
+	.col-3 h2:before {
+		background-image: url("../team.svg");
+	}
+}
+
+#portfolio {
+	padding: 3rem;
+
+	.tile {
+		height: 300px;
+		width: 300px;
+		position: relative;
 		display: inline-block;
-		width: 30%;
-		// margin-right: 3%;
+		background-color: pink;
+		margin: 1rem;
+
+		.tile-title {
+			text-align: center;
+			font-family: 'Raleway', sans-serif;
+			margin-top: 1rem;
+		}
 	}
 }

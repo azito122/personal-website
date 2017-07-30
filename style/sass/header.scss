@@ -1,22 +1,57 @@
 $col1-fs: 5rem;
-$col2-fs: 3rem;
+$col2-fs: 4.3rem;
 
 header {
 	width: 100%;
 
+	@media (max-width: 1100px) {
+		div.column-second {
+			display: none;
+		}
+
+		div.wrapper-table div.column-first {
+			text-align: center !important;
+			width: 100% !important;
+		}
+	}
+
 	/* Follow text hover */
 	span.follow-text {
-		display: none;
+		position: absolute;
+		// width: 100%;
+		height: 100%;
+		top: 0;
+		left: 2rem;
+		z-index: 1000;
+		opacity: 0;
+		line-height: 9.3rem;
+		// background-color: #ededed;
 	}
 
 	div.wrapper-table {
+		font-size: 0; /* to fix weird white space between inline-block children */
 
 		/* Follow links */
 
 		a.follow {
 			display: inline-block;
 			width: 100%;
-			height: 100%;
+
+			&:hover {
+				background-color: #ededed;
+
+				span.main {
+					opacity: 0;
+
+					span {
+						opacity: 0 !important;
+					}
+				}
+
+				span.follow-text {
+					opacity: 1;
+				}
+			}
 		}
 
 		/* Word/phrase rotation lists */
@@ -28,9 +63,9 @@ header {
 			li {
 				opacity: 0;
 				position: absolute;
-				bottom: -0.5rem;
-				line-height: 3rem;
-				font-size: 3rem;
+				bottom: -0.6rem;
+				line-height: $col2-fs;
+				font-size: $col2-fs;
 			}
 		}
 
@@ -38,35 +73,47 @@ header {
 
 		div {
 			position: relative;
-			padding: 2rem;
-			text-transform: uppercase;
-			color: grey;
 			opacity: 0;
+			padding: 2rem;
+			color: grey;
+			text-transform: uppercase;
 
 			&.column-first {
-				font-size: $col1-fs;
 				float: left;
 				clear: left;
 				width: 40%;
-				letter-spacing: 0.5rem;
+				font-size: $col1-fs;
+				font-family: 'Questrial', sans-serif;
 				color: black;
 				text-align: right;
+				letter-spacing: 1rem;
 			}
 
 			&.column-second {
-				font-size: $col2-fs;
-				line-height: $col1-fs;
 				float: right;
 				clear: right;
 				width: 60%;
+				font-family: 'Raleway', sans-serif;
+				font-size: $col2-fs;
+				line-height: $col1-fs;
 				text-align: left;
 			}
 
 			&.row-third.column-second ul {
 				width: 100%;
+				display: table;
 
 				li {
+					display: table;
+					top: 0.7rem;
 					font-size: 2rem;
+					line-height: 2rem;
+
+						span {
+							height: 4rem;
+							display: table-cell;
+							vertical-align: middle;
+						}
 				}
 			}
 		}
@@ -78,10 +125,10 @@ header div.wrapper-table {
 
 		/* Animation vals */
 		$base1: 300ms; /* base delay for appearance animation */
-		$d1: 2s; /* duration of fade in for col1 text */
-		$d2: 0.3s; /* duration of fade in for col2 text */
+		$d1: 1s; /* duration of fade in for col1 text */
+		$d2: 0.2s; /* duration of fade in for col2 text */
 		$g1: -0.3s; /* time between end of col1 text fadein and beginning of col2 fade in */
-		$g2: 1.2s; /* time between end of col2 fade in and beginning of next col1 fade in */
+		$g2: 1s; /* time between end of col2 fade in and beginning of next col1 fade in */
 
 		$base2: $base1 + $d1 + $g1 + $d2 + $g2 + $d1 + $g1 - 1.5s; /* base delay for rotation animation */
 		$per: 3s; /* how long each rotated text should be visible */
@@ -124,6 +171,7 @@ header div.wrapper-table {
 
 		div.row-third.column-second ul li {
 			color: inherit;
+			animation-name: rotateWord;
 		}
 
 		/* Fade in animation */

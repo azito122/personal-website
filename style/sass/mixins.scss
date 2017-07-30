@@ -19,3 +19,12 @@
 	26% { opacity: 0; transform: translateY(-100%) }
 	100% {opacity: 0 }
 }
+
+@keyframes rotateWord2 {
+	0% { opacity: 0; transform: translateY(140%) }
+	5% { opacity: 1; transform: translateY(40%) }
+	21% { opacity: 1; transform: translateY(40%) }
+	24% { opacity: 0 }
+	26% { opacity: 0; transform: translateY(-40%) }
+	100% {opacity: 0 }
+}

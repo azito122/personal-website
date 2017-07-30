@@ -3,6 +3,8 @@
 <html>
 <head>
 
+<link href="https://fonts.googleapis.com/css?family=Questrial|Raleway|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="style/main.css">
 
@@ -15,57 +17,60 @@
 </head>
 
 <body>
-
+<div class="screen">
 <header>
 
   <div class="wrapper wrapper-table">
-    <a class="follow" href="#">
+    <a class="follow" href="#about-me">
       <div class="row-first column-first">
         Andy
       </div>
-      <div class="dynamic-header-content row-first column-second">
+      <div class="row-first column-second">
         <span class="follow-text">About me -></span>
-        (That's me)
+        <span class="main">(That's me)</span>
       </div>
     </a>
-    <a class="follow" href="#">
+    <a class="follow" href="#skillsets">
       <div class="row-second column-first">
         Codes
       </div>
-      <div class="dynamic-header-content row-second column-second">
+      <div class="row-second column-second">
         <span class="follow-text">Skillsets -></span>
-        With
+        <span class="main">With
           <ul>
-            <li class="visible">JavaScript</li>
+            <li>JavaScript</li>
             <li>PHP</li>
             <li>Python</li>
             <li>HTML5</li>
             <li>CSS3</li>
-          </ul>
+          </ul></span>
       </div>
     </a>
-    <a class="follow" href="#">
+    <a class="follow" href="#portfolio">
       <div class="row-third column-first">
         Things
       </div>
-      <div class="dynamic-header-content row-third column-second">
+      <div class="row-third column-second">
         <span class="follow-text">Portfolio -></span>
-        <ul>
-          <li>A syntax tree drawing web app</li>
-          <li>A custom Moodle module for temporary enrolments</li>
-          <li>A bit of JavaScript to improve date input</li>
-          <li>A custom Drupal theme for a graduate student's personal website</li>
-          <li>A Python script for evolving English letter frequencies</li>
+        <span class="main"><ul>
+          <li><span>A syntax tree drawing web app</span></li>
+          <li><span>A custom Moodle module for temporary enrolments</span></li>
+          <li><span>A bit of JavaScript to improve date input</span></li>
+          <li><span>A custom Drupal theme for a graduate student's personal website</span></li>
+          <li><span>A Python script for evolving English letter frequencies</span></li></span>
       </div>
     </a>
   </div>
 
 </header>
 
+<div class="section-sep">
+</div>
+</div>
 <section id="about-me">
   <h1 class="section-title">About Me</h1>
   <div class="section-content">
-    <p>Hello, my name is Andy Zito. I graduated from Hampshire College in Spring 2017 and am actively seeking a career in web development. Apart from web development, I have academic experience in linguistics. Additionally, I have interests in learning languages, reading books, petting cats, shuffling cards, sleeping, playing video games, changing the world, and building the occasional loft bed.</p>
+    <p class="content"><?php include 'content/about.php' ?></p>
   </div>
 </section>
 
@@ -73,36 +78,59 @@
   <h1 class="section-title">Skillsets</h1>
   <div class="section-content">
 
-    <div class="3-col col-1">
+    <div class="_3-col col-1">
       <h2>Languages</h2>
       <ul>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>Python</li>
+        <li><i class="devicon-html5-plain colored"></i> HTML5</li>
+        <li><i class="devicon-css3-plain colored"></i> CSS3</li>
+        <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+        <li><i class="devicon-jquery-plain colored"></i> jQuery</li>
+        <li><i class="devicon-php-plain colored"></i> PHP</li>
+        <li><i class="devicon-python-plain colored"></i> Python</li>
       </ul>
     </div>
-    <div class="3-col col-2">
-      <h2>Systems/Frameworks</h2>
+    <div class="_3-col col-2">
+      <h2>Systems/<br>Frameworks</h2>
       <ul>
-        <li>Git</li>
-        <li>MySQL</li>
-        <li>Whatever</li>
+        <li><i class="devicon-git-plain colored"></i> Git</li>
+        <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
+        <li><i class="devicon-moodle-plain colored"></i> Moodle</li>
+        <li><i class="devicon-drupal-plain colored"></i> Drupal</li>
+        <li>LaTeX</li>
+        <li>Vagrant & VirtualBox</li>
       </ul>
     </div>
 
-    <div class="3-col col-3">
-      <h2>Teamwork Tools</h2>
+    <div class="_3-col col-3">
+      <h2>Teamwork<br>Tools</h2>
       <ul>
-        <li>GitLab</li>
-        <li>Slack</li>
-        <li>Trello</li>
+        <li><i class="devicon-gitlab-plain colored"></i> GitLab</li>
+        <li><i class="devicon-slack-plain colored"></i> Slack</li>
+        <li><i class="devicon-trello-plain colored"></i> Trello</li>
       </ul>
     </div>
+
   </div>
 </section>
 
 <section id="portfolio">
+  <div class="tile">
+    <h3 class="tile-title">Title</h3>
+  </div>
+  <div class="tile">
+    <h3 class="tile-title">Title</h3>
+  </div>
+  <div class="tile">
+    <h3 class="tile-title">Title</h3>
+  </div>
+  <div class="tile">
+    <h3 class="tile-title">Title</h3>
+  </div>
 </section>
 
 </body>
+<footer>
+<div>Icons made by <a href="https://www.flaticon.com/authors/picol" title="Picol">Picol</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<a href='http://www.freepik.com/free-vector/city-skylines_787669.htm'>Designed by Freepik</a>
+</footer>
 </html>
