@@ -114,18 +114,34 @@
 </section>
 
 <section id="portfolio">
-  <div class="tile">
-    <h3 class="tile-title">Title</h3>
+
+  <h1 class="section-title">Portfolio
+    <a class="icon-link" href="http://github.com/azito122">
+      <i class="devicon-github-plain colored"></i>
+    </a>
+  </h1>
+
+  <div class="tile syntree">
+    <div class="overlay"></div>
+    <h3 class="tile-title">Syntree</h3>
+    <a class="tile-link" href="http://syntree.andycodesthings.com">Syntree</a>
+    <p class="tile-description">A JavaScript web app for drawing syntax trees.</p>
   </div>
-  <div class="tile">
-    <h3 class="tile-title">Title</h3>
+
+  <div class="tile diviiportfolio">
+    <div class="overlay"></div>
+    <a class="tile-link" href="http://diviiportfolio.andycodesthings.com">Academic E-Portfolio</a>
+    <h3 class="tile-title">Academic E-Portfolio</h3>
+    <p class="tile-description">An e-portfolio of academic work.</p>
   </div>
-  <div class="tile">
-    <h3 class="tile-title">Title</h3>
+
+  <div class="tile number-game">
+    <div class="overlay"></div>
+    <a class="tile-link" href="https://repl.it/D4ey/2">Number Guessing Game</a>
+    <h3 class="tile-title">Number Guessing Game</h3>
+    <p class="tile-description">A simple number guessing game in Python.</p>
   </div>
-  <div class="tile">
-    <h3 class="tile-title">Title</h3>
-  </div>
+
 </section>
 
 </body>

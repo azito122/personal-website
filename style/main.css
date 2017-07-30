@@ -69,9 +69,6 @@ li {
   width: 32%;
   display: inline-block; }
 
-footer {
-  display: none; }
-
 header {
   width: 100%;
   /* Follow text hover */ }
@@ -208,15 +205,16 @@ header div.wrapper-table {
 section {
   display: block;
   overflow: hidden;
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 10rem; }
 
 .section-title {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   margin-top: 0;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.4rem; }
 
 .section-content {
   width: 80%;
@@ -265,15 +263,82 @@ section {
     background-image: url("../team.svg"); }
 
 #portfolio {
-  padding: 3rem; }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #d6ebfa; }
+  #portfolio a.icon-link {
+    margin-left: 5rem; }
+    #portfolio a.icon-link:hover i {
+      color: darkorange; }
+  #portfolio a.tile-link {
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; }
   #portfolio .tile {
     height: 300px;
     width: 300px;
     position: relative;
     display: inline-block;
-    background-color: pink;
-    margin: 1rem; }
+    vertical-align: top;
+    margin: 1rem;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 3px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black; }
     #portfolio .tile .tile-title {
       text-align: center;
       font-family: 'Raleway', sans-serif;
-      margin-top: 1rem; }
+      height: 300px;
+      line-height: 300px;
+      z-index: 900;
+      font-size: 1.4rem;
+      white-space: nowrap;
+      transition: height 0.5s, line-height 0.5s; }
+    #portfolio .tile div.overlay {
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 800;
+      transition: background-color 0.5s; }
+    #portfolio .tile p.tile-description {
+      opacity: 0;
+      z-index: 900;
+      transition: opacity 0.5s;
+      width: 75%;
+      margin: auto;
+      text-align: center; }
+    #portfolio .tile:hover .tile-title {
+      height: 100px;
+      line-height: 100px; }
+    #portfolio .tile:hover .tile-description {
+      opacity: 1;
+      font-size: 1.2rem; }
+    #portfolio .tile.syntree {
+      background-image: url("../syntree.png"); }
+      #portfolio .tile.syntree .overlay {
+        background-color: rgba(105, 255, 105, 0.2); }
+      #portfolio .tile.syntree:hover .overlay {
+        background-color: #69ff69; }
+    #portfolio .tile.diviiportfolio {
+      background-image: url("../diviiportfolio.png"); }
+      #portfolio .tile.diviiportfolio .overlay {
+        background-color: rgba(105, 105, 255, 0.2); }
+      #portfolio .tile.diviiportfolio:hover .overlay {
+        background-color: #6969ff; }
+    #portfolio .tile.number-game {
+      background-image: url("../syntree.png"); }
+      #portfolio .tile.number-game .overlay {
+        background-color: rgba(255, 105, 105, 0.2); }
+      #portfolio .tile.number-game:hover .overlay {
+        background-color: #ff6969; }
+
+footer {
+  background-color: lightgrey; }
