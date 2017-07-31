@@ -25,12 +25,141 @@ section {
 	}
 }
 
+.section-sep.second {
+	position: relative;
+	top: 0;
+	height: 20rem;
+	width: 100%;
+	background-image: url("../resources/img/leaves.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	opacity: 1;
+	display: block;
+	animation: none;
+
+	&.third {
+		background-image: url("../resources/img/trunk.jpeg");
+
+		&:before {
+			background-color: color-alpha(section-2-accent, thin);
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: color-alpha(section-1-accent, thin);
+	}
+}
+
 #about-me {
-	background-color: #d6ebfa;
+	background-color: color(section-1);
+
+	.resume-download-wrapper {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		min-width: 13rem;
+		border: 3px solid black;
+		border-radius: 7px;
+		overflow: hidden;
+
+		&:hover {
+			background-color: color(shade-darkest);
+
+			ul {
+				height: 6.5rem;
+				padding: 0.3rem 0;
+			}
+
+			.resume-download {
+				background-color: color(shade-darker);
+				color: color(shade-lightest);
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
+		}
+
+		.resume-download {
+			display: inline-block;
+			white-space: pre;
+			padding: 0.7rem 0;
+			width: 13rem;
+			text-align: center;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			letter-spacing: 0.3rem;
+			font-weight: 600;
+			z-index: 100;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		ul {
+			height: 0px;
+			background-color: color(shade-darkest);
+			color: color(shade-lightest);
+			position: relative;
+			border-radius: 5px;
+			width: 13rem;
+			z-index: 100;
+			transition: height 0.3s;
+
+			li {
+				position: relative;
+				transition: background-color 0.5s;
+				width: 100%;
+				height: 3rem;
+
+				a {
+					color: color(shade-lightest);
+					position: absolute;
+					line-height: 3rem;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding: 0 1rem;
+					letter-spacing: 0.1rem;
+					font-size: 0.9rem;
+					font-weight: 200;
+					text-transform: uppercase;
+					transition: left 0.3s;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 0;
+					background-color: color(section-1-accent);
+					border-radius: 1px;
+					transition: width 0.3s;
+				}
+
+				&:hover {
+					background-color: mix(white, color(shade-darkest), 10%);
+
+					a {
+						left: 1.3rem;
+					}
+
+					&:before {
+						width: 0.8rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 #skillsets  {
-	background-color: #c3ffc3;
+	background-color: color(section-2);
 	text-align: center;
 
 	.section-content {
@@ -41,23 +170,16 @@ section {
 	.tile {
 		display: inline-block;
 		vertical-align: top;
-		// border: 1px solid black;
 		padding: 1rem 3rem;
 		width: 25rem;
 
+		& > i {
+			font-size: 10rem;
+			margin-bottom: 3rem;
+		}
+
 		.tile-title {
 			text-align: center;
-
-			&:before {
-				content: "";
-				background-repeat: no-repeat;
-				background-position: top center;
-				background-size: contain;
-				height: 8rem;
-				width: 100%;
-				display: block;
-				margin: 2rem 0;
-			}
 		}
 
 		ul {
@@ -67,22 +189,25 @@ section {
 			text-align: left;
 
 			i {
-				display: none;
+				color: color(shade-darkest);
+				margin-right: 1rem;
 			}
 
 			li {
-				margin-bottom: 1.5rem;
-			}
-		}
+				padding: 1rem 0.5rem;
 
-		&.languages .tile-title:before {
-			background-image: url("../code.svg");
-		}
-		&.systems .tile-title:before {
-			background-image: url("../framework.svg")
-		}
-		&.teamwork .tile-title:before {
-			background-image: url("../team.svg");
+				&:before {
+					// content:"\2014\a0";
+				}
+
+				&:hover {
+					background-color: lighten(color(section-2), 8);
+
+					i {
+						color: inherit;
+					}
+				}
+			}
 		}
 	}
 }
@@ -90,7 +215,8 @@ section {
 #portfolio {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	background-color: #ededed;
+	background-color: color(shade-darker);
+	color: color(text-lightest);
 
 	.tiles-wrapper {
 		text-align: center;
@@ -99,8 +225,12 @@ section {
 	a.icon-link {
 		margin-left: 5rem;
 
+		i {
+			color: color(text-lightest);
+		}
+
 		&:hover i {
-			color: darkorange;
+			color: color(javascript);
 		}
 	}
 
@@ -112,6 +242,15 @@ section {
 		top: 0;
 		left: 0;
 		z-index: 1000;
+	}
+
+	a.repo-link {
+		color: color(shade-lightest);
+		z-index: 1001;
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		font-size: 1.5rem;
 	}
 
 	$tileH: 300px;
@@ -130,14 +269,17 @@ section {
 		border-radius: 3px;
 		border-top: 5px solid black;
 		border-bottom: 5px solid black;
+		color: color(shade-lightest);
 
 		.tile-title {
 			text-align: center;
 			font-family: 'Raleway', sans-serif;
-			height: $tileH;
-			line-height: $tileH;
+			// height: $tileH;
+			// line-height: $tileH;
 			z-index: 900;
 			font-size: 1.4rem;
+			padding: 0.5rem 0;
+			background-color: color-alpha(shade-darkest, thick);
 			white-space: nowrap;
 			transition: height $hovt, line-height $hovt;
 		}
@@ -154,53 +296,31 @@ section {
 		}
 
 		p.tile-description {
+			color: color(shade-darkest);
 			opacity: 0;
 			z-index: 900;
-			transition: opacity $hovt;
-			width: 75%;
 			margin:auto;
+			margin-top: 10rem;
+			transition: opacity $hovt, margin-top $hovt;
+			width: 75%;
 			text-align: center;
+			font-size: 1.2rem;
 		}
 
 		&:hover {
-			.tile-title {
-				height: $tileH/3;
-				line-height: $tileH/3;
-			}
+			// .tile-title {
+			// 	height: $tileH/3;
+			// 	line-height: $tileH/3;
+			// }
 			.tile-description {
 				opacity: 1;
-				font-size: 1.2rem;
+				margin-top: 3rem;
 			}
 		}
 
-		&.syntree {
-			background-image: url("../syntree.png");
-			.overlay {
-					background-color: rgba(105,255,105,0.2);
-			}
-			&:hover .overlay{
-				background-color: rgba(105,255,105,1);
-			}
-		}
-
-		&.diviiportfolio {
-			background-image: url("../diviiportfolio.png");
-			.overlay {
-					background-color: rgba(105,105,255,0.2);
-			}
-			&:hover .overlay{
-				background-color: rgba(105,105,255,1);
-			}
-		}
-
-		&.number-game {
-			background-image: url("../syntree.png");
-			.overlay {
-					background-color: rgba(255,105,105,0.2);
-			}
-			&:hover .overlay{
-				background-color: rgba(255,105,105,1);
-			}
-		}
+		@include portfolio-tile('syntree', 'javascript', 'syntree.png');
+		@include portfolio-tile('diviiportfolio', 'css', 'diviiportfolio.png');
+		@include portfolio-tile('picam', 'ras-pi', 'syntree.png');
+		@include portfolio-tile('number-game', 'python', 'syntree.png');
 	}
 }

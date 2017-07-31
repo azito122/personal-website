@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="style/main.css">
 
+<script src="https://use.fontawesome.com/0ca20f4a02.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -26,7 +27,7 @@
         Andy
       </div>
       <div class="row-first column-second">
-        <span class="follow-text">About me -></span>
+        <span class="follow-text">About me <i class="fa fa-angle-double-right"></i></span>
         <span class="main">(That's me)</span>
       </div>
     </a>
@@ -35,7 +36,7 @@
         Codes
       </div>
       <div class="row-second column-second">
-        <span class="follow-text">Skillsets -></span>
+        <span class="follow-text">Skillsets <i class="fa fa-angle-double-right"></i></span>
         <span class="main">With
           <ul>
             <li>JavaScript</li>
@@ -51,7 +52,7 @@
         Things
       </div>
       <div class="row-third column-second">
-        <span class="follow-text">Portfolio -></span>
+        <span class="follow-text">Portfolio <i class="fa fa-angle-double-right"></i></span>
         <span class="main"><ul>
           <li><span>A syntax tree drawing web app</span></li>
           <li><span>A custom Moodle module for temporary enrolments</span></li>
@@ -65,20 +66,38 @@
 </header>
 
 <div class="section-sep">
+  <a href="#about-me">
+    <i class="fa fa-angle-down" aria-hidden="true"></i>
+  </a>
 </div>
+
 </div>
+
 <section id="about-me">
+
+  <div class="resume-download-wrapper">
+    <a class="resume-download" href="resources/files/andrew_zito_resume.doc"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
+    <ul>
+      <li><a href="resources/files/andrew_zito_resume.doc">Single page</a></li>
+      <li><a href="resources/files/andrew_zito_resume_full.doc">Full</a></li>
+    </ul>
+  </div>
   <h1 class="section-title">About Me</h1>
   <div class="section-content">
     <p class="content"><?php include 'content/about.php' ?></p>
   </div>
+
 </section>
+
+<div class="section-sep second">
+</div>
 
 <section id="skillsets">
   <h1 class="section-title">Skillsets</h1>
   <div class="section-content">
 
     <div class="tile languages">
+      <i class="fa fa-code"></i>
       <h2 class="tile-title">Languages</h2>
       <ul>
         <li><i class="devicon-html5-plain colored"></i> HTML5</li>
@@ -91,6 +110,7 @@
     </div>
 
     <div class="tile systems">
+      <i class="fa fa-list-alt"></i>
       <h2 class="tile-title">Systems</h2>
       <ul>
         <li><i class="devicon-git-plain colored"></i> Git</li>
@@ -103,6 +123,7 @@
     </div>
 
     <div class="tile teamwork">
+      <i class="fa fa-users"></i>
       <h2 class="tile-title">Teamwork Tools</h2>
       <ul>
         <li><i class="devicon-gitlab-plain colored"></i> GitLab</li>
@@ -114,6 +135,9 @@
   </div>
 </section>
 
+<div class="section-sep second third">
+</div>
+
 <section id="portfolio">
 
   <h1 class="section-title">Portfolio
@@ -123,9 +147,13 @@
   </h1>
 
   <div class="tiles-wrapper">
+
   <div class="tile syntree">
     <div class="overlay"></div>
     <h3 class="tile-title">Syntree</h3>
+    <a class="repo-link" href="https://github.com/azito122/syntree" title="Repository/Source Code">
+      <i class="devicon-github-plain"></i>
+    </a>
     <a class="tile-link" href="http://syntree.andycodesthings.com">Syntree</a>
     <p class="tile-description">A JavaScript web app for drawing syntax trees.</p>
   </div>
@@ -134,7 +162,20 @@
     <div class="overlay"></div>
     <a class="tile-link" href="http://diviiportfolio.andycodesthings.com">Academic E-Portfolio</a>
     <h3 class="tile-title">Academic E-Portfolio</h3>
+    <a class="repo-link" href="https://github.com/azito122/diviiportfolio" title="Repository/Source Code">
+      <i class="devicon-github-plain"></i>
+    </a>
     <p class="tile-description">An e-portfolio of academic work.</p>
+  </div>
+
+  <div class="tile picam">
+    <div class="overlay"></div>
+    <h3 class="tile-title">Hampshire Picam</h3>
+    <a class="repo-link" href="https://github.com/azito122/hamp-picam" title="Repository/Source Code">
+      <i class="devicon-github-plain"></i>
+    </a>
+    <a class="tile-link" href="https://github.com/azito122/hamp-picam">Hampshire Picam</a>
+    <p class="tile-description">A security camera script for the Raspberry Pi Camera (Python).</p>
   </div>
 
   <div class="tile number-game">

@@ -41,6 +41,20 @@
   100% {
     opacity: 0; } }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0%); }
+  2% {
+    transform: translateY(130%); }
+  4% {
+    transform: translateY(0%); }
+  6% {
+    transform: translateY(130%); }
+  8% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(0%); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -56,11 +70,12 @@
 
 body, html {
   border: none;
-  font-family: sans-serif;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Open Sans', sans-serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000000; }
 
 li {
   list-style: none; }
@@ -79,13 +94,32 @@ li {
   bottom: 0 !important;
   left: 0;
   width: 100%;
-  background-image: url("../skyline.jpg");
-  background-size: contain; }
+  background-image: url("../resources/img/forest.png");
+  background-size: contain;
+  animation-name: fadeIn;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 4s; }
+  .section-sep i {
+    display: block;
+    margin: auto;
+    margin-top: -3rem;
+    text-align: center;
+    width: 10rem;
+    font-size: 10rem;
+    line-height: 1rem;
+    color: #8c8c8c;
+    animation: 10s bounce 5s linear infinite;
+    transition: margin-top 0.3s;
+    cursor: pointer; }
+    .section-sep i:hover {
+      margin-top: -2rem; }
 
 header {
   padding-top: 3rem;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   /* Follow text hover */ }
   @media (max-width: 1100px) {
     header div.column-second {
@@ -94,13 +128,15 @@ header {
       text-align: center !important;
       width: 100% !important; } }
   header span.follow-text {
+    color: #000000;
     position: absolute;
     height: 100%;
     top: 0;
     left: 2rem;
     z-index: 1000;
     opacity: 0;
-    line-height: 9.3rem; }
+    line-height: 9.3rem;
+    transition: opacity 0.5s; }
   header div.wrapper-table {
     font-size: 0;
     /* to fix weird white space between inline-block children */
@@ -131,18 +167,18 @@ header {
       position: relative;
       opacity: 0;
       padding: 2rem;
-      color: grey;
       text-transform: uppercase; }
       header div.wrapper-table div.column-first {
+        color: #000000;
         float: left;
         clear: left;
         width: 40%;
         font-size: 5rem;
         font-family: 'Questrial', sans-serif;
-        color: black;
         text-align: right;
         letter-spacing: 1rem; }
       header div.wrapper-table div.column-second {
+        color: #8c8c8c;
         float: right;
         clear: right;
         width: 60%;
@@ -150,6 +186,8 @@ header {
         font-size: 4.3rem;
         line-height: 5rem;
         text-align: left; }
+        header div.wrapper-table div.column-second span.main {
+          transition: opacity 0.5s; }
       header div.wrapper-table div.row-third.column-second ul {
         width: 100%;
         display: table; }
@@ -161,7 +199,8 @@ header {
           header div.wrapper-table div.row-third.column-second ul li span {
             height: 4rem;
             display: table-cell;
-            vertical-align: middle; }
+            vertical-align: middle;
+            transition: opacity 0.5s; }
 
 /* Animations */
 header div.wrapper-table {
@@ -184,19 +223,19 @@ header div.wrapper-table {
   header div.wrapper-table div.column-second ul li {
     animation: rotateWord 15s linear infinite 1400ms; }
   header div.wrapper-table div.column-second ul li:nth-child(1) {
-    color: orange; }
+    color: #f7df1e; }
   header div.wrapper-table div.column-second ul li:nth-child(2) {
     animation-delay: 4400ms;
-    color: blue; }
+    color: #8892be; }
   header div.wrapper-table div.column-second ul li:nth-child(3) {
     animation-delay: 7400ms;
-    color: green; }
+    color: #ffde57; }
   header div.wrapper-table div.column-second ul li:nth-child(4) {
     animation-delay: 10400ms;
-    color: lightblue; }
+    color: #e34c26; }
   header div.wrapper-table div.column-second ul li:nth-child(5) {
     animation-delay: 13400ms;
-    color: yellow; }
+    color: #1572b6; }
   header div.wrapper-table div.row-third.column-second ul li {
     color: inherit;
     animation-name: rotateWord; }
@@ -239,11 +278,109 @@ section {
   .section-content .content {
     white-space: pre-wrap; }
 
+.section-sep.second {
+  position: relative;
+  top: 0;
+  height: 20rem;
+  width: 100%;
+  background-image: url("../resources/img/leaves.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 1;
+  display: block;
+  animation: none; }
+  .section-sep.second.third {
+    background-image: url("../resources/img/trunk.jpeg"); }
+    .section-sep.second.third:before {
+      background-color: rgba(52, 191, 73, 0.3); }
+  .section-sep.second:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(59, 96, 228, 0.3); }
+
 #about-me {
-  background-color: #d6ebfa; }
+  background-color: #9DC5DD; }
+  #about-me .resume-download-wrapper {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    min-width: 13rem;
+    border: 3px solid black;
+    border-radius: 7px;
+    overflow: hidden; }
+    #about-me .resume-download-wrapper:hover {
+      background-color: #000000; }
+      #about-me .resume-download-wrapper:hover ul {
+        height: 6.5rem;
+        padding: 0.3rem 0; }
+      #about-me .resume-download-wrapper:hover .resume-download {
+        background-color: #404040;
+        color: #ffffff;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px; }
+    #about-me .resume-download-wrapper .resume-download {
+      display: inline-block;
+      white-space: pre;
+      padding: 0.7rem 0;
+      width: 13rem;
+      text-align: center;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-weight: 600;
+      z-index: 100;
+      transition: background-color 0.3s, color 0.3s; }
+    #about-me .resume-download-wrapper ul {
+      height: 0px;
+      background-color: #000000;
+      color: #ffffff;
+      position: relative;
+      border-radius: 5px;
+      width: 13rem;
+      z-index: 100;
+      transition: height 0.3s; }
+      #about-me .resume-download-wrapper ul li {
+        position: relative;
+        transition: background-color 0.5s;
+        width: 100%;
+        height: 3rem; }
+        #about-me .resume-download-wrapper ul li a {
+          color: #ffffff;
+          position: absolute;
+          line-height: 3rem;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0 1rem;
+          letter-spacing: 0.1rem;
+          font-size: 0.9rem;
+          font-weight: 200;
+          text-transform: uppercase;
+          transition: left 0.3s; }
+        #about-me .resume-download-wrapper ul li:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0;
+          background-color: #3B60E4;
+          border-radius: 1px;
+          transition: width 0.3s; }
+        #about-me .resume-download-wrapper ul li:hover {
+          background-color: #1a1a1a; }
+          #about-me .resume-download-wrapper ul li:hover a {
+            left: 1.3rem; }
+          #about-me .resume-download-wrapper ul li:hover:before {
+            width: 0.8rem; }
 
 #skillsets {
-  background-color: #c3ffc3;
+  background-color: #61DDA5;
   text-align: center; }
   #skillsets .section-content {
     width: auto;
@@ -253,43 +390,39 @@ section {
     vertical-align: top;
     padding: 1rem 3rem;
     width: 25rem; }
+    #skillsets .tile > i {
+      font-size: 10rem;
+      margin-bottom: 3rem; }
     #skillsets .tile .tile-title {
       text-align: center; }
-      #skillsets .tile .tile-title:before {
-        content: "";
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: contain;
-        height: 8rem;
-        width: 100%;
-        display: block;
-        margin: 2rem 0; }
     #skillsets .tile ul {
       display: inline-block;
       font-size: 1.5rem;
       margin-top: 1.5rem;
       text-align: left; }
       #skillsets .tile ul i {
-        display: none; }
+        color: #000000;
+        margin-right: 1rem; }
       #skillsets .tile ul li {
-        margin-bottom: 1.5rem; }
-    #skillsets .tile.languages .tile-title:before {
-      background-image: url("../code.svg"); }
-    #skillsets .tile.systems .tile-title:before {
-      background-image: url("../framework.svg"); }
-    #skillsets .tile.teamwork .tile-title:before {
-      background-image: url("../team.svg"); }
+        padding: 1rem 0.5rem; }
+        #skillsets .tile ul li:hover {
+          background-color: #83e4b8; }
+          #skillsets .tile ul li:hover i {
+            color: inherit; }
 
 #portfolio {
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: #ededed; }
+  background-color: #404040;
+  color: #ffffff; }
   #portfolio .tiles-wrapper {
     text-align: center; }
   #portfolio a.icon-link {
     margin-left: 5rem; }
+    #portfolio a.icon-link i {
+      color: #ffffff; }
     #portfolio a.icon-link:hover i {
-      color: darkorange; }
+      color: #f7df1e; }
   #portfolio a.tile-link {
     font-size: 0;
     width: 100%;
@@ -298,6 +431,13 @@ section {
     top: 0;
     left: 0;
     z-index: 1000; }
+  #portfolio a.repo-link {
+    color: #ffffff;
+    z-index: 1001;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem; }
   #portfolio .tile {
     height: 300px;
     width: 300px;
@@ -309,14 +449,15 @@ section {
     background-position: top center;
     border-radius: 3px;
     border-top: 5px solid black;
-    border-bottom: 5px solid black; }
+    border-bottom: 5px solid black;
+    color: #ffffff; }
     #portfolio .tile .tile-title {
       text-align: center;
       font-family: 'Raleway', sans-serif;
-      height: 300px;
-      line-height: 300px;
       z-index: 900;
       font-size: 1.4rem;
+      padding: 0.5rem 0;
+      background-color: rgba(0, 0, 0, 0.8);
       white-space: nowrap;
       transition: height 0.5s, line-height 0.5s; }
     #portfolio .tile div.overlay {
@@ -329,36 +470,50 @@ section {
       z-index: 800;
       transition: background-color 0.5s; }
     #portfolio .tile p.tile-description {
+      color: #000000;
       opacity: 0;
       z-index: 900;
-      transition: opacity 0.5s;
-      width: 75%;
       margin: auto;
-      text-align: center; }
-    #portfolio .tile:hover .tile-title {
-      height: 100px;
-      line-height: 100px; }
+      margin-top: 10rem;
+      transition: opacity 0.5s, margin-top 0.5s;
+      width: 75%;
+      text-align: center;
+      font-size: 1.2rem; }
     #portfolio .tile:hover .tile-description {
       opacity: 1;
-      font-size: 1.2rem; }
+      margin-top: 3rem; }
     #portfolio .tile.syntree {
-      background-image: url("../syntree.png"); }
+      background-image: url("../resources/img/syntree.png"); }
       #portfolio .tile.syntree .overlay {
-        background-color: rgba(105, 255, 105, 0.2); }
+        background-color: rgba(247, 223, 30, 0.3); }
       #portfolio .tile.syntree:hover .overlay {
-        background-color: #69ff69; }
+        background-color: #f7df1e; }
+      #portfolio .tile.syntree a.repo-link:hover {
+        color: #f7df1e; }
     #portfolio .tile.diviiportfolio {
-      background-image: url("../diviiportfolio.png"); }
+      background-image: url("../resources/img/diviiportfolio.png"); }
       #portfolio .tile.diviiportfolio .overlay {
-        background-color: rgba(105, 105, 255, 0.2); }
+        background-color: rgba(21, 114, 182, 0.3); }
       #portfolio .tile.diviiportfolio:hover .overlay {
-        background-color: #6969ff; }
+        background-color: #1572b6; }
+      #portfolio .tile.diviiportfolio a.repo-link:hover {
+        color: #1572b6; }
+    #portfolio .tile.picam {
+      background-image: url("../resources/img/syntree.png"); }
+      #portfolio .tile.picam .overlay {
+        background-color: rgba(199, 5, 61, 0.3); }
+      #portfolio .tile.picam:hover .overlay {
+        background-color: #c7053d; }
+      #portfolio .tile.picam a.repo-link:hover {
+        color: #c7053d; }
     #portfolio .tile.number-game {
-      background-image: url("../syntree.png"); }
+      background-image: url("../resources/img/syntree.png"); }
       #portfolio .tile.number-game .overlay {
-        background-color: rgba(255, 105, 105, 0.2); }
+        background-color: rgba(255, 222, 87, 0.3); }
       #portfolio .tile.number-game:hover .overlay {
-        background-color: #ff6969; }
+        background-color: #ffde57; }
+      #portfolio .tile.number-game a.repo-link:hover {
+        color: #ffde57; }
 
 footer {
   background-color: lightgrey; }

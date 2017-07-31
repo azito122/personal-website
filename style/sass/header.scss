@@ -12,14 +12,37 @@ $col2-fs: 4.3rem;
 	bottom: 0 !important;
 	left: 0;
 	width: 100%;
-	background-image: url("../skyline.jpg");
+	background-image: url("../resources/img/forest.png");
 	background-size: contain;
+	animation-name: fadeIn;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 4s;
+
+	i {
+		display: block;
+		margin: auto;
+		margin-top: -3rem;
+		text-align: center;
+		width: 10rem;
+		font-size: 10rem;
+		line-height: 1rem;
+		color: color(text-lighter);
+		animation: 10s bounce 5s linear infinite;
+		transition: margin-top 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			margin-top: -2rem;
+		}
+	}
 }
 
 header {
 	padding-top: 3rem;
 	width: 100%;
-	background-color: white;
+	background-color: color(shade-lightest);
 
 	@media (max-width: 1100px) {
 		div.column-second {
@@ -34,15 +57,15 @@ header {
 
 	/* Follow text hover */
 	span.follow-text {
+		color: color(shade-darkest);
 		position: absolute;
-		// width: 100%;
 		height: 100%;
 		top: 0;
 		left: 2rem;
 		z-index: 1000;
 		opacity: 0;
 		line-height: 9.3rem;
-		// background-color: #ededed;
+		transition: opacity 0.5s;
 	}
 
 	div.wrapper-table {
@@ -55,7 +78,7 @@ header {
 			width: 100%;
 
 			&:hover {
-				background-color: #ededed;
+				background-color: color(shade-lighter);
 
 				span.main {
 					opacity: 0;
@@ -92,21 +115,21 @@ header {
 			position: relative;
 			opacity: 0;
 			padding: 2rem;
-			color: grey;
 			text-transform: uppercase;
 
 			&.column-first {
+				color: color(text-darkest);
 				float: left;
 				clear: left;
 				width: 40%;
 				font-size: $col1-fs;
 				font-family: 'Questrial', sans-serif;
-				color: black;
 				text-align: right;
 				letter-spacing: 1rem;
 			}
 
 			&.column-second {
+				color: color(text-lighter);
 				float: right;
 				clear: right;
 				width: 60%;
@@ -114,6 +137,10 @@ header {
 				font-size: $col2-fs;
 				line-height: $col1-fs;
 				text-align: left;
+
+				span.main {
+					transition: opacity 0.5s;
+				}
 			}
 
 			&.row-third.column-second ul {
@@ -126,11 +153,12 @@ header {
 					font-size: 2rem;
 					line-height: 2rem;
 
-						span {
-							height: 4rem;
-							display: table-cell;
-							vertical-align: middle;
-						}
+					span {
+						height: 4rem;
+						display: table-cell;
+						vertical-align: middle;
+						transition: opacity 0.5s;
+					}
 				}
 			}
 		}
@@ -165,24 +193,24 @@ header div.wrapper-table {
 			}
 
 			li:nth-child(1) {
-				color: orange;
+				color: color(javascript);
 			}
 
 			li:nth-child(2) {
 				animation-delay: $base2+$per*1;
-				color: blue;
+				color: color(php);
 			}
 			li:nth-child(3) {
 				animation-delay: $base2+$per*2;
-				color: green;
+				color: color(python);
 			}
 			li:nth-child(4) {
 				animation-delay: $base2+$per*3;
-				color: lightblue;
+				color: color(html);
 			}
 			li:nth-child(5) {
 				animation-delay: $base2+$per*4;
-				color: yellow;
+				color: color(css);
 			}
 		}
 

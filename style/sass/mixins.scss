@@ -1,9 +1,73 @@
 /* Mixins, keyframes, etc. */
 
+$colors: (
+  'white': #ffffff,
+  'black': #000000,
+  'shade-lightest': #ffffff,
+  'shade-lighter': #ededed,
+	'shade-darker': #404040,
+  'shade-darkest': #000000,
+  'link': #000000,
+	'text-darkest': #000000,
+	'text-lighter': #8c8c8c,
+  'text-lightest': #ffffff,
+	'javascript': #f7df1e,
+	'css': #1572b6,
+	'html': #e34c26,
+	'php': #8892be,
+	'python': #ffde57,
+  'github': #ffc107,
+  'ras-pi': #c7053d,
+  'section-1': #9DC5DD,
+  'section-2': #61DDA5,
+  'section-1-accent': #3B60E4,
+  'section-2-accent': #34bf49,
+);
+
+$opacity: (
+  'full': 1,
+  'thick': 0.8, // opacity used with lighter colors
+  'medium': 0.5,
+  'thin': 0.3,   // opacity used with darker colors
+  'trans': 0,
+  // ... etc.
+);
+
+@function color-alpha($name: 'primary', $o: 0) {
+  $color: color($name);
+
+  // Get the named opacity level, if it exists
+  @if map-key-exists($opacity, $o) {
+    $o: map-get($opacity, $o);
+  }
+
+  // Use rgba() to manipulate the color's alpha level
+  @return rgba($color, $o);
+}
+
+@function color($key: 'primary') {
+  @return map-get($colors, $key);
+}
+
 @mixin background-image ($url) {
 	background-image: url($url);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+@mixin portfolio-tile ($class, $color, $image) {
+  &.#{($class)} {
+    background-image: url("../resources/img/#{($image)}");
+    .overlay {
+      background-color: color-alpha($color, thin);
+    }
+    &:hover .overlay{
+      background-color: color-alpha($color, full);
+    }
+    a.repo-link:hover {
+      color: color($color);
+    }
+  }
 }
 
 @keyframes fadeIn {
@@ -27,4 +91,21 @@
 	24% { opacity: 0 }
 	26% { opacity: 0; transform: translateY(-40%) }
 	100% {opacity: 0 }
+}
+
+$bounce-for: 0.8;
+$every: 10;
+$per: ($bounce-for/$every)*100;
+$x: $per/2;
+$displace: 130%;
+
+@keyframes bounce {
+	0% { transform: translateY(0%) }
+	#{($x*0.5)}% { transform: translateY($displace) }
+	#{($x*1)}% { transform: translateY(0%) }
+	#{($x*1.5)}% { transform: translateY($displace) }
+	// #{($x*2)}% { transform: translateY(0%) }
+	// #{($x*2.5)}% { transform: translateY($displace) }
+	#{($per)}% { transform: translateY(0%) }
+	100% { transform: translateY(0%) }
 }
