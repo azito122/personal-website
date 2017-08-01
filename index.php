@@ -71,7 +71,7 @@
   </div>
   <h1 class="section-title">About Me</h1>
   <div class="section-content">
-    <p class="content"><?php include 'content/about.php' ?></p>
+    <p class="content"><?php print($V->render_text($C->get_text('about-me'))); ?></p>
   </div>
 
 </section>
@@ -134,47 +134,11 @@
   </h1>
 
   <div class="tiles-wrapper">
-
-  <?php $syntree = array(
-    'name' => 'syntree',
-    'title' => 'Syntree',
-    'description' => 'A JavaScript web app for drawing syntax trees.',
-    'info_link' => '#',
-    'visit_link' => 'http://syntree.andycodesthings.com',
-    'source_link' => 'https://github.com/azito122/syntree',
-  ); ?>
-
-  <?php $diviiportfolio = array(
-    'name' => 'diviiportfolio',
-    'title' => 'Academic E-Portfolio',
-    'description' => 'An e-portfolio of academic work.',
-    'info_link' => '#',
-    'visit_link' => 'http://diviiportfolio.andycodesthings.com',
-    'source_link' => 'https://github.com/azito122/eportfolio',
-  ); ?>
-
-  <?php $picam = array(
-    'name' => 'picam',
-    'title' => 'Hampshire Picam',
-    'description' => 'A security camera script for the Raspberry Pi Camera',
-    'info_link' => '#',
-    'visit_link' => '',
-    'source_link' => 'https://github.com/azito122/hamp-picam',
-  ); ?>
-
-  <?php $number_game = array(
-    'name' => 'number-game',
-    'title' => 'Number Guessing Game',
-    'description' => 'A simple number guessing game in Python.',
-    'info_link' => '#',
-    'visit_link' => '',
-    'source_link' => '',
-  ); ?>
-
-  <?php print($V->render_portfolio_tile($syntree)); ?>
-  <?php print($V->render_portfolio_tile($diviiportfolio)); ?>
-  <?php print($V->render_portfolio_tile($picam)); ?>
-  <?php print($V->render_portfolio_tile($number_game)); ?>
+    
+  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('syntree'))); ?>
+  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('diviiportfolio'))); ?>
+  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('picam'))); ?>
+  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('number-game'))); ?>
 
 </section>
 

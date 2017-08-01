@@ -1,4 +1,6 @@
+<?php include 'classes/control.php'; ?>
 <?php include 'classes/view.php'; ?>
+<?php $C = new Control(); ?>
 <?php $V = new View(); ?>
 
 <head>

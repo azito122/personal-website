@@ -21,4 +21,9 @@ class View {
 
     return $o;
   }
+
+  public function render_text($text) {
+    $o = $text;
+    return $text;
+  }
 }
