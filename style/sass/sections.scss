@@ -222,36 +222,36 @@ section {
 		text-align: center;
 	}
 
-	a.icon-link {
-		margin-left: 5rem;
+	// a.icon-link {
+	// 	margin-left: 5rem;
+	//
+	// 	i {
+	// 		color: color(text-lightest);
+	// 	}
+	//
+	// 	&:hover i {
+	// 		color: color(javascript);
+	// 	}
+	// }
 
-		i {
-			color: color(text-lightest);
-		}
-
-		&:hover i {
-			color: color(javascript);
-		}
-	}
-
-	a.tile-link {
-		font-size: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1000;
-	}
-
-	a.repo-link {
-		color: color(shade-lightest);
-		z-index: 1001;
-		position: absolute;
-		top: 0.5rem;
-		right: 0.5rem;
-		font-size: 1.5rem;
-	}
+	// a.tile-link {
+	// 	font-size: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	z-index: 1000;
+	// }
+	//
+	// a.repo-link {
+	// 	color: color(shade-lightest);
+	// 	z-index: 1001;
+	// 	position: absolute;
+	// 	top: 0.5rem;
+	// 	right: 0.5rem;
+	// 	font-size: 1.5rem;
+	// }
 
 	$tileH: 300px;
 	$tileW: 300px;
@@ -274,8 +274,6 @@ section {
 		.tile-title {
 			text-align: center;
 			font-family: 'Raleway', sans-serif;
-			// height: $tileH;
-			// line-height: $tileH;
 			z-index: 900;
 			font-size: 1.4rem;
 			padding: 0.5rem 0;
@@ -298,7 +296,7 @@ section {
 		p.tile-description {
 			color: color(shade-darkest);
 			opacity: 0;
-			z-index: 900;
+			z-index: 880;
 			margin:auto;
 			margin-top: 10rem;
 			transition: opacity $hovt, margin-top $hovt;
@@ -308,13 +306,48 @@ section {
 		}
 
 		&:hover {
-			// .tile-title {
-			// 	height: $tileH/3;
-			// 	line-height: $tileH/3;
-			// }
 			.tile-description {
 				opacity: 1;
 				margin-top: 3rem;
+			}
+
+			.tile-links {
+				opacity: 1;
+			}
+		}
+
+		.tile-links {
+			position: absolute;
+			display: table;
+			table-layout: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			// transition: opacity 0.3s;
+
+			a {
+				display: table-cell;
+				vertical-align: bottom;
+				padding-bottom: 0.5rem;
+				z-index: 890;
+				color: transparent;
+				transition: padding-bottom 0.3s, color 0.3s, background 0.3s;
+
+				i {
+					display: block;
+					font-size: 2rem;
+					color: black;
+					margin-top: 0.3rem;
+				}
+
+				&:hover {
+					background: color-alpha('white',  thin);
+					background: linear-gradient(to top, color-alpha('white',  thin), transparent, transparent);
+					padding-bottom: 1.5rem;
+					color: black;
+				}
 			}
 		}
 

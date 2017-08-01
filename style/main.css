@@ -417,27 +417,6 @@ section {
   color: #ffffff; }
   #portfolio .tiles-wrapper {
     text-align: center; }
-  #portfolio a.icon-link {
-    margin-left: 5rem; }
-    #portfolio a.icon-link i {
-      color: #ffffff; }
-    #portfolio a.icon-link:hover i {
-      color: #f7df1e; }
-  #portfolio a.tile-link {
-    font-size: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000; }
-  #portfolio a.repo-link {
-    color: #ffffff;
-    z-index: 1001;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 1.5rem; }
   #portfolio .tile {
     height: 300px;
     width: 300px;
@@ -472,7 +451,7 @@ section {
     #portfolio .tile p.tile-description {
       color: #000000;
       opacity: 0;
-      z-index: 900;
+      z-index: 880;
       margin: auto;
       margin-top: 10rem;
       transition: opacity 0.5s, margin-top 0.5s;
@@ -482,6 +461,34 @@ section {
     #portfolio .tile:hover .tile-description {
       opacity: 1;
       margin-top: 3rem; }
+    #portfolio .tile:hover .tile-links {
+      opacity: 1; }
+    #portfolio .tile .tile-links {
+      position: absolute;
+      display: table;
+      table-layout: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0; }
+      #portfolio .tile .tile-links a {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 0.5rem;
+        z-index: 890;
+        color: transparent;
+        transition: padding-bottom 0.3s, color 0.3s, background 0.3s; }
+        #portfolio .tile .tile-links a i {
+          display: block;
+          font-size: 2rem;
+          color: black;
+          margin-top: 0.3rem; }
+        #portfolio .tile .tile-links a:hover {
+          background: rgba(255, 255, 255, 0.3);
+          background: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent, transparent);
+          padding-bottom: 1.5rem;
+          color: black; }
     #portfolio .tile.syntree {
       background-image: url("../resources/img/syntree.png"); }
       #portfolio .tile.syntree .overlay {

@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-<head>
 
-<link href="https://fonts.googleapis.com/css?family=Questrial|Raleway|Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-<link rel="stylesheet" href="style/normalize.css">
-<link rel="stylesheet" href="style/main.css">
-
-<script src="https://use.fontawesome.com/0ca20f4a02.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-
-</head>
+<?php include 'head.php' ?>
 
 <body>
 <div class="screen">
@@ -148,43 +135,46 @@
 
   <div class="tiles-wrapper">
 
-  <div class="tile syntree">
-    <div class="overlay"></div>
-    <h3 class="tile-title">Syntree</h3>
-    <a class="repo-link" href="https://github.com/azito122/syntree" title="Repository/Source Code">
-      <i class="devicon-github-plain"></i>
-    </a>
-    <a class="tile-link" href="http://syntree.andycodesthings.com">Syntree</a>
-    <p class="tile-description">A JavaScript web app for drawing syntax trees.</p>
-  </div>
+  <?php $syntree = array(
+    'name' => 'syntree',
+    'title' => 'Syntree',
+    'description' => 'A JavaScript web app for drawing syntax trees.',
+    'info_link' => '#',
+    'visit_link' => 'http://syntree.andycodesthings.com',
+    'source_link' => 'https://github.com/azito122/syntree',
+  ); ?>
 
-  <div class="tile diviiportfolio">
-    <div class="overlay"></div>
-    <a class="tile-link" href="http://diviiportfolio.andycodesthings.com">Academic E-Portfolio</a>
-    <h3 class="tile-title">Academic E-Portfolio</h3>
-    <a class="repo-link" href="https://github.com/azito122/diviiportfolio" title="Repository/Source Code">
-      <i class="devicon-github-plain"></i>
-    </a>
-    <p class="tile-description">An e-portfolio of academic work.</p>
-  </div>
+  <?php $diviiportfolio = array(
+    'name' => 'diviiportfolio',
+    'title' => 'Academic E-Portfolio',
+    'description' => 'An e-portfolio of academic work.',
+    'info_link' => '#',
+    'visit_link' => 'http://diviiportfolio.andycodesthings.com',
+    'source_link' => 'https://github.com/azito122/eportfolio',
+  ); ?>
 
-  <div class="tile picam">
-    <div class="overlay"></div>
-    <h3 class="tile-title">Hampshire Picam</h3>
-    <a class="repo-link" href="https://github.com/azito122/hamp-picam" title="Repository/Source Code">
-      <i class="devicon-github-plain"></i>
-    </a>
-    <a class="tile-link" href="https://github.com/azito122/hamp-picam">Hampshire Picam</a>
-    <p class="tile-description">A security camera script for the Raspberry Pi Camera (Python).</p>
-  </div>
+  <?php $picam = array(
+    'name' => 'picam',
+    'title' => 'Hampshire Picam',
+    'description' => 'A security camera script for the Raspberry Pi Camera',
+    'info_link' => '#',
+    'visit_link' => '',
+    'source_link' => 'https://github.com/azito122/hamp-picam',
+  ); ?>
 
-  <div class="tile number-game">
-    <div class="overlay"></div>
-    <a class="tile-link" href="https://repl.it/D4ey/2">Number Guessing Game</a>
-    <h3 class="tile-title">Number Guessing Game</h3>
-    <p class="tile-description">A simple number guessing game in Python.</p>
-  </div>
-</div>
+  <?php $number_game = array(
+    'name' => 'number-game',
+    'title' => 'Number Guessing Game',
+    'description' => 'A simple number guessing game in Python.',
+    'info_link' => '#',
+    'visit_link' => '',
+    'source_link' => '',
+  ); ?>
+
+  <?php print($V->render_portfolio_tile($syntree)); ?>
+  <?php print($V->render_portfolio_tile($diviiportfolio)); ?>
+  <?php print($V->render_portfolio_tile($picam)); ?>
+  <?php print($V->render_portfolio_tile($number_game)); ?>
 
 </section>
 
