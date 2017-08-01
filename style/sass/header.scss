@@ -65,7 +65,7 @@ header {
 		z-index: 1000;
 		opacity: 0;
 		line-height: 9.3rem;
-		transition: opacity 0.5s;
+		transition: opacity 0s;
 	}
 
 	div.wrapper-table {
@@ -90,6 +90,9 @@ header {
 
 				span.follow-text {
 					opacity: 1;
+					transition: opacity 0.5s;
+					animation: 3s slide-left 100ms linear 1;
+					animation-fill-mode: forwards;
 				}
 			}
 		}

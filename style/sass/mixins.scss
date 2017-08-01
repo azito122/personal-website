@@ -110,3 +110,23 @@ $displace: 130%;
 	#{($per)}% { transform: translateY(0%) }
 	100% { transform: translateY(0%) }
 }
+
+$s: 0.5;
+$t: 2.5;
+$d: 3.5;
+$step: $t/10;
+
+
+@keyframes slide-left {
+  0% { margin-left: 0 } //0
+  10% { margin-left: #{(($d/pow($t,$s))*pow(($step*1), $s))}rem } //1
+  20% { margin-left: #{(($d/pow($t,$s))*pow(($step*2), $s))}rem } //1
+  30% { margin-left: #{(($d/pow($t,$s))*pow(($step*3), $s))}rem } //1
+  40% { margin-left: #{(($d/pow($t,$s))*pow(($step*4), $s))}rem } //1
+  50% { margin-left: #{(($d/pow($t,$s))*pow(($step*5), $s))}rem } //1
+  60% { margin-left: #{(($d/pow($t,$s))*pow(($step*6), $s))}rem } //1
+  70% { margin-left: #{(($d/pow($t,$s))*pow(($step*7), $s))}rem } //1
+  80% { margin-left: #{(($d/pow($t,$s))*pow(($step*8), $s))}rem } //1
+  90% { margin-left: #{(($d/pow($t,$s))*pow(($step*9), $s))}rem } //1
+  100% { margin-left: #{($d)}rem } //3
+}
