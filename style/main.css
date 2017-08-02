@@ -114,7 +114,9 @@ li {
 
 .screen {
   height: 100%;
-  position: relative; }
+  position: relative;
+  background: linear-gradient(#dde3f8, white);
+  /*linear-gradient(#e1e6f9, white)*/ }
 
 .section-sep {
   position: absolute;
@@ -122,7 +124,7 @@ li {
   bottom: 0 !important;
   left: 0;
   width: 100%;
-  background-image: url("../resources/img/forest.png");
+  background-image: url("../resources/img/forest.svg");
   background-size: contain;
   animation-name: fadeIn;
   animation-timing-function: linear;
@@ -137,7 +139,7 @@ li {
     width: 10rem;
     font-size: 10rem;
     line-height: 1rem;
-    color: #8c8c8c;
+    color: #c2c2c2;
     animation: 10s bounce 5s linear infinite;
     transition: margin-top 0.3s;
     cursor: pointer; }
@@ -147,7 +149,6 @@ li {
 header {
   padding-top: 3rem;
   width: 100%;
-  background-color: #ffffff;
   /* Follow text hover */ }
   @media (max-width: 1100px) {
     header div.column-second {
@@ -175,7 +176,7 @@ header {
       display: inline-block;
       width: 100%; }
       header div.wrapper-table a.follow:hover {
-        background-color: #ededed; }
+        background-color: rgba(255, 255, 255, 0.8); }
         header div.wrapper-table a.follow:hover span.main {
           opacity: 0; }
           header div.wrapper-table a.follow:hover span.main span {
@@ -203,16 +204,16 @@ header {
         color: #000000;
         float: left;
         clear: left;
-        width: 40%;
+        width: 45%;
         font-size: 5rem;
         font-family: 'Questrial', sans-serif;
         text-align: right;
-        letter-spacing: 1rem; }
+        letter-spacing: 1.3rem; }
       header div.wrapper-table div.column-second {
-        color: #8c8c8c;
+        color: #c2c2c2;
         float: right;
         clear: right;
-        width: 60%;
+        width: 55%;
         font-family: 'Questrial', sans-serif;
         font-size: 4.3rem;
         line-height: 5rem;
@@ -287,11 +288,23 @@ header div.wrapper-table {
   header div.wrapper-table div.row-third.column-second {
     animation-delay: 4800ms; }
 
+body.portfolio section.syntree .img.portfolio-screenshot {
+  background-image: url("../resources/img/syntree.png");
+  background-size: contain;
+  width: 20rem;
+  height: 10rem; }
+
 section {
   display: block;
   overflow: hidden;
   padding-top: 6rem;
   padding-bottom: 10rem; }
+  section.section-1 {
+    background-color: #aab9ee; }
+  section.section-2 {
+    background-color: #88c5db; }
+  section.section-3 {
+    background-color: #77cad2; }
 
 .section-title {
   text-align: center;
@@ -514,7 +527,7 @@ section {
         display: table-cell;
         vertical-align: bottom;
         padding-bottom: 0.5rem;
-        z-index: 890;
+        z-index: 910;
         color: transparent;
         transition: padding-bottom 0.3s, color 0.3s, background 0.3s; }
         #portfolio .tile .tile-links a i {

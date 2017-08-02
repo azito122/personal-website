@@ -1,0 +1,6 @@
+  {$insert}
+  <h1 class="section-title">{$title}</h1>
+  <div class="section-content">
+  {$content_wrapper}
+  {$pieces}
+  </div>

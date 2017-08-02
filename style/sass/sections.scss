@@ -1,8 +1,29 @@
+body.portfolio {
+
+	section.syntree .img.portfolio-screenshot {
+		background-image: url("../resources/img/syntree.png");
+		background-size: contain;
+		width: 20rem;
+		height: 10rem;
+	}
+
+}
+
 section {
 	display: block;
 	overflow: hidden;
 	padding-top: 6rem;
 	padding-bottom: 10rem;
+
+	&.section-1 {
+		background-color: color(section-1);
+	}
+	&.section-2 {
+		background-color: color(section-2);
+	}
+	&.section-3 {
+		background-color: color(section-3);
+	}
 }
 
 .section-title {
@@ -313,7 +334,7 @@ section {
 				display: table-cell;
 				vertical-align: bottom;
 				padding-bottom: 0.5rem;
-				z-index: 890;
+				z-index: 910;
 				color: transparent;
 				transition: padding-bottom 0.3s, color 0.3s, background 0.3s;
 

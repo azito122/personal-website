@@ -61,19 +61,7 @@
 </div>
 
 <section id="about-me">
-
-  <div class="resume-download-wrapper">
-    <a class="resume-download" href="resources/files/andrew_zito_resume.doc"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
-    <ul>
-      <li><a href="resources/files/andrew_zito_resume.doc">Single page</a></li>
-      <li><a href="resources/files/andrew_zito_resume_full.doc">Full</a></li>
-    </ul>
-  </div>
-  <h1 class="section-title">About Me</h1>
-  <div class="section-content">
-    <p class="content"><?php print($V->render_text($C->get_text('about-me'))); ?></p>
-  </div>
-
+<?php print($V->render($C->get_section('about-me'))); ?>
 </section>
 
 <div class="section-sep second">
@@ -126,25 +114,14 @@
 </div>
 
 <section id="portfolio">
-
-  <h1 class="section-title">Portfolio
-    <a class="icon-link" href="http://github.com/azito122">
-      <i class="devicon-github-plain colored"></i>
-    </a>
-  </h1>
-
-  <div class="tiles-wrapper">
-    
-  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('syntree'))); ?>
-  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('diviiportfolio'))); ?>
-  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('picam'))); ?>
-  <?php print($V->render_portfolio_tile($C->get_portfolio_tile('number-game'))); ?>
-
+  <?php print($V->render($C->get_section('portfolio'))); ?>
+</div>
 </section>
 
 </body>
 <footer>
 <div>Icons made by <a href="https://www.flaticon.com/authors/picol" title="Picol">Picol</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 <a href='http://www.freepik.com/free-vector/city-skylines_787669.htm'>Designed by Freepik</a>
+<a href="http://www.freepik.com/free-vector/forest-banners_793671.htm">Designed by Freepik</a>
 </footer>
 </html>
