@@ -52,7 +52,7 @@ section {
 		height: 100%;
 		left: 0;
 		top: 0;
-		background-color: color-alpha(section-1-accent, thin);
+		background-color: color-alpha(section-1, thin);
 	}
 }
 
@@ -127,7 +127,7 @@ section {
 					font-size: 0.9rem;
 					font-weight: 200;
 					text-transform: uppercase;
-					transition: left 0.3s;
+					transition: padding-left 0.3s;
 				}
 
 				&:before {
@@ -137,6 +137,7 @@ section {
 					left: 0;
 					height: 100%;
 					width: 0;
+					background-color: '#{(red(color(section-1-accent)))}, #{(green(color(section-1-accent)))}, #{(blue(color(section-1-accent)))}';
 					background-color: color(section-1-accent);
 					border-radius: 1px;
 					transition: width 0.3s;
@@ -146,7 +147,7 @@ section {
 					background-color: mix(white, color(shade-darkest), 10%);
 
 					a {
-						left: 1.3rem;
+						padding-left: 1.8rem;
 					}
 
 					&:before {
@@ -215,43 +216,24 @@ section {
 #portfolio {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	background-color: color(shade-darker);
-	color: color(text-lightest);
+	background-color: color(section-3);
+	color: color(text-darkest);
 
 	.tiles-wrapper {
 		text-align: center;
 	}
 
-	// a.icon-link {
-	// 	margin-left: 5rem;
-	//
-	// 	i {
-	// 		color: color(text-lightest);
-	// 	}
-	//
-	// 	&:hover i {
-	// 		color: color(javascript);
-	// 	}
-	// }
+	a.icon-link {
+		margin-left: 5rem;
 
-	// a.tile-link {
-	// 	font-size: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	z-index: 1000;
-	// }
-	//
-	// a.repo-link {
-	// 	color: color(shade-lightest);
-	// 	z-index: 1001;
-	// 	position: absolute;
-	// 	top: 0.5rem;
-	// 	right: 0.5rem;
-	// 	font-size: 1.5rem;
-	// }
+		i {
+			color: color(text-darkest);
+		}
+
+		&:hover i {
+			color: color(section-3-accent);
+		}
+	}
 
 	$tileH: 300px;
 	$tileW: 300px;

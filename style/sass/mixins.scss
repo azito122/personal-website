@@ -1,5 +1,10 @@
 /* Mixins, keyframes, etc. */
 
+$sb: rgb(170, 185, 238); /*section base*/
+$m: rgb(0, 243, 143); /*mix*/
+$mf: 80; /*mix factor*/
+$mfs: 10; /*mix factor step*/
+
 $colors: (
   'white': #ffffff,
   'black': #000000,
@@ -16,13 +21,24 @@ $colors: (
 	'html': #e34c26,
 	'php': #8892be,
 	'python': #ffde57,
-  'github': #ffc107,
+  'github': #4078c0,
   'ras-pi': #c7053d,
-  'section-1': #9DC5DD,
-  'section-2': #61DDA5,
-  'section-1-accent': #3B60E4,
-  'section-2-accent': #34bf49,
+  'section-1': $sb,
+  'section-2': mix($sb, $m, $mf),
+  'section-3': mix($sb, $m, $mf - $mfs),
 );
+
+@function accent($color-name) {
+  @return darken(desaturate(map-get($colors, $color-name), 11), 21);
+}
+
+$temp: (
+  'section-1-accent': accent(section-1),
+  'section-2-accent': accent(section-2),
+  'section-3-accent': accent(section-3),
+);
+
+$colors: map-merge($colors, $temp);
 
 $opacity: (
   'full': 1,

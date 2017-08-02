@@ -4,6 +4,7 @@ $col2-fs: 4.3rem;
 .screen {
 	height: 100%;
 	position: relative;
+	background: linear-gradient(#e1e6f9, white);
 }
 
 .section-sep {
@@ -142,7 +143,7 @@ header {
 				text-align: left;
 
 				span.main {
-					transition: opacity 0.5s;
+					transition: opacity 0.3s;
 				}
 			}
 
