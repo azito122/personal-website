@@ -1,0 +1,11 @@
+@@type : list_tile
+
+@@title : Teamwork Tools
+
+@@image : <i class="fa fa-users"></i>
+
+@@list_items : <li><i class="devicon-gitlab-plain colored"></i> GitLab</li>
+        <li><i class="devicon-slack-plain colored"></i> Slack</li>
+        <li><i class="devicon-trello-plain colored"></i> Trello</li>
+
+@@weight : 2

@@ -1,0 +1,7 @@
+<div class="tile {$name}">
+  {$image}
+  <h2 class="tile-title">{$title}</h2>
+  <ul>
+  {$list_items}
+  </ul>
+</div>

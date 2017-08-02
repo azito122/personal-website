@@ -68,46 +68,7 @@
 </div>
 
 <section id="skillsets">
-  <h1 class="section-title">Skillsets</h1>
-  <div class="section-content">
-
-    <div class="tile languages">
-      <i class="fa fa-code"></i>
-      <h2 class="tile-title">Languages</h2>
-      <ul>
-        <li><i class="devicon-html5-plain colored"></i> HTML5</li>
-        <li><i class="devicon-css3-plain colored"></i> CSS3</li>
-        <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
-        <li><i class="devicon-jquery-plain colored"></i> jQuery</li>
-        <li><i class="devicon-php-plain colored"></i> PHP</li>
-        <li><i class="devicon-python-plain colored"></i> Python</li>
-      </ul>
-    </div>
-
-    <div class="tile systems">
-      <i class="fa fa-list-alt"></i>
-      <h2 class="tile-title">Systems</h2>
-      <ul>
-        <li><i class="devicon-git-plain colored"></i> Git</li>
-        <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
-        <li><i class="devicon-moodle-plain colored"></i> Moodle</li>
-        <li><i class="devicon-drupal-plain colored"></i> Drupal</li>
-        <li>LaTeX</li>
-        <li>Vagrant</li>
-      </ul>
-    </div>
-
-    <div class="tile teamwork">
-      <i class="fa fa-users"></i>
-      <h2 class="tile-title">Teamwork Tools</h2>
-      <ul>
-        <li><i class="devicon-gitlab-plain colored"></i> GitLab</li>
-        <li><i class="devicon-slack-plain colored"></i> Slack</li>
-        <li><i class="devicon-trello-plain colored"></i> Trello</li>
-      </ul>
-    </div>
-
-  </div>
+  <?php print($V->render($C->get_section('skillsets'))); ?>
 </section>
 
 <div class="section-sep second third">
