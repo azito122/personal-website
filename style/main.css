@@ -1,8 +1,11 @@
 /* Mixins, keyframes, etc. */
+/* Colors */
 /*section base*/
 /*mix*/
 /*mix factor*/
 /*mix factor step*/
+/* Other mixins */
+/* Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -24,24 +27,6 @@
   26% {
     opacity: 0;
     transform: translateY(-100%); }
-  100% {
-    opacity: 0; } }
-
-@keyframes rotateWord2 {
-  0% {
-    opacity: 0;
-    transform: translateY(140%); }
-  5% {
-    opacity: 1;
-    transform: translateY(40%); }
-  21% {
-    opacity: 1;
-    transform: translateY(40%); }
-  24% {
-    opacity: 0; }
-  26% {
-    opacity: 0;
-    transform: translateY(-40%); }
   100% {
     opacity: 0; } }
 
@@ -118,15 +103,17 @@ li {
     height: auto;
     top: 40rem;
     bottom: 0;
-    left: 0;
     background-image: url("../resources/img/forest.svg");
     background-size: contain;
     background-attachment: scroll;
     animation-name: fadeIn;
+    animation-duration: 4s;
     animation-timing-function: linear;
+    animation-delay: 0s;
     animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
-    animation-duration: 4s; }
+    animation-play-state: running; }
     .screen .section-sep i {
       display: block;
       width: 10rem;
@@ -136,22 +123,23 @@ li {
       font-size: 10rem;
       line-height: 1rem;
       color: #c2c2c2;
-      animation: 10s bounce 5s linear infinite;
       transition: margin-top 0.3s;
-      cursor: pointer; }
+      cursor: pointer;
+      animation-name: bounce;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-delay: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running; }
       .screen .section-sep i:hover {
         margin-top: -2rem; }
 
 header {
   display: block;
   padding-top: 3rem;
-  /* Follow text hover */ }
-  @media (max-width: 1100px) {
-    header div.column-second {
-      display: none; }
-    header div.wrapper-table div.column-first {
-      text-align: center !important;
-      width: 100% !important; } }
+  /* Follow hover-text */ }
   header span.follow-text {
     position: absolute;
     top: 0;
@@ -180,17 +168,22 @@ header {
         header div.wrapper-table a.follow:hover span.follow-text {
           opacity: 1;
           transition: opacity 0.5s;
-          animation: 3s slide-left 100ms linear 1;
-          animation-fill-mode: forwards; }
+          animation-name: slide-left;
+          animation-duration: 3s;
+          animation-timing-function: linear;
+          animation-delay: 100ms;
+          animation-iteration-count: 1;
+          animation-direction: normal;
+          animation-fill-mode: forwards;
+          animation-play-state: running; }
     header div.wrapper-table div.column-second ul {
-      display: inline-block;
-      font-size: 0; }
+      display: inline-block; }
       header div.wrapper-table div.column-second ul li {
         position: absolute;
-        opacity: 0;
         bottom: -0.6rem;
         font-size: 4.3rem;
-        line-height: 4.3rem; }
+        line-height: 4.3rem;
+        opacity: 0; }
     header div.wrapper-table div {
       position: relative;
       padding: 2rem;
@@ -206,83 +199,96 @@ header {
         text-align: right;
         letter-spacing: 1.3rem; }
       header div.wrapper-table div.column-second {
-        color: #c2c2c2;
         float: right;
         clear: right;
         width: 55%;
-        font-family: 'Questrial', sans-serif;
+        color: #c2c2c2;
         font-size: 4.3rem;
         line-height: 5rem;
+        font-family: 'Questrial', sans-serif;
         text-align: left; }
         header div.wrapper-table div.column-second span.main {
           transition: opacity 0.3s; }
       header div.wrapper-table div.row-third.column-second ul {
-        width: 100%;
-        display: table; }
+        display: table;
+        width: 100%; }
         header div.wrapper-table div.row-third.column-second ul li {
           display: table;
           top: 0.7rem;
           font-size: 2rem;
           line-height: 2rem; }
           header div.wrapper-table div.row-third.column-second ul li span {
-            height: 4rem;
             display: table-cell;
+            height: 4rem;
             vertical-align: middle;
             transition: opacity 0.5s; }
 
 /* Animations */
-header div.wrapper-table {
-  /* Animation vals */
-  /* base delay for appearance animation */
-  /* duration of fade in for col1 text */
-  /* duration of fade in for col2 text */
-  /* time between end of col1 text fadein and beginning of col2 fade in */
-  /* time between end of col2 fade in and beginning of next col1 fade in */
-  /* base delay for rotation animation */
-  /* how long each rotated text should be visible */
-  /* Base animation properties for fading in*/
-  /* Rotating list animation */
-  /* Fade in animation */ }
-  header div.wrapper-table div {
-    animation-name: fadeIn;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; }
-  header div.wrapper-table div.column-second ul li {
-    animation: rotateWord 15s linear infinite 1400ms; }
-  header div.wrapper-table div.column-second ul li:nth-child(1) {
-    color: #f7df1e; }
-  header div.wrapper-table div.column-second ul li:nth-child(2) {
-    animation-delay: 4400ms;
-    color: #8892be; }
-  header div.wrapper-table div.column-second ul li:nth-child(3) {
-    animation-delay: 7400ms;
-    color: #ffde57; }
-  header div.wrapper-table div.column-second ul li:nth-child(4) {
-    animation-delay: 10400ms;
-    color: #e34c26; }
-  header div.wrapper-table div.column-second ul li:nth-child(5) {
-    animation-delay: 13400ms;
-    color: #1572b6; }
-  header div.wrapper-table div.row-third.column-second ul li {
-    color: inherit;
-    animation-name: rotateWord; }
-  header div.wrapper-table div.column-second {
-    animation-duration: 0.2s; }
-  header div.wrapper-table div.column-first {
-    animation-duration: 1s; }
-  header div.wrapper-table div.row-first.column-first {
-    animation-delay: 300ms; }
-  header div.wrapper-table div.row-first.column-second {
-    animation-delay: 1000ms; }
-  header div.wrapper-table div.row-second.column-first {
-    animation-delay: 2200ms; }
-  header div.wrapper-table div.row-second.column-second {
-    animation-delay: 2900ms; }
-  header div.wrapper-table div.row-third.column-first {
-    animation-delay: 4100ms; }
-  header div.wrapper-table div.row-third.column-second {
-    animation-delay: 4800ms; }
+header div.wrapper-table div {
+  animation-name: fadeIn;
+  animation-duration: 0s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+header div.wrapper-table div.column-second ul li {
+  animation-name: rotateWord;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 1400ms;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+header div.wrapper-table div.column-second ul li:nth-child(1) {
+  color: #f7df1e; }
+
+header div.wrapper-table div.column-second ul li:nth-child(2) {
+  animation-delay: 4400ms;
+  color: #8892be; }
+
+header div.wrapper-table div.column-second ul li:nth-child(3) {
+  animation-delay: 7400ms;
+  color: #ffde57; }
+
+header div.wrapper-table div.column-second ul li:nth-child(4) {
+  animation-delay: 10400ms;
+  color: #e34c26; }
+
+header div.wrapper-table div.column-second ul li:nth-child(5) {
+  animation-delay: 13400ms;
+  color: #1572b6; }
+
+header div.wrapper-table div.row-third.column-second ul li {
+  color: inherit; }
+
+header div.wrapper-table div.column-second {
+  animation-duration: 0.2s; }
+
+header div.wrapper-table div.column-first {
+  animation-duration: 1s; }
+
+header div.wrapper-table div.row-first.column-first {
+  animation-delay: 300ms; }
+
+header div.wrapper-table div.row-first.column-second {
+  animation-delay: 1000ms; }
+
+header div.wrapper-table div.row-second.column-first {
+  animation-delay: 2200ms; }
+
+header div.wrapper-table div.row-second.column-second {
+  animation-delay: 2900ms; }
+
+header div.wrapper-table div.row-third.column-first {
+  animation-delay: 4100ms; }
+
+header div.wrapper-table div.row-third.column-second {
+  animation-delay: 4800ms; }
 
 #about-me {
   background-color: #aab9ee; }

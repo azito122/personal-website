@@ -1,5 +1,6 @@
 /* Mixins, keyframes, etc. */
 
+/* Colors */
 $sb: rgb(170, 185, 238); /*section base*/
 $m: rgb(0, 243, 143); /*mix*/
 $mf: 80; /*mix factor*/
@@ -68,11 +69,13 @@ $opacity: (
   @return map-get($colors, $key);
 }
 
-@mixin background-image ($url) {
-	background-image: url($url);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+// @mixin background-image ($url) {
+// 	background-image: url($url);
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// }
+
+/* Other mixins */
 
 @mixin portfolio-tile ($class, $color, $image) {
   &.#{($class)} {
@@ -89,6 +92,27 @@ $opacity: (
   }
 }
 
+@mixin animate (
+  $name: none,
+  $duration: 0s,
+  $timing-function: linear,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards,
+  $play-state: running) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+    animation-iteration-count: $iteration-count;
+    animation-direction: $direction;
+    animation-fill-mode: $fill-mode;
+    animation-play-state: $play-state;
+  }
+
+/* Keyframes */
+
 @keyframes fadeIn {
 	0% { opacity: 0 }
 	100% { opacity: 1 }
@@ -103,15 +127,6 @@ $opacity: (
 	100% {opacity: 0 }
 }
 
-@keyframes rotateWord2 {
-	0% { opacity: 0; transform: translateY(140%) }
-	5% { opacity: 1; transform: translateY(40%) }
-	21% { opacity: 1; transform: translateY(40%) }
-	24% { opacity: 0 }
-	26% { opacity: 0; transform: translateY(-40%) }
-	100% {opacity: 0 }
-}
-
 $bounce-for: 0.8;
 $every: 10;
 $per: ($bounce-for/$every)*100;
@@ -123,8 +138,6 @@ $displace: 130%;
 	#{($x*0.5)}% { transform: translateY($displace) }
 	#{($x*1)}% { transform: translateY(0%) }
 	#{($x*1.5)}% { transform: translateY($displace) }
-	// #{($x*2)}% { transform: translateY(0%) }
-	// #{($x*2.5)}% { transform: translateY($displace) }
 	#{($per)}% { transform: translateY(0%) }
 	100% { transform: translateY(0%) }
 }

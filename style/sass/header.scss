@@ -3,24 +3,19 @@ $col2-fs: 4.3rem;
 
 .screen {
 	position: relative;
-	height: 100%;
+	height: 100%; // based on body and html having height 100%
 	background: linear-gradient(mix(color(section-1), white, 40), white);
 
 	.section-sep {
 		position: absolute;
 		width: 100%;
-		height: auto;
+		height: auto; // override parallax section-seps
 		top: 40rem;
 		bottom: 0;
-		left: 0;
 		background-image: url("../resources/img/forest.svg");
-		background-size: contain;
-		background-attachment: scroll;
-		animation-name: fadeIn;
-		animation-timing-function: linear;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-		animation-duration: 4s;
+		background-size: contain; // override parallax section-seps
+		background-attachment: scroll; // override parallax section-seps
+		@include animate ($name: fadeIn, $duration: 4s)
 
 		i {
 			display: block;
@@ -31,9 +26,13 @@ $col2-fs: 4.3rem;
 			font-size: 10rem;
 			line-height: 1rem;
 			color: color(text-lighter);
-			animation: 10s bounce 5s linear infinite;
 			transition: margin-top 0.3s;
 			cursor: pointer;
+			@include animate (
+				$name: bounce,
+				$duration: 10s,
+				$delay: 5s,
+				$iteration-count: infinite);
 
 			&:hover {
 				margin-top: -2rem;
@@ -46,18 +45,18 @@ header {
 	display: block;
 	padding-top: 3rem;
 
-	@media (max-width: 1100px) {
-		div.column-second {
-			display: none;
-		}
+	// @media (max-width: 1100px) {
+	// 	div.column-second {
+	// 		display: none;
+	// 	}
+	//
+	// 	div.wrapper-table div.column-first {
+	// 		text-align: center !important;
+	// 		width: 100% !important;
+	// 	}
+	// }
 
-		div.wrapper-table div.column-first {
-			text-align: center !important;
-			width: 100% !important;
-		}
-	}
-
-	/* Follow text hover */
+	/* Follow hover-text */
 	span.follow-text {
 		position: absolute;
 		top: 0;
@@ -92,8 +91,7 @@ header {
 				span.follow-text { //text to indicate where clicking the link takes you
 					opacity: 1;
 					transition: opacity 0.5s;
-					animation: 3s slide-left 100ms linear 1;
-					animation-fill-mode: forwards;
+					@include animate($name: slide-left, $duration: 3s, $delay: 100ms);
 				}
 			}
 		}
@@ -102,20 +100,19 @@ header {
 
 		div.column-second ul {
 			display: inline-block;
-			font-size: 0;
 
 			li {
 				position: absolute;
-				opacity: 0;
 				bottom: -0.6rem;
 				font-size: $col2-fs;
 				line-height: $col2-fs;
+				opacity: 0;
 			}
 		}
 
 		/* Main content */
 
-		div {
+		div { // All cells
 			position: relative;
 			padding: 2rem;
 			text-transform: uppercase;
@@ -133,23 +130,23 @@ header {
 			}
 
 			&.column-second {
-				color: color(text-lighter);
 				float: right;
 				clear: right;
 				width: 55%;
-				font-family: 'Questrial', sans-serif;
+				color: color(text-lighter);
 				font-size: $col2-fs;
 				line-height: $col1-fs;
+				font-family: 'Questrial', sans-serif;
 				text-align: left;
 
-				span.main {
+				span.main { // Main content within a cell
 					transition: opacity 0.3s;
 				}
 			}
 
-			&.row-third.column-second ul {
-				width: 100%;
+			&.row-third.column-second ul { // Special for the multiline rotating text
 				display: table;
+				width: 100%;
 
 				li {
 					display: table;
@@ -158,8 +155,8 @@ header {
 					line-height: 2rem;
 
 					span {
-						height: 4rem;
 						display: table-cell;
+						height: 4rem;
 						vertical-align: middle;
 						transition: opacity 0.5s;
 					}
@@ -168,38 +165,39 @@ header {
 		}
 	}
 }
+
 /* Animations */
 
 header div.wrapper-table {
 
-		/* Animation vals */
-		$base1: 300ms; /* base delay for appearance animation */
-		$d1: 1s; /* duration of fade in for col1 text */
-		$d2: 0.2s; /* duration of fade in for col2 text */
-		$g1: -0.3s; /* time between end of col1 text fadein and beginning of col2 fade in */
-		$g2: 1s; /* time between end of col2 fade in and beginning of next col1 fade in */
+		// Animation vals
+		$base1: 300ms; // base delay for appearance animation
+		$d1: 1s; // duration of fade in for col1 text
+		$d2: 0.2s; // duration of fade in for col2 text
+		$g1: -0.3s; // time between end of col1 text fade in and beginning of col2 fade in
+		$g2: 1s; // time between end of col2 fade in and beginning of next col1 fade in
 
-		$base2: $base1 + $d1 + $g1 + $d2 + $g2 + $d1 + $g1 - 1.5s; /* base delay for rotation animation */
-		$per: 3s; /* how long each rotated text should be visible */
+		$base2: $base1 + $d1 + $g1 + $d2 + $g2 + $d1 + $g1 - 1.5s; // base delay for rotation animation
+		$per: 3s; // how long each rotated text should be visible
 
-		/* Base animation properties for fading in*/
+		// Base animation properties for fading in (now mostly taken care of by animate mixin defaults)
 		div {
-			animation-name: fadeIn;
-			animation-timing-function: linear;
-			animation-iteration-count: 1;
-			animation-fill-mode: forwards;
+			@include animate ($name: fadeIn)
 		}
 
-		/* Rotating list animation */
+		// Rotating list animation
 		div.column-second ul {
 			li {
-				animation: rotateWord $per*5 linear infinite $base2;
+				@include animate (
+					$name: rotateWord,
+					$duration: $per*5,
+					$delay: $base2,
+					$iteration-count: infinite);
 			}
 
 			li:nth-child(1) {
 				color: color(javascript);
 			}
-
 			li:nth-child(2) {
 				animation-delay: $base2+$per*1;
 				color: color(php);
@@ -220,10 +218,9 @@ header div.wrapper-table {
 
 		div.row-third.column-second ul li {
 			color: inherit;
-			animation-name: rotateWord;
 		}
 
-		/* Fade in animation */
+		// Fade in animation
 		div {
 			&.column-second {
 				animation-duration: $d2;
@@ -234,22 +231,22 @@ header div.wrapper-table {
 			}
 
 			&.row-first.column-first {
-				animation-delay: $base1;
+				animation-delay: $base1 + ($d1 * 0) + ($g1 * 0) + ($d2 * 0) + ($g2 * 0);
 			}
 			&.row-first.column-second {
-				animation-delay: $base1+$d1+$g1;
+				animation-delay: $base1 + ($d1 * 1) + ($g1 * 1) + ($d2 * 0) + ($g2 * 0);
 			}
 			&.row-second.column-first {
-				animation-delay: $base1+$d1+$g1+$d2+$g2;
+				animation-delay: $base1 + ($d1 * 1) + ($g1 * 1) + ($d2 * 1) + ($g2 * 1);
 			}
 			&.row-second.column-second {
-				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1;
+				animation-delay: $base1 + ($d1 * 2) + ($g1 * 2) + ($d2 * 1) + ($g2 * 1);
 			}
 			&.row-third.column-first {
-				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2;
+				animation-delay: $base1 + ($d1 * 2) + ($g1 * 2) + ($d2 * 2) + ($g2 * 2);
 			}
 			&.row-third.column-second {
-				animation-delay: $base1+$d1+$g1+$d2+$g2+$d1+$g1+$d2+$g2+$d1+$g1;
+				animation-delay: $base1 + ($d1 * 3) + ($g1 * 3) + ($d2 * 2) + ($g2 * 2);
 			}
 		}
 	}
