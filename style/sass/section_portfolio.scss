@@ -1,8 +1,6 @@
 #portfolio {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	background-color: color(section-3);
-	color: color(text-darkest);
 
 	.tiles-wrapper {
 		text-align: center;
@@ -11,46 +9,43 @@
 	a.icon-link {
 		margin-left: 5rem;
 
-		i {
-			color: color(text-darkest);
-		}
+		&:hover {
+			// background-color: color-alpha(shade-lightest, thin);
 
-		&:hover i {
-			color: color(section-3-accent);
+			i {
+				color: color(github);
+			}
 		}
 	}
 
 	$tileH: 300px;
 	$tileW: 300px;
-	$hovt: 0.5s;
+	$hovt: 0.5s; // hover transition time
 
 	.tile {
+		display: inline-block;
+		position: relative;
 		height: $tileH;
 		width: $tileW;
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
 		margin: 1rem;
+		vertical-align: top;
 		background-size: cover;
 		background-position: top center;
+		border-bottom: 1rem solid color-alpha(shade-darkest, thick);
 		border-radius: 3px;
-		border-top: 5px solid black;
-		border-bottom: 5px solid black;
 		color: color(shade-lightest);
 
 		.tile-title {
+			z-index: 900;
+			padding: 0.5rem 0;
 			text-align: center;
 			font-family: 'Raleway', sans-serif;
-			z-index: 900;
 			font-size: 1.4rem;
-			padding: 0.5rem 0;
 			background-color: color-alpha(shade-darkest, thick);
 			white-space: nowrap;
-			transition: height $hovt, line-height $hovt;
 		}
 
 		div.overlay {
-			border-radius: 3px;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -84,30 +79,30 @@
 		}
 
 		.tile-links {
-			position: absolute;
 			display: table;
+			position: absolute;
 			table-layout: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			opacity: 0;
-			// transition: opacity 0.3s;
 
 			a {
 				display: table-cell;
+				z-index: 910;
 				vertical-align: bottom;
 				padding-bottom: 0.5rem;
-				z-index: 910;
 				color: transparent;
+				text-align: center;
+				font-size: 1rem;
 				transition: padding-bottom 0.3s, color 0.3s, background 0.3s;
 
 				i {
-					display: block;
 					font-size: 2rem;
-					color: black;
+					color: color(text-darkest); // Required to override link text hiding
 					margin-top: 0.3rem;
-				}
+					}
 
 				&:hover {
 					background: color-alpha('white',  thin);

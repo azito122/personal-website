@@ -1,19 +1,18 @@
 #skillsets  {
-	background-color: color(section-2);
-	text-align: center;
 
 	.section-content {
 		width: auto;
 		margin: 0;
+		text-align: center;
 	}
 
 	.tile {
 		display: inline-block;
+		width: 25rem;
 		vertical-align: top;
 		padding: 1rem 3rem;
-		width: 25rem;
 
-		& > i {
+		& > i { // Main icon
 			font-size: 10rem;
 			margin-bottom: 3rem;
 		}
@@ -24,15 +23,15 @@
 
 		ul {
 			display: inline-block;
-			font-size: 1.5rem;
 			margin-top: 1.5rem;
+			font-size: 1.5rem;
 			text-align: left;
 
-			i {
+			i { // Sub icons for each skill
 				color: color(shade-darkest);
 				margin-right: 1rem;
 
-				&.blank {
+				&.blank { // A placeholder for skills that have no icon
 					display: inline-block;
 					vertical-align: middle;
 					width: 1em;
@@ -44,10 +43,6 @@
 
 			li {
 				padding: 1rem 0.5rem;
-
-				&:before {
-					// content:"\2014\a0";
-				}
 
 				&:hover {
 					background-color: lighten(color(section-2), 8);

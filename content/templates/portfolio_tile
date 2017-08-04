@@ -3,8 +3,8 @@
   <h3 class="tile-title">{$title}</h3>
   <p class="tile-description">{$description}</p>
   <div class="tile-links">
-    <a class="info" href="{$info_link}">More info<i class="fa fa-info-circle"></i></a>
-    <a class="visit" href="{$visit_link}">Visit<i class="fa fa-angle-double-right"></i></a>
-    <a class="source" href="{$source_link}">Source code<i class="fa fa-github"></i></a>
+    <a class="info" href="{$info_link}">More info<br><i class="fa fa-info-circle"></i></a>
+    <a class="visit" href="{$visit_link}">Visit<br><i class="fa fa-angle-double-right"></i></a>
+    <a class="source" href="{$source_link}">Source code<br><i class="fa fa-github"></i></a>
   </div>
 </div>

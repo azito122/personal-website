@@ -1,5 +1,4 @@
 #about-me {
-	background-color: color(section-1);
 
 	.content {
 		line-height: 2rem;
@@ -9,10 +8,9 @@
 		position: absolute;
 		top: 2rem;
 		left: 2rem;
-		min-width: 13rem;
+		overflow: hidden;
 		border: 3px solid black;
 		border-radius: 7px;
-		overflow: hidden;
 
 		&:hover {
 			background-color: color(shade-darkest);
@@ -22,7 +20,7 @@
 				padding: 0.3rem 0;
 			}
 
-			.resume-download {
+			a.resume-download {
 				background-color: color(shade-darker);
 				color: color(shade-lightest);
 				border-bottom-left-radius: 8px;
@@ -30,27 +28,26 @@
 			}
 		}
 
-		.resume-download {
+		a.resume-download { // Main button
 			display: inline-block;
-			white-space: pre;
-			padding: 0.7rem 0;
 			width: 13rem;
+			padding: 0.7rem 0;
 			text-align: center;
 			font-size: 1.3rem;
-			text-transform: uppercase;
 			letter-spacing: 0.3rem;
 			font-weight: 600;
+			text-transform: uppercase;
 			z-index: 100;
 			transition: background-color 0.3s, color 0.3s;
 		}
 
-		ul {
+		ul { // Dropdown menu
+			position: relative;
+			width: 13rem;
 			height: 0px;
 			background-color: color(shade-darkest);
 			color: color(shade-lightest);
-			position: relative;
 			border-radius: 5px;
-			width: 13rem;
 			z-index: 100;
 			transition: height 0.3s;
 
