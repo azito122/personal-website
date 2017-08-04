@@ -1,10 +1,10 @@
 * {
+	position: relative;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	outline: none !important;
 	outline-width: 0 !important;
-	position: relative;
-	box-sizing: border-box;
 }
 
 .clearfix:after {
@@ -26,9 +26,4 @@ a {
 
 li {
 	list-style: none;
-}
-
-._3-col {
-	width: 32%;
-	display: inline-block;
 }

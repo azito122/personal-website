@@ -1,0 +1,62 @@
+#skillsets  {
+	background-color: color(section-2);
+	text-align: center;
+
+	.section-content {
+		width: auto;
+		margin: 0;
+	}
+
+	.tile {
+		display: inline-block;
+		vertical-align: top;
+		padding: 1rem 3rem;
+		width: 25rem;
+
+		& > i {
+			font-size: 10rem;
+			margin-bottom: 3rem;
+		}
+
+		.tile-title {
+			text-align: center;
+		}
+
+		ul {
+			display: inline-block;
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			text-align: left;
+
+			i {
+				color: color(shade-darkest);
+				margin-right: 1rem;
+
+				&.blank {
+					display: inline-block;
+					vertical-align: middle;
+					width: 1em;
+					height: 3px;
+					background-color: black;
+					border-radius: 5px;
+				}
+			}
+
+			li {
+				padding: 1rem 0.5rem;
+
+				&:before {
+					// content:"\2014\a0";
+				}
+
+				&:hover {
+					background-color: lighten(color(section-2), 8);
+
+					i {
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}

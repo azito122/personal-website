@@ -1,0 +1,106 @@
+#about-me {
+	background-color: color(section-1);
+
+	.content {
+		line-height: 2rem;
+	}
+
+	.resume-download-wrapper {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		min-width: 13rem;
+		border: 3px solid black;
+		border-radius: 7px;
+		overflow: hidden;
+
+		&:hover {
+			background-color: color(shade-darkest);
+
+			ul {
+				height: 6.5rem;
+				padding: 0.3rem 0;
+			}
+
+			.resume-download {
+				background-color: color(shade-darker);
+				color: color(shade-lightest);
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
+		}
+
+		.resume-download {
+			display: inline-block;
+			white-space: pre;
+			padding: 0.7rem 0;
+			width: 13rem;
+			text-align: center;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			letter-spacing: 0.3rem;
+			font-weight: 600;
+			z-index: 100;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		ul {
+			height: 0px;
+			background-color: color(shade-darkest);
+			color: color(shade-lightest);
+			position: relative;
+			border-radius: 5px;
+			width: 13rem;
+			z-index: 100;
+			transition: height 0.3s;
+
+			li {
+				position: relative;
+				transition: background-color 0.5s;
+				width: 100%;
+				height: 3rem;
+
+				a {
+					color: color(shade-lightest);
+					position: absolute;
+					line-height: 3rem;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding: 0 1rem;
+					letter-spacing: 0.1rem;
+					font-size: 0.9rem;
+					font-weight: 200;
+					text-transform: uppercase;
+					transition: padding-left 0.3s;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 0;
+					background-color: '#{(red(color(section-1-accent)))}, #{(green(color(section-1-accent)))}, #{(blue(color(section-1-accent)))}';
+					background-color: color(section-1-accent);
+					border-radius: 1px;
+					transition: width 0.3s;
+				}
+
+				&:hover {
+					background-color: mix(white, color(shade-darkest), 10%);
+
+					a {
+						padding-left: 1.8rem;
+					}
+
+					&:before {
+						width: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}

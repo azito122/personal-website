@@ -8,7 +8,7 @@
         <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
         <li><i class="devicon-moodle-plain colored"></i> Moodle</li>
         <li><i class="devicon-drupal-plain colored"></i> Drupal</li>
-        <li>LaTeX</li>
-        <li>Vagrant</li>
+        <li><i class="blank"></i> LaTeX</li>
+        <li><i class="blank"></i> Vagrant</li>
 
 @@weight : 1

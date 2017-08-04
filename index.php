@@ -81,8 +81,8 @@
 
 </body>
 <footer>
-<div>Icons made by <a href="https://www.flaticon.com/authors/picol" title="Picol">Picol</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-<a href='http://www.freepik.com/free-vector/city-skylines_787669.htm'>Designed by Freepik</a>
-<a href="http://www.freepik.com/free-vector/forest-banners_793671.htm">Designed by Freepik</a>
+  <a class="picture-attribution" href="http://www.freepik.com/free-vector/forest-banners_793671.htm">Forest Banner courtesy of Freepik</a>
+  <a class="profile-link github" title="GitHub" href="https://github.com/azito122"><i class="devicon-github-plain"></i></a>
+  <a class="profile-link linkedin" title="Linkedin" href="https://www.linkedin.com/in/andrew-zito/"><i class="fa fa-linkedin-square"></i></a>
 </footer>
 </html>

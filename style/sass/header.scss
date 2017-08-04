@@ -2,48 +2,45 @@ $col1-fs: 5rem;
 $col2-fs: 4.3rem;
 
 .screen {
-	height: 100%;
 	position: relative;
-	background: linear-gradient(mix(color(section-1), white, 40), white); /*linear-gradient(#e1e6f9, white)*/
-}
+	height: 100%;
+	background: linear-gradient(mix(color(section-1), white, 40), white);
 
-.section-sep {
-	position: absolute;
-	top: 40rem;
-	bottom: 0 !important;
-	left: 0;
-	width: 100%;
-	background-image: url("../resources/img/forest.svg");
-	background-size: contain;
-	animation-name: fadeIn;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-duration: 4s;
+	.section-sep {
+		position: absolute;
+		top: 40rem;
+		bottom: 0;
+		left: 0;
+		background-image: url("../resources/img/forest.svg");
+		animation-name: fadeIn;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		animation-duration: 4s;
 
-	i {
-		display: block;
-		margin: auto;
-		margin-top: -3rem;
-		text-align: center;
-		width: 10rem;
-		font-size: 10rem;
-		line-height: 1rem;
-		color: color(text-lighter);
-		animation: 10s bounce 5s linear infinite;
-		transition: margin-top 0.3s;
-		cursor: pointer;
+		i {
+			display: block;
+			width: 10rem;
+			margin: auto;
+			margin-top: -3rem;
+			text-align: center;
+			font-size: 10rem;
+			line-height: 1rem;
+			color: color(text-lighter);
+			animation: 10s bounce 5s linear infinite;
+			transition: margin-top 0.3s;
+			cursor: pointer;
 
-		&:hover {
-			margin-top: -2rem;
+			&:hover {
+				margin-top: -2rem;
+			}
 		}
 	}
 }
 
 header {
+	display: block;
 	padding-top: 3rem;
-	width: 100%;
-	// background-color: color(shade-lightest);
 
 	@media (max-width: 1100px) {
 		div.column-second {
@@ -58,38 +55,37 @@ header {
 
 	/* Follow text hover */
 	span.follow-text {
-		color: color(shade-darkest);
 		position: absolute;
-		height: 100%;
 		top: 0;
 		left: 2rem;
+		height: 100%;
+		color: color(shade-darkest);
+		line-height: 9.3rem;
 		z-index: 1000;
 		opacity: 0;
-		line-height: 9.3rem;
 		transition: opacity 0s;
 	}
 
 	div.wrapper-table {
 		font-size: 0; /* to fix weird white space between inline-block children */
 
-		/* Follow links */
-
+		/* Follow links (row-spanning links, click to go to relevant section)*/
 		a.follow {
-			display: inline-block;
 			width: 100%;
+			display: inline-block;
 
-			&:hover {
+			&:hover { //bg on hover
 				background-color: color-alpha(shade-lightest, thick);
 
-				span.main {
+				span.main { //and hide standard text of second column
 					opacity: 0;
 
-					span {
+					span { // make sure one of the rotating word lists is hidden
 						opacity: 0 !important;
 					}
 				}
 
-				span.follow-text {
+				span.follow-text { //text to indicate where clicking the link takes you
 					opacity: 1;
 					transition: opacity 0.5s;
 					animation: 3s slide-left 100ms linear 1;
@@ -105,11 +101,11 @@ header {
 			font-size: 0;
 
 			li {
-				opacity: 0;
 				position: absolute;
+				opacity: 0;
 				bottom: -0.6rem;
-				line-height: $col2-fs;
 				font-size: $col2-fs;
+				line-height: $col2-fs;
 			}
 		}
 
@@ -117,15 +113,15 @@ header {
 
 		div {
 			position: relative;
-			opacity: 0;
 			padding: 2rem;
 			text-transform: uppercase;
+			opacity: 0;
 
 			&.column-first {
-				color: color(text-darkest);
 				float: left;
 				clear: left;
 				width: 45%;
+				color: color(text-darkest);
 				font-size: $col1-fs;
 				font-family: 'Questrial', sans-serif;
 				text-align: right;
