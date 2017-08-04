@@ -8,10 +8,14 @@ $col2-fs: 4.3rem;
 
 	.section-sep {
 		position: absolute;
+		width: 100%;
+		height: auto;
 		top: 40rem;
 		bottom: 0;
 		left: 0;
 		background-image: url("../resources/img/forest.svg");
+		background-size: contain;
+		background-attachment: scroll;
 		animation-name: fadeIn;
 		animation-timing-function: linear;
 		animation-iteration-count: 1;

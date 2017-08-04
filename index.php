@@ -4,8 +4,10 @@
 
 <?php include 'head.php' ?>
 
-<body>
+<body class="index">
+
 <div class="screen">
+
 <header>
 
   <div class="wrapper wrapper-table">
@@ -61,7 +63,7 @@
 </div>
 
 <section id="about-me">
-<?php print($V->render($C->get_section('about-me'))); ?>
+  <?php print($V->render($C->get_section('about-me'))); ?>
 </section>
 
 <div class="section-sep second">
@@ -71,7 +73,7 @@
   <?php print($V->render($C->get_section('skillsets'))); ?>
 </section>
 
-<div class="section-sep second third">
+<div class="section-sep third">
 </div>
 
 <section id="portfolio">
