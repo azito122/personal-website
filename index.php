@@ -55,7 +55,7 @@
 </header>
 
 <div class="section-sep">
-  <a href="#about-me">
+  <a href="#section_about-me">
     <i class="fa fa-angle-down" aria-hidden="true"></i>
   </a>
 </div>

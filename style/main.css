@@ -641,7 +641,9 @@ body.portfolio .content {
   margin: 3rem;
   margin-left: 10%;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 2rem;
+  white-space: pre-wrap; }
   body.portfolio .content a {
     color: blue; }
     body.portfolio .content a:hover {
@@ -655,3 +657,12 @@ body.portfolio section.syntree {
     background-image: url("../resources/img/syntree-2.png"); }
   body.portfolio section.syntree div.portfolio-screenshot.third {
     background-image: url("../resources/img/syntree-3.png"); }
+
+body.portfolio section.diviiportfolio {
+  background-color: #cacee2; }
+  body.portfolio section.diviiportfolio div.portfolio-screenshot.first {
+    background-image: url("../resources/img/diviiportfolio-1.png"); }
+  body.portfolio section.diviiportfolio div.portfolio-screenshot.second {
+    background-image: url("../resources/img/diviiportfolio-2.png"); }
+  body.portfolio section.diviiportfolio div.portfolio-screenshot.third {
+    background-image: url("../resources/img/diviiportfolio-3.png"); }

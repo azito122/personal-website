@@ -68,6 +68,8 @@ body.portfolio {
     margin-left: 10%;
     text-align: center;
     font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
 
     a {
       color: color(link);
@@ -88,6 +90,20 @@ body.portfolio {
     }
     div.portfolio-screenshot.third {
       background-image: url("../resources/img/syntree-3.png")
+    }
+  }
+
+  section.diviiportfolio {
+    background-color: lighten(color(php), 20);
+
+    div.portfolio-screenshot.first {
+      background-image: url("../resources/img/diviiportfolio-1.png");
+    }
+    div.portfolio-screenshot.second {
+      background-image: url("../resources/img/diviiportfolio-2.png")
+    }
+    div.portfolio-screenshot.third {
+      background-image: url("../resources/img/diviiportfolio-3.png")
     }
   }
 }
