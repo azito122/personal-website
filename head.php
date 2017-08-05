@@ -1,3 +1,4 @@
+<?php define("DATA_DIR", "data"); ?>
 <?php include 'classes/control.php'; ?>
 <?php include 'classes/view.php'; ?>
 <?php $C = new Control(); ?>

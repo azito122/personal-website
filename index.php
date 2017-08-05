@@ -62,24 +62,17 @@
 
 </div>
 
-<section id="about-me" class="section-1">
-  <?php print($V->render($C->get_section('about-me'))); ?>
-</section>
+<?php print($V->render($C->get('section_about-me'))); ?>
 
 <div class="section-sep second">
 </div>
 
-<section id="skillsets" class="section-2">
-  <?php print($V->render($C->get_section('skillsets'))); ?>
-</section>
+<?php print($V->render($C->get('section_skillsets'))); ?>
 
 <div class="section-sep third">
 </div>
 
-<section id="portfolio" class="section-3">
-  <?php print($V->render($C->get_section('portfolio'))); ?>
-</div>
-</section>
+<?php print($V->render($C->get('section_portfolio'))); ?>
 
 </body>
 <footer>

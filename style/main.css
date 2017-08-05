@@ -293,27 +293,27 @@ header div.wrapper-table div.row-third.column-first {
 header div.wrapper-table div.row-third.column-second {
   animation-delay: 4800ms; }
 
-#about-me .content {
+#section_about-me .content {
   line-height: 2rem; }
 
-#about-me .resume-download-wrapper {
+#section_about-me .resume-download-wrapper {
   position: absolute;
   top: 2rem;
   left: 2rem;
   overflow: hidden;
   border: 3px solid black;
   border-radius: 7px; }
-  #about-me .resume-download-wrapper:hover {
+  #section_about-me .resume-download-wrapper:hover {
     background-color: #000000; }
-    #about-me .resume-download-wrapper:hover ul {
+    #section_about-me .resume-download-wrapper:hover ul {
       height: 6.5rem;
       padding: 0.3rem 0; }
-    #about-me .resume-download-wrapper:hover a.resume-download {
+    #section_about-me .resume-download-wrapper:hover a.resume-download {
       background-color: #404040;
       color: #ffffff;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px; }
-  #about-me .resume-download-wrapper a.resume-download {
+  #section_about-me .resume-download-wrapper a.resume-download {
     display: inline-block;
     width: 13rem;
     padding: 0.7rem 0;
@@ -324,7 +324,7 @@ header div.wrapper-table div.row-third.column-second {
     text-transform: uppercase;
     z-index: 100;
     transition: background-color 0.3s, color 0.3s; }
-  #about-me .resume-download-wrapper ul {
+  #section_about-me .resume-download-wrapper ul {
     position: relative;
     width: 13rem;
     height: 0px;
@@ -333,12 +333,12 @@ header div.wrapper-table div.row-third.column-second {
     border-radius: 5px;
     z-index: 100;
     transition: height 0.3s; }
-    #about-me .resume-download-wrapper ul li {
+    #section_about-me .resume-download-wrapper ul li {
       position: relative;
       transition: background-color 0.5s;
       width: 100%;
       height: 3rem; }
-      #about-me .resume-download-wrapper ul li a {
+      #section_about-me .resume-download-wrapper ul li a {
         color: #ffffff;
         position: absolute;
         line-height: 3rem;
@@ -352,7 +352,7 @@ header div.wrapper-table div.row-third.column-second {
         font-weight: 200;
         text-transform: uppercase;
         transition: padding-left 0.3s; }
-      #about-me .resume-download-wrapper ul li:before {
+      #section_about-me .resume-download-wrapper ul li:before {
         content: "";
         position: absolute;
         top: 0;
@@ -363,60 +363,60 @@ header div.wrapper-table div.row-third.column-second {
         background-color: #5c76d1;
         border-radius: 1px;
         transition: width 0.3s; }
-      #about-me .resume-download-wrapper ul li:hover {
+      #section_about-me .resume-download-wrapper ul li:hover {
         background-color: #1a1a1a; }
-        #about-me .resume-download-wrapper ul li:hover a {
+        #section_about-me .resume-download-wrapper ul li:hover a {
           padding-left: 1.8rem; }
-        #about-me .resume-download-wrapper ul li:hover:before {
+        #section_about-me .resume-download-wrapper ul li:hover:before {
           width: 0.8rem; }
 
-#skillsets .section-content {
+#section_skillsets .section-content {
   width: auto;
   margin: 0;
   text-align: center; }
 
-#skillsets .tile {
+#section_skillsets .tile {
   display: inline-block;
   width: 25rem;
   vertical-align: top;
   padding: 1rem 3rem; }
-  #skillsets .tile > i {
+  #section_skillsets .tile > i {
     font-size: 10rem;
     margin-bottom: 3rem; }
-  #skillsets .tile .tile-title {
+  #section_skillsets .tile .tile-title {
     text-align: center; }
-  #skillsets .tile ul {
+  #section_skillsets .tile ul {
     display: inline-block;
     margin-top: 1.5rem;
     font-size: 1.5rem;
     text-align: left; }
-    #skillsets .tile ul i {
+    #section_skillsets .tile ul i {
       color: #000000;
       margin-right: 1rem; }
-      #skillsets .tile ul i.blank {
+      #section_skillsets .tile ul i.blank {
         display: inline-block;
         vertical-align: middle;
         width: 1em;
         height: 3px;
         background-color: black;
         border-radius: 5px; }
-    #skillsets .tile ul li {
+    #section_skillsets .tile ul li {
       padding: 1rem 0.5rem; }
-      #skillsets .tile ul li:hover {
+      #section_skillsets .tile ul li:hover {
         background-color: #b9d9ec; }
-        #skillsets .tile ul li:hover i {
+        #section_skillsets .tile ul li:hover i {
           color: inherit; }
 
-#portfolio {
+#section_portfolio {
   padding-left: 1rem;
   padding-right: 1rem; }
-  #portfolio .tiles-wrapper {
+  #section_portfolio .tiles-wrapper {
     text-align: center; }
-  #portfolio a.icon-link {
+  #section_portfolio a.icon-link {
     margin-left: 5rem; }
-    #portfolio a.icon-link:hover i {
+    #section_portfolio a.icon-link:hover i {
       color: #6cc644; }
-  #portfolio .tile {
+  #section_portfolio .tile {
     display: inline-block;
     position: relative;
     height: 300px;
@@ -428,7 +428,7 @@ header div.wrapper-table div.row-third.column-second {
     border-bottom: 1rem solid rgba(0, 0, 0, 0.8);
     border-radius: 3px;
     color: #ffffff; }
-    #portfolio .tile .tile-title {
+    #section_portfolio .tile .tile-title {
       z-index: 900;
       padding: 0.5rem 0;
       text-align: center;
@@ -436,7 +436,7 @@ header div.wrapper-table div.row-third.column-second {
       font-size: 1.4rem;
       background-color: rgba(0, 0, 0, 0.8);
       white-space: nowrap; }
-    #portfolio .tile div.overlay {
+    #section_portfolio .tile div.overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -444,7 +444,7 @@ header div.wrapper-table div.row-third.column-second {
       height: 100%;
       z-index: 800;
       transition: background-color 0.5s; }
-    #portfolio .tile p.tile-description {
+    #section_portfolio .tile p.tile-description {
       color: #000000;
       opacity: 0;
       z-index: 880;
@@ -454,12 +454,12 @@ header div.wrapper-table div.row-third.column-second {
       width: 75%;
       text-align: center;
       font-size: 1.2rem; }
-    #portfolio .tile:hover .tile-description {
+    #section_portfolio .tile:hover .tile-description {
       opacity: 1;
       margin-top: 3rem; }
-    #portfolio .tile:hover .tile-links {
+    #section_portfolio .tile:hover .tile-links {
       opacity: 1; }
-    #portfolio .tile .tile-links {
+    #section_portfolio .tile .tile-links {
       display: table;
       position: absolute;
       table-layout: fixed;
@@ -468,7 +468,7 @@ header div.wrapper-table div.row-third.column-second {
       width: 100%;
       height: 100%;
       opacity: 0; }
-      #portfolio .tile .tile-links a {
+      #section_portfolio .tile .tile-links a {
         display: table-cell;
         z-index: 910;
         vertical-align: bottom;
@@ -477,46 +477,46 @@ header div.wrapper-table div.row-third.column-second {
         text-align: center;
         font-size: 1rem;
         transition: padding-bottom 0.3s, color 0.3s, background 0.3s; }
-        #portfolio .tile .tile-links a i {
+        #section_portfolio .tile .tile-links a i {
           font-size: 2rem;
           color: #000000;
           margin-top: 0.3rem; }
-        #portfolio .tile .tile-links a:hover {
+        #section_portfolio .tile .tile-links a:hover {
           background: rgba(255, 255, 255, 0.3);
           background: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent, transparent);
           padding-bottom: 1.5rem;
           color: black; }
-    #portfolio .tile.syntree {
+    #section_portfolio .tile.syntree {
       background-image: url("../resources/img/syntree.png"); }
-      #portfolio .tile.syntree .overlay {
+      #section_portfolio .tile.syntree .overlay {
         background-color: rgba(247, 223, 30, 0.3); }
-      #portfolio .tile.syntree:hover .overlay {
+      #section_portfolio .tile.syntree:hover .overlay {
         background-color: #f7df1e; }
-      #portfolio .tile.syntree a.repo-link:hover {
+      #section_portfolio .tile.syntree a.repo-link:hover {
         color: #f7df1e; }
-    #portfolio .tile.diviiportfolio {
+    #section_portfolio .tile.diviiportfolio {
       background-image: url("../resources/img/diviiportfolio.png"); }
-      #portfolio .tile.diviiportfolio .overlay {
+      #section_portfolio .tile.diviiportfolio .overlay {
         background-color: rgba(21, 114, 182, 0.3); }
-      #portfolio .tile.diviiportfolio:hover .overlay {
+      #section_portfolio .tile.diviiportfolio:hover .overlay {
         background-color: #1572b6; }
-      #portfolio .tile.diviiportfolio a.repo-link:hover {
+      #section_portfolio .tile.diviiportfolio a.repo-link:hover {
         color: #1572b6; }
-    #portfolio .tile.picam {
+    #section_portfolio .tile.picam {
       background-image: url("../resources/img/syntree.png"); }
-      #portfolio .tile.picam .overlay {
+      #section_portfolio .tile.picam .overlay {
         background-color: rgba(199, 5, 61, 0.3); }
-      #portfolio .tile.picam:hover .overlay {
+      #section_portfolio .tile.picam:hover .overlay {
         background-color: #c7053d; }
-      #portfolio .tile.picam a.repo-link:hover {
+      #section_portfolio .tile.picam a.repo-link:hover {
         color: #c7053d; }
-    #portfolio .tile.number-game {
+    #section_portfolio .tile.number-game {
       background-image: url("../resources/img/syntree.png"); }
-      #portfolio .tile.number-game .overlay {
+      #section_portfolio .tile.number-game .overlay {
         background-color: rgba(255, 222, 87, 0.3); }
-      #portfolio .tile.number-game:hover .overlay {
+      #section_portfolio .tile.number-game:hover .overlay {
         background-color: #ffde57; }
-      #portfolio .tile.number-game a.repo-link:hover {
+      #section_portfolio .tile.number-game a.repo-link:hover {
         color: #ffde57; }
 
 .section-sep {

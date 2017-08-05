@@ -1,0 +1,15 @@
+@@type : list_tile
+
+@@title : Systems
+
+@@image : <i class="fa fa-list-alt"></i>
+
+@@list_items :
+  <i class="devicon-git-plain colored"></i> Git,
+  <i class="devicon-mysql-plain colored"></i> MySQL,
+  <i class="devicon-moodle-plain colored"></i> Moodle,
+  <i class="devicon-drupal-plain colored"></i> Drupal,
+  <i class="blank"></i> LaTeX,
+  <i class="blank"></i> Vagrant
+
+@@weight : 1

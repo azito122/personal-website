@@ -7,8 +7,10 @@
 
 @@section_number : 3
 
-@@pieces_of_type : portfolio_tile
+@@content_of_type : portfolio_tile
 
 @@max_pieces : 3
 
 @@content_wrapper : <div class="tiles-wrapper">
+
+@@content_wrapper_close : </div>
