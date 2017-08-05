@@ -2,7 +2,7 @@
 
 /* Colors */
 $sb: rgb(170, 185, 238); /*section base*/
-$m: rgb(0, 243, 143); /*mix*/
+$m: rgb(87, 255, 185); /*mix*/
 $mf: 80; /*mix factor*/
 $mfs: 10; /*mix factor step*/
 
@@ -13,7 +13,7 @@ $colors: (
   'shade-lighter': #ededed,
 	'shade-darker': #404040,
   'shade-darkest': #000000,
-  'link': #000000,
+  'link': blue,
 	'text-darkest': #000000,
 	'text-darker': #8c8c8c,
   'text-lighter': #c2c2c2,

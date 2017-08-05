@@ -1,0 +1,93 @@
+body.portfolio {
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-screenshots {
+    text-align: center;
+    min-height: 270px;
+    padding: 1rem 0;
+  }
+
+  div.portfolio-screenshot {
+    display: inline-block;
+    vertical-align: middle;
+    width: 450px;
+    height: 253.4px;
+    border: 1px solid black;
+    margin: 5px;
+    background-position: top center;
+    background-size: cover;
+    transition: width 0.3s, height 0.3s, margin 0.3s;
+
+    &:hover {
+      width: 460px;
+      height: 259.45px;
+      margin: 5px 0;
+
+      .screenshot-title {
+        opacity: 1;
+      }
+    }
+
+    a.site-link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .screenshot-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: color(text-lightest);
+      background: color-alpha(shade-darkest, thick);
+      padding: 0.5rem 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  }
+
+  .technologies-used {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid color(shade-darkest);
+    border-bottom: 1px solid color(shade-darkest);
+    font-size: 1.3rem;
+    background-color: color-alpha(shade-darkest, very-thin);
+  }
+
+  .content {
+    width: 80%;
+    margin: 3rem;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 1.5rem;
+
+    a {
+      color: color(link);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  section.syntree {
+    background-color: lighten(color(javascript), 20);
+    div.portfolio-screenshot.first {
+      background-image: url("../resources/img/syntree-1.png");
+    }
+    div.portfolio-screenshot.second {
+      background-image: url("../resources/img/syntree-2.png")
+    }
+    div.portfolio-screenshot.third {
+      background-image: url("../resources/img/syntree-3.png")
+    }
+  }
+}

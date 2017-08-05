@@ -21,7 +21,7 @@ body, html {
 
 a {
 	text-decoration: none;
-	color: color(link);
+	color: color(shade-darkest); // the color 'link' is for actual link links; since most links are not inline, underliny type links, it makes more sense to have the default be the text color
 }
 
 li {
