@@ -1,4 +1,7 @@
 body.portfolio {
+  section {
+    border-bottom: 1rem solid black;
+  }
 
   .section-title {
     margin-bottom: 2rem;
@@ -6,7 +9,7 @@ body.portfolio {
 
   .portfolio-screenshots {
     text-align: center;
-    min-height: 270px;
+    min-height: 300px;
     padding: 1rem 0;
   }
 
@@ -22,9 +25,9 @@ body.portfolio {
     transition: width 0.3s, height 0.3s, margin 0.3s;
 
     &:hover {
-      width: 460px;
-      height: 259.45px;
-      margin: 5px 0;
+      // width: 460px;
+      // height: 259.45px;
+      // margin: 5px 0;
 
       .screenshot-title {
         opacity: 1;
