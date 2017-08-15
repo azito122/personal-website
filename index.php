@@ -16,7 +16,7 @@
         Andy
       </div>
       <div class="row-first column-second">
-        <span class="follow-text">About me <i class="fa fa-angle-double-right"></i></span>
+        <!-- <span class="follow-text">About me <i class="fa fa-angle-double-right"></i></span> -->
         <span class="main">(That's me)</span>
       </div>
     </a>

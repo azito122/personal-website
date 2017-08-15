@@ -1,9 +1,10 @@
-$col1-fs: 5rem;
-$col2-fs: 4.3rem;
+$col1-fs: 5.5rem;
+$col2-fs: 5rem;
 
 .screen {
 	position: relative;
 	height: 100%; // based on body and html having height 100%
+	min-height: 45rem;
 	background: linear-gradient(mix(color(section-1), white, 40), white);
 
 	.section-sep {
@@ -41,41 +42,137 @@ $col2-fs: 4.3rem;
 	}
 }
 
+@media screen and (max-width: bk(ml)) {
+	.wrapper-table {
+		.column-first {
+			padding-right: 0.5rem;
+		}
+
+		.column-second {
+			padding-left: 0.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: bk(m)) {
+	.screen .section-sep {
+		background-image: none;
+	}
+
+	header .wrapper.wrapper-table {
+		display: block;
+
+		.follow {
+			display: block;
+
+			&:hover {
+				background-color: transparent;
+			}
+
+			div {
+				width: 100%;
+				display: block;
+				text-align: center;
+				padding: 2rem 1rem;
+
+				&.column-second {
+					display: none;
+					font-size: 3rem;
+					text-align: center;
+
+					ul li {
+						// position: relative;
+						animation-name: rotateWordH;
+					}
+
+					&.row-second .main {
+						display: inline-block;
+						width: 23rem;
+						text-align: left;
+
+						ul li {
+							font-size: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 header {
 	display: block;
 	padding-top: 3rem;
 
-	// @media (max-width: 1100px) {
-	// 	div.column-second {
-	// 		display: none;
-	// 	}
-	//
-	// 	div.wrapper-table div.column-first {
-	// 		text-align: center !important;
-	// 		width: 100% !important;
-	// 	}
-	// }
-
-	/* Follow hover-text */
+	/* Follow hover-text, appears on hover to indicate where clicking will take you */
 	span.follow-text {
+		display: table-cell;
 		position: absolute;
-		top: 0;
-		left: 2rem;
-		height: 100%;
+		vertical-align: middle;
 		color: color(shade-darkest);
-		line-height: 9.3rem;
 		z-index: 1000;
 		opacity: 0;
 		transition: opacity 0s;
 	}
 
-	div.wrapper-table {
-		font-size: 0; /* to fix weird white space between inline-block children */
+	.wrapper-table {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+
+		/* Main content */
+		div { // All cells
+			display: table-cell;
+			position: relative;
+			vertical-align: middle;
+			padding: 2rem;
+			text-transform: uppercase;
+			opacity: 0;
+
+			&.column-first {
+				width: 45%;
+				color: color(text-darkest);
+				font-size: $col1-fs;
+				font-family: 'Questrial', sans-serif;
+				text-align: right;
+				letter-spacing: 1.3rem;
+				text-indent: 1.3rem;
+			}
+
+			&.column-second {
+				width: 55%;
+				color: color(text-lighter);
+				font-size: $col2-fs;
+				font-family: 'Questrial', sans-serif;
+				text-align: left;
+
+				.main { // Main content within a cell
+					transition: opacity 0.3s;
+				}
+			}
+
+			&.row-third.column-second ul { // Special for the multiline rotating text
+				display: inline-table;
+				width: 100%;
+				vertical-align: text-bottom;
+
+				li {
+					font-size: 2rem;
+
+					span {
+						display: table-cell;
+						height: $col2-fs;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
 
 		/* Follow links (row-spanning links, click to go to relevant section)*/
-		a.follow {
+		.follow {
 			width: 100%;
-			display: inline-block;
+			display: table-row;
+			transition: background-color 0.2s;
 
 			&:hover { //bg on hover
 				background-color: color-alpha(shade-lightest, thick);
@@ -99,68 +196,16 @@ header {
 		/* Word/phrase rotation lists */
 
 		div.column-second ul {
-			display: inline-block;
+			display: inline-table;
+			vertical-align: bottom;
 
 			li {
+				display: table-cell;
+				vertical-align: middle;
 				position: absolute;
-				bottom: -0.6rem;
+				bottom: 0;
 				font-size: $col2-fs;
-				line-height: $col2-fs;
 				opacity: 0;
-			}
-		}
-
-		/* Main content */
-
-		div { // All cells
-			position: relative;
-			padding: 2rem;
-			text-transform: uppercase;
-			opacity: 0;
-
-			&.column-first {
-				float: left;
-				clear: left;
-				width: 45%;
-				color: color(text-darkest);
-				font-size: $col1-fs;
-				font-family: 'Questrial', sans-serif;
-				text-align: right;
-				letter-spacing: 1.3rem;
-			}
-
-			&.column-second {
-				float: right;
-				clear: right;
-				width: 55%;
-				color: color(text-lighter);
-				font-size: $col2-fs;
-				line-height: $col1-fs;
-				font-family: 'Questrial', sans-serif;
-				text-align: left;
-
-				span.main { // Main content within a cell
-					transition: opacity 0.3s;
-				}
-			}
-
-			&.row-third.column-second ul { // Special for the multiline rotating text
-				display: table;
-				width: 100%;
-
-				li {
-					display: table;
-					top: 0.7rem;
-					font-size: 2rem;
-					line-height: 2rem;
-
-					span {
-						display: table-cell;
-						height: 4rem;
-						vertical-align: middle;
-						transition: opacity 0.5s;
-					}
-				}
 			}
 		}
 	}

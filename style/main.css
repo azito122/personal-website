@@ -30,6 +30,24 @@
   100% {
     opacity: 0; } }
 
+@keyframes rotateWordH {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  5% {
+    opacity: 1;
+    transform: translateX(0%); }
+  21% {
+    opacity: 1;
+    transform: translateX(0%); }
+  24% {
+    opacity: 0; }
+  26% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 0; } }
+
 @keyframes bounce {
   0% {
     transform: translateY(0%); }
@@ -99,6 +117,7 @@ li {
 .screen {
   position: relative;
   height: 100%;
+  min-height: 45rem;
   background: linear-gradient(#dde3f8, white); }
   .screen .section-sep {
     position: absolute;
@@ -139,36 +158,102 @@ li {
       .screen .section-sep i:hover {
         margin-top: -2rem; }
 
+@media screen and (max-width: 1224px) {
+  .wrapper-table .column-first {
+    padding-right: 0.5rem; }
+  .wrapper-table .column-second {
+    padding-left: 0.5rem; } }
+
+@media screen and (max-width: 1024px) {
+  .screen .section-sep {
+    background-image: none; }
+  header .wrapper.wrapper-table {
+    display: block; }
+    header .wrapper.wrapper-table .follow {
+      display: block; }
+      header .wrapper.wrapper-table .follow:hover {
+        background-color: transparent; }
+      header .wrapper.wrapper-table .follow div {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 2rem 1rem; }
+        header .wrapper.wrapper-table .follow div.column-second {
+          display: none;
+          font-size: 3rem;
+          text-align: center; }
+          header .wrapper.wrapper-table .follow div.column-second ul li {
+            animation-name: rotateWordH; }
+          header .wrapper.wrapper-table .follow div.column-second.row-second .main {
+            display: inline-block;
+            width: 23rem;
+            text-align: left; }
+            header .wrapper.wrapper-table .follow div.column-second.row-second .main ul li {
+              font-size: 3rem; } }
+
 header {
   display: block;
   padding-top: 3rem;
-  /* Follow hover-text */ }
+  /* Follow hover-text, appears on hover to indicate where clicking will take you */ }
   header span.follow-text {
+    display: table-cell;
     position: absolute;
-    top: 0;
-    left: 2rem;
-    height: 100%;
+    vertical-align: middle;
     color: #000000;
-    line-height: 9.3rem;
     z-index: 1000;
     opacity: 0;
     transition: opacity 0s; }
-  header div.wrapper-table {
-    font-size: 0;
-    /* to fix weird white space between inline-block children */
+  header .wrapper-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    /* Main content */
     /* Follow links (row-spanning links, click to go to relevant section)*/
-    /* Word/phrase rotation lists */
-    /* Main content */ }
-    header div.wrapper-table a.follow {
+    /* Word/phrase rotation lists */ }
+    header .wrapper-table div {
+      display: table-cell;
+      position: relative;
+      vertical-align: middle;
+      padding: 2rem;
+      text-transform: uppercase;
+      opacity: 0; }
+      header .wrapper-table div.column-first {
+        width: 45%;
+        color: #000000;
+        font-size: 5.5rem;
+        font-family: 'Questrial', sans-serif;
+        text-align: right;
+        letter-spacing: 1.3rem;
+        text-indent: 1.3rem; }
+      header .wrapper-table div.column-second {
+        width: 55%;
+        color: #c2c2c2;
+        font-size: 5rem;
+        font-family: 'Questrial', sans-serif;
+        text-align: left; }
+        header .wrapper-table div.column-second .main {
+          transition: opacity 0.3s; }
+      header .wrapper-table div.row-third.column-second ul {
+        display: inline-table;
+        width: 100%;
+        vertical-align: text-bottom; }
+        header .wrapper-table div.row-third.column-second ul li {
+          font-size: 2rem; }
+          header .wrapper-table div.row-third.column-second ul li span {
+            display: table-cell;
+            height: 5rem;
+            vertical-align: middle; }
+    header .wrapper-table .follow {
       width: 100%;
-      display: inline-block; }
-      header div.wrapper-table a.follow:hover {
+      display: table-row;
+      transition: background-color 0.2s; }
+      header .wrapper-table .follow:hover {
         background-color: rgba(255, 255, 255, 0.8); }
-        header div.wrapper-table a.follow:hover span.main {
+        header .wrapper-table .follow:hover span.main {
           opacity: 0; }
-          header div.wrapper-table a.follow:hover span.main span {
+          header .wrapper-table .follow:hover span.main span {
             opacity: 0 !important; }
-        header div.wrapper-table a.follow:hover span.follow-text {
+        header .wrapper-table .follow:hover span.follow-text {
           opacity: 1;
           transition: opacity 0.5s;
           animation-name: slide-left;
@@ -179,52 +264,16 @@ header {
           animation-direction: normal;
           animation-fill-mode: forwards;
           animation-play-state: running; }
-    header div.wrapper-table div.column-second ul {
-      display: inline-block; }
-      header div.wrapper-table div.column-second ul li {
+    header .wrapper-table div.column-second ul {
+      display: inline-table;
+      vertical-align: bottom; }
+      header .wrapper-table div.column-second ul li {
+        display: table-cell;
+        vertical-align: middle;
         position: absolute;
-        bottom: -0.6rem;
-        font-size: 4.3rem;
-        line-height: 4.3rem;
-        opacity: 0; }
-    header div.wrapper-table div {
-      position: relative;
-      padding: 2rem;
-      text-transform: uppercase;
-      opacity: 0; }
-      header div.wrapper-table div.column-first {
-        float: left;
-        clear: left;
-        width: 45%;
-        color: #000000;
+        bottom: 0;
         font-size: 5rem;
-        font-family: 'Questrial', sans-serif;
-        text-align: right;
-        letter-spacing: 1.3rem; }
-      header div.wrapper-table div.column-second {
-        float: right;
-        clear: right;
-        width: 55%;
-        color: #c2c2c2;
-        font-size: 4.3rem;
-        line-height: 5rem;
-        font-family: 'Questrial', sans-serif;
-        text-align: left; }
-        header div.wrapper-table div.column-second span.main {
-          transition: opacity 0.3s; }
-      header div.wrapper-table div.row-third.column-second ul {
-        display: table;
-        width: 100%; }
-        header div.wrapper-table div.row-third.column-second ul li {
-          display: table;
-          top: 0.7rem;
-          font-size: 2rem;
-          line-height: 2rem; }
-          header div.wrapper-table div.row-third.column-second ul li span {
-            display: table-cell;
-            height: 4rem;
-            vertical-align: middle;
-            transition: opacity 0.5s; }
+        opacity: 0; }
 
 /* Animations */
 header div.wrapper-table div {

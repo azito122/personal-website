@@ -53,6 +53,19 @@ $opacity: (
   // ... etc.
 );
 
+$breakpoints: (
+  'xs': 320px,
+  's': 480px,
+  'ms': 768px,
+  'm': 1024px,
+  'ml': 1224px,
+  'l': 1824px,
+);
+
+@function bk($name) {
+  @return map-get($breakpoints, $name);
+}
+
 @function color-alpha($name: 'primary', $o: 0) {
   $color: color($name);
 
@@ -124,6 +137,15 @@ $opacity: (
 	21% { opacity: 1; transform: translateY(0%) }
 	24% { opacity: 0 }
 	26% { opacity: 0; transform: translateY(-100%) }
+	100% {opacity: 0 }
+}
+
+@keyframes rotateWordH {
+	0% { opacity: 0; transform: translateX(100%) }
+	5% { opacity: 1; transform: translateX(0%) }
+	21% { opacity: 1; transform: translateX(0%) }
+	24% { opacity: 0 }
+	26% { opacity: 0; transform: translateX(-100%) }
 	100% {opacity: 0 }
 }
 
