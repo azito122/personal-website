@@ -57,7 +57,7 @@ $breakpoints: (
   'xs': 320px,
   's': 480px,
   'ms': 768px,
-  'm': 1024px,
+  'm': 1000px,
   'ml': 1224px,
   'l': 1824px,
 );
@@ -123,6 +123,11 @@ $breakpoints: (
     animation-fill-mode: $fill-mode;
     animation-play-state: $play-state;
   }
+
+@mixin letter-spacing($val) {
+  letter-spacing: $val;
+  text-indent: $val;
+}
 
 /* Keyframes */
 

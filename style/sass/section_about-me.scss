@@ -1,7 +1,35 @@
 #section_about-me {
-	@media screen and (max-width: bk(m)) {
-			.resume-download-wrapper {
 
+	@media screen and (max-width: bk(m)) {
+			div.resume-download-wrapper {
+				position: relative;
+				display: block;
+				margin: auto;
+				background-color: color(shade-darkest);
+				top: 0;
+				left: 0;
+
+				&:hover {
+					ul {
+						height: auto;
+					}
+				}
+
+				ul {
+					height: auto;
+					padding: 0.3rem 0;
+
+					li a {
+						position: relative;
+					}
+				}
+
+				a.resume-download {
+					background-color: color(shade-darker);
+					color: color(shade-lightest);
+					border-bottom-left-radius: 8px;
+					border-bottom-right-radius: 8px;
+				}
 			}
 	}
 
@@ -10,6 +38,7 @@
 	}
 
 	.resume-download-wrapper {
+		width: 13rem;
 		position: absolute;
 		top: 2rem;
 		left: 2rem;

@@ -54,8 +54,7 @@ $col2-fs: 5rem;
 @media screen and (max-width: bk(ml)) {
 	header .wrapper-table div.cell {
 		&.column-first {
-			padding-right: 0.5rem;
-			letter-spacing: 0.5rem;
+			@include letter-spacing(0.4rem)
 			width: 35%;
 		}
 
