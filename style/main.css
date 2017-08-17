@@ -50,17 +50,17 @@
 
 @keyframes bounce {
   0% {
-    transform: translateY(0%); }
+    margin-bottom: 0; }
   2% {
-    transform: translateY(130%); }
+    margin-bottom: -1rem; }
   4% {
-    transform: translateY(0%); }
+    margin-bottom: 0; }
   6% {
-    transform: translateY(130%); }
+    margin-bottom: -1rem; }
   8% {
-    transform: translateY(0%); }
+    margin-bottom: 0; }
   100% {
-    transform: translateY(0%); } }
+    margin-bottom: 0; } }
 
 @keyframes slide-left {
   0% {
@@ -99,6 +99,9 @@
   display: block;
   clear: both; }
 
+html {
+  overflow-x: hidden; }
+
 body, html {
   border: none;
   height: 100%;
@@ -125,7 +128,6 @@ li {
     height: auto;
     top: 40rem;
     bottom: 0;
-    background-image: url("../resources/img/forest.svg");
     background-size: contain;
     background-attachment: scroll;
     animation-name: fadeIn;
@@ -136,32 +138,36 @@ li {
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: running; }
-    .screen .section-sep i {
-      display: block;
-      width: 10rem;
-      margin: auto;
-      margin-top: -3rem;
-      text-align: center;
-      font-size: 10rem;
-      line-height: 1rem;
-      color: #c2c2c2;
-      transition: margin-top 0.3s;
-      cursor: pointer;
-      animation-name: bounce;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-delay: 5s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-play-state: running; }
-      .screen .section-sep i:hover {
-        margin-top: -2rem; }
+    .screen .section-sep a {
+      position: absolute;
+      bottom: 0;
+      left: 50%; }
+      .screen .section-sep a i {
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-50%);
+        font-size: 10rem;
+        color: #c2c2c2;
+        transition: transform 0.3s;
+        cursor: pointer;
+        animation-name: bounce;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running; }
+        .screen .section-sep a i:hover {
+          animation-play-state: paused;
+          transform: translate(-50%, 1rem); }
 
 @media screen and (max-width: 1224px) {
-  .wrapper-table .column-first {
-    padding-right: 0.5rem; }
-  .wrapper-table .column-second {
+  header .wrapper-table div.cell.column-first {
+    padding-right: 0.5rem;
+    letter-spacing: 0.5rem;
+    width: 35%; }
+  header .wrapper-table div.cell.column-second {
     padding-left: 0.5rem; } }
 
 @media screen and (max-width: 1024px) {
@@ -177,7 +183,8 @@ li {
         width: 100%;
         display: block;
         text-align: center;
-        padding: 2rem 1rem; }
+        padding: 1rem;
+        padding: 5vh 1rem; }
         header .wrapper.wrapper-table .follow div.column-second {
           display: none;
           font-size: 3rem;
@@ -195,7 +202,7 @@ header {
   display: block;
   padding-top: 3rem;
   /* Follow hover-text, appears on hover to indicate where clicking will take you */ }
-  header span.follow-text {
+  header .follow-text {
     display: table-cell;
     position: absolute;
     vertical-align: middle;
@@ -210,14 +217,14 @@ header {
     /* Main content */
     /* Follow links (row-spanning links, click to go to relevant section)*/
     /* Word/phrase rotation lists */ }
-    header .wrapper-table div {
+    header .wrapper-table .cell {
       display: table-cell;
       position: relative;
       vertical-align: middle;
       padding: 2rem;
       text-transform: uppercase;
       opacity: 0; }
-      header .wrapper-table div.column-first {
+      header .wrapper-table .cell.column-first {
         width: 45%;
         color: #000000;
         font-size: 5.5rem;
@@ -225,24 +232,27 @@ header {
         text-align: right;
         letter-spacing: 1.3rem;
         text-indent: 1.3rem; }
-      header .wrapper-table div.column-second {
+      header .wrapper-table .cell.column-second {
         width: 55%;
         color: #c2c2c2;
         font-size: 5rem;
         font-family: 'Questrial', sans-serif;
         text-align: left; }
-        header .wrapper-table div.column-second .main {
+        header .wrapper-table .cell.column-second .main {
           transition: opacity 0.3s; }
-      header .wrapper-table div.row-third.column-second ul {
-        display: inline-table;
-        width: 100%;
-        vertical-align: text-bottom; }
-        header .wrapper-table div.row-third.column-second ul li {
-          font-size: 2rem; }
-          header .wrapper-table div.row-third.column-second ul li span {
-            display: table-cell;
-            height: 5rem;
-            vertical-align: middle; }
+      header .wrapper-table .cell.row-third.column-second {
+        font-size: 5.5rem; }
+        header .wrapper-table .cell.row-third.column-second ul {
+          display: table;
+          width: 100%;
+          height: 6.20rem; }
+          header .wrapper-table .cell.row-third.column-second ul li {
+            font-size: 2rem;
+            bottom: auto; }
+            header .wrapper-table .cell.row-third.column-second ul li span {
+              display: table-cell;
+              height: 6.20rem;
+              vertical-align: middle; }
     header .wrapper-table .follow {
       width: 100%;
       display: table-row;
@@ -408,7 +418,6 @@ header div.wrapper-table div.row-third.column-second {
         left: 0;
         height: 100%;
         width: 0;
-        background-color: "92.2505, 117.92675, 208.6495";
         background-color: #5c76d1;
         border-radius: 1px;
         transition: width 0.3s; }

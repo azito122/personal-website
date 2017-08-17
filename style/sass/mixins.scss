@@ -153,15 +153,15 @@ $bounce-for: 0.8;
 $every: 10;
 $per: ($bounce-for/$every)*100;
 $x: $per/2;
-$displace: 130%;
+$displace: 1rem;
 
 @keyframes bounce {
-	0% { transform: translateY(0%) }
-	#{($x*0.5)}% { transform: translateY($displace) }
-	#{($x*1)}% { transform: translateY(0%) }
-	#{($x*1.5)}% { transform: translateY($displace) }
-	#{($per)}% { transform: translateY(0%) }
-	100% { transform: translateY(0%) }
+	0% { margin-bottom: 0 }
+	#{($x*0.5)}% { margin-bottom: -$displace }
+	#{($x*1)}% { margin-bottom: 0 }
+	#{($x*1.5)}% { margin-bottom: -$displace }
+	#{($per)}% { margin-bottom: 0 }
+	100% { margin-bottom: 0 }
 }
 
 $s: 0.5;

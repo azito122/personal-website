@@ -1,4 +1,9 @@
 #section_about-me {
+	@media screen and (max-width: bk(m)) {
+			.resume-download-wrapper {
+
+			}
+	}
 
 	.content {
 		line-height: 2rem;
@@ -80,7 +85,6 @@
 					left: 0;
 					height: 100%;
 					width: 0;
-					background-color: '#{(red(color(section-1-accent)))}, #{(green(color(section-1-accent)))}, #{(blue(color(section-1-accent)))}';
 					background-color: color(section-1-accent);
 					border-radius: 1px;
 					transition: width 0.3s;

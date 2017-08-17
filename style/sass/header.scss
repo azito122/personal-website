@@ -13,42 +13,53 @@ $col2-fs: 5rem;
 		height: auto; // override parallax section-seps
 		top: 40rem;
 		bottom: 0;
-		background-image: url("../resources/img/forest.svg");
+		// background-image: url("../resources/img/forest.svg");
 		background-size: contain; // override parallax section-seps
 		background-attachment: scroll; // override parallax section-seps
 		@include animate ($name: fadeIn, $duration: 4s)
 
-		i {
-			display: block;
-			width: 10rem;
-			margin: auto;
-			margin-top: -3rem;
-			text-align: center;
-			font-size: 10rem;
-			line-height: 1rem;
-			color: color(text-lighter);
-			transition: margin-top 0.3s;
-			cursor: pointer;
-			@include animate (
-				$name: bounce,
-				$duration: 10s,
-				$delay: 5s,
-				$iteration-count: infinite);
+		a {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
 
-			&:hover {
-				margin-top: -2rem;
+			i {
+				position: absolute;
+				bottom: 0;
+				transform: translateX(-50%);
+				// width: 100%;
+				// margin: auto;
+				// margin-top: -3rem;
+				// text-align: center;
+				font-size: 10rem;
+				// line-height: 1rem;
+				color: color(text-lighter);
+				transition: transform 0.3s;
+				cursor: pointer;
+				@include animate (
+					$name: bounce,
+					$duration: 10s,
+					$delay: 5s,
+					$iteration-count: infinite);
+
+				&:hover {
+					animation-play-state: paused;
+					transform: translate(-50%, 1rem);
+				}
 			}
 		}
 	}
 }
 
 @media screen and (max-width: bk(ml)) {
-	.wrapper-table {
-		.column-first {
+	header .wrapper-table div.cell {
+		&.column-first {
 			padding-right: 0.5rem;
+			letter-spacing: 0.5rem;
+			width: 35%;
 		}
 
-		.column-second {
+		&.column-second {
 			padding-left: 0.5rem;
 		}
 	}
@@ -73,7 +84,8 @@ $col2-fs: 5rem;
 				width: 100%;
 				display: block;
 				text-align: center;
-				padding: 2rem 1rem;
+				padding: 1rem;
+				padding: 5vh 1rem;
 
 				&.column-second {
 					display: none;
@@ -105,7 +117,7 @@ header {
 	padding-top: 3rem;
 
 	/* Follow hover-text, appears on hover to indicate where clicking will take you */
-	span.follow-text {
+	.follow-text {
 		display: table-cell;
 		position: absolute;
 		vertical-align: middle;
@@ -121,7 +133,7 @@ header {
 		width: 100%;
 
 		/* Main content */
-		div { // All cells
+		.cell { // All cells
 			display: table-cell;
 			position: relative;
 			vertical-align: middle;
@@ -151,18 +163,24 @@ header {
 				}
 			}
 
-			&.row-third.column-second ul { // Special for the multiline rotating text
-				display: inline-table;
-				width: 100%;
-				vertical-align: text-bottom;
+			&.row-third.column-second {
+				font-size: $col1-fs;
 
-				li {
-					font-size: 2rem;
+				ul { // Special for the multiline rotating text
+					display: table;
+					width: 100%;
+					height: 6.20rem;
+					// vertical-align: text-bottom;
 
-					span {
-						display: table-cell;
-						height: $col2-fs;
-						vertical-align: middle;
+					li {
+						font-size: 2rem;
+						bottom: auto;
+
+						span {
+							display: table-cell;
+							height: 6.20rem;
+							vertical-align: middle;
+						}
 					}
 				}
 			}

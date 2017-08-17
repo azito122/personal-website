@@ -12,19 +12,19 @@
 
   <div class="wrapper wrapper-table">
     <a class="follow" href="#about-me">
-      <div class="row-first column-first">
+      <div class="cell row-first column-first">
         Andy
       </div>
-      <div class="row-first column-second">
-        <!-- <span class="follow-text">About me <i class="fa fa-angle-double-right"></i></span> -->
+      <div class="cell row-first column-second">
+        <span class="follow-text">About me <i class="fa fa-angle-double-right"></i></span>
         <span class="main">(That's me)</span>
       </div>
     </a>
     <a class="follow" href="#skillsets">
-      <div class="row-second column-first">
+      <div class="cell row-second column-first">
         Codes
       </div>
-      <div class="row-second column-second">
+      <div class="cell row-second column-second">
         <span class="follow-text">Skillsets <i class="fa fa-angle-double-right"></i></span>
         <span class="main">With
           <ul>
@@ -37,10 +37,10 @@
       </div>
     </a>
     <a class="follow" href="#portfolio">
-      <div class="row-third column-first">
+      <div class="cell row-third column-first">
         Things
       </div>
-      <div class="row-third column-second">
+      <div class="cell row-third column-second">
         <span class="follow-text">Portfolio <i class="fa fa-angle-double-right"></i></span>
         <span class="main"><ul>
           <li><span>A syntax tree drawing web app</span></li>

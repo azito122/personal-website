@@ -13,6 +13,10 @@
 	clear: both;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body, html {
 	border: none;
 	height: 100%; // required for header
