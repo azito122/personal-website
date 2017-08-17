@@ -6,6 +6,11 @@
 
 <head>
 
+<title>Andy Codes Things | Freelance Web Developer</title>
+<meta name="description" content="Andrew Zito is a freelance web developer currently residing in upstate New York. He seeks to start a career in web development." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+
 <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 <link rel="stylesheet" href="style/normalize.css">
