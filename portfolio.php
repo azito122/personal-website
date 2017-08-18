@@ -52,5 +52,21 @@
   </div>
 </section>
 
+<section id="section_picam" class="section-3 picam">
+  <h1 class="section-title">Hampshire Picam Script</h1>
+  <div cass="section-content">
+    <div class="portfolio-screenshots">
+      <div class="img portfolio-screenshot first">
+        <span class="screenshot-title">Source Code</span>
+        <a class="site-link" title="Hampshire Picam Source Code" href="https://github.com/azito122/hamp-picam"></a>
+      </div>
+    </div>
+    <div class="technologies-used">Python, Raspberry Pi</div>
+    <p class="content">A Raspberry Pi + Picamera (Python library) security camera script.
+
+This script will watch for motion. If it detects motion it will take a picture and upload it to a remote server.</p>
+  </div>
+</section>
+
 </body>
 </html>

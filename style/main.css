@@ -122,81 +122,45 @@ li {
   height: 100%;
   min-height: 40rem;
   background: linear-gradient(#dde3f8, white); }
-  .screen .section-sep {
+  .screen a.down-arrow {
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 40rem;
     bottom: 0;
-    background-size: contain;
-    background-attachment: scroll;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running; }
-    .screen .section-sep a {
+    left: 50%; }
+    .screen a.down-arrow i {
       position: absolute;
       bottom: 0;
-      left: 50%; }
-      .screen .section-sep a i {
-        position: absolute;
-        bottom: 0;
-        transform: translateX(-50%);
-        font-size: 10rem;
-        color: #c2c2c2;
-        transition: transform 0.3s;
-        cursor: pointer;
-        animation-name: bounce;
-        animation-duration: 10s;
-        animation-timing-function: linear;
-        animation-delay: 5s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-play-state: running; }
-        .screen .section-sep a i:hover {
-          animation-play-state: paused;
-          transform: translate(-50%, 1rem); }
-
-@media screen and (max-width: 1224px) {
-  header .wrapper-table div.cell.column-first {
-    letter-spacing: 0.4rem;
-    text-indent: 0.4rem;
-    width: 35%; }
-  header .wrapper-table div.cell.column-second {
-    padding-left: 0.5rem; } }
-
-@media screen and (max-width: 1000px) {
-  .screen .section-sep {
-    background-image: none; }
-  header .wrapper.wrapper-table {
-    display: block; }
-    header .wrapper.wrapper-table .follow {
-      display: block; }
-      header .wrapper.wrapper-table .follow:hover {
-        background-color: transparent; }
-      header .wrapper.wrapper-table .follow div {
-        width: 100%;
-        display: block;
-        text-align: center;
-        padding: 1rem;
-        padding: 4vh 1rem; }
-        header .wrapper.wrapper-table .follow div.column-second {
-          display: none;
-          font-size: 3rem;
-          text-align: center; }
-          header .wrapper.wrapper-table .follow div.column-second ul li {
-            animation-name: rotateWordH; }
-          header .wrapper.wrapper-table .follow div.column-second.row-second .main {
-            display: inline-block;
-            width: 23rem;
-            text-align: left; }
-            header .wrapper.wrapper-table .follow div.column-second.row-second .main ul li {
-              font-size: 3rem; } }
+      transform: translateX(-50%);
+      font-size: 10rem;
+      color: #c2c2c2;
+      transition: transform 0.3s;
+      cursor: pointer;
+      animation-name: bounce;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-delay: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running; }
+      .screen a.down-arrow i:hover {
+        animation-play-state: paused;
+        transform: translate(-50%, 1rem); }
+    .screen a.down-arrow .section-sep {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 40rem;
+      bottom: 0;
+      background-size: contain;
+      background-attachment: scroll;
+      animation-name: fadeIn;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running; }
 
 header {
   display: block;
@@ -352,6 +316,43 @@ header div.wrapper-table div.row-third.column-first {
 header div.wrapper-table div.row-third.column-second {
   animation-delay: 4800ms; }
 
+@media screen and (max-width: 1224px) {
+  header .wrapper-table div.cell.column-first {
+    letter-spacing: 0.4rem;
+    text-indent: 0.4rem;
+    width: 35%;
+    animation-delay: 2s !important; }
+  header .wrapper-table div.cell.column-second {
+    padding-left: 0.5rem; } }
+
+@media screen and (max-width: 1000px) {
+  .screen .section-sep {
+    background-image: none; }
+  header .wrapper.wrapper-table {
+    display: block; }
+    header .wrapper.wrapper-table .follow {
+      display: block; }
+      header .wrapper.wrapper-table .follow:hover {
+        background-color: transparent; }
+      header .wrapper.wrapper-table .follow div {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        padding: 4vh 1rem; }
+        header .wrapper.wrapper-table .follow div.column-second {
+          display: none;
+          font-size: 3rem;
+          text-align: center; }
+          header .wrapper.wrapper-table .follow div.column-second ul li {
+            animation-name: rotateWordH; }
+          header .wrapper.wrapper-table .follow div.column-second.row-second .main {
+            display: inline-block;
+            width: 23rem;
+            text-align: left; }
+            header .wrapper.wrapper-table .follow div.column-second.row-second .main ul li {
+              font-size: 3rem; } }
+
 @media screen and (max-width: 480px) {
   #section_about-me {
     padding-top: 0; }
@@ -506,6 +507,9 @@ header div.wrapper-table div.row-third.column-second {
 #section_portfolio {
   padding-left: 1rem;
   padding-right: 1rem; }
+  #section_portfolio .section-content {
+    width: 100%;
+    margin-left: 0; }
   #section_portfolio .tiles-wrapper {
     text-align: center; }
   #section_portfolio a.icon-link {
@@ -599,7 +603,7 @@ header div.wrapper-table div.row-third.column-second {
       #section_portfolio .tile.diviiportfolio a.repo-link:hover {
         color: #1572b6; }
     #section_portfolio .tile.picam {
-      background-image: url("../resources/img/syntree.png"); }
+      background-image: url("../resources/img/picam.png"); }
       #section_portfolio .tile.picam .overlay {
         background-color: rgba(199, 5, 61, 0.3); }
       #section_portfolio .tile.picam:hover .overlay {
@@ -687,6 +691,17 @@ section {
     background-color: #99c7e3; }
   section.section-3 {
     background-color: #91cede; }
+  @media screen and (max-width: 480px) {
+    section {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      border-bottom: 5px solid #000000; }
+      section.section-1 {
+        background-color: #d5dcf7; }
+      section.section-2 {
+        background-color: #c1ddee; }
+      section.section-3 {
+        background-color: #b8dfea; } }
 
 .section-title {
   margin-bottom: 6rem;
@@ -814,3 +829,8 @@ body.portfolio section.diviiportfolio {
     background-image: url("../resources/img/diviiportfolio-2.png"); }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.third {
     background-image: url("../resources/img/diviiportfolio-3.png"); }
+
+body.portfolio section.picam {
+  background-color: #ffde57; }
+  body.portfolio section.picam div.portfolio-screenshot.first {
+    background-image: url("../resources/img/picam-1.png"); }

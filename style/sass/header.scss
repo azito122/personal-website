@@ -7,6 +7,36 @@ $col2-fs: 5rem;
 	min-height: 40rem;
 	background: linear-gradient(mix(color(section-1), white, 40), white);
 
+	a.down-arrow {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+
+		i {
+			position: absolute;
+			bottom: 0;
+			transform: translateX(-50%);
+			// width: 100%;
+			// margin: auto;
+			// margin-top: -3rem;
+			// text-align: center;
+			font-size: 10rem;
+			// line-height: 1rem;
+			color: color(text-lighter);
+			transition: transform 0.3s;
+			cursor: pointer;
+			@include animate (
+				$name: bounce,
+				$duration: 10s,
+				$delay: 5s,
+				$iteration-count: infinite);
+
+			&:hover {
+				animation-play-state: paused;
+				transform: translate(-50%, 1rem);
+			}
+		}
+
 	.section-sep {
 		position: absolute;
 		width: 100%;
@@ -17,96 +47,6 @@ $col2-fs: 5rem;
 		background-size: contain; // override parallax section-seps
 		background-attachment: scroll; // override parallax section-seps
 		@include animate ($name: fadeIn, $duration: 4s)
-
-		a {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-
-			i {
-				position: absolute;
-				bottom: 0;
-				transform: translateX(-50%);
-				// width: 100%;
-				// margin: auto;
-				// margin-top: -3rem;
-				// text-align: center;
-				font-size: 10rem;
-				// line-height: 1rem;
-				color: color(text-lighter);
-				transition: transform 0.3s;
-				cursor: pointer;
-				@include animate (
-					$name: bounce,
-					$duration: 10s,
-					$delay: 5s,
-					$iteration-count: infinite);
-
-				&:hover {
-					animation-play-state: paused;
-					transform: translate(-50%, 1rem);
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: bk(ml)) {
-	header .wrapper-table div.cell {
-		&.column-first {
-			@include letter-spacing(0.4rem)
-			width: 35%;
-		}
-
-		&.column-second {
-			padding-left: 0.5rem;
-		}
-	}
-}
-
-@media screen and (max-width: bk(m)) {
-	.screen .section-sep {
-		background-image: none;
-	}
-
-	header .wrapper.wrapper-table {
-		display: block;
-
-		.follow {
-			display: block;
-
-			&:hover {
-				background-color: transparent;
-			}
-
-			div {
-				width: 100%;
-				display: block;
-				text-align: center;
-				padding: 1rem;
-				padding: 4vh 1rem;
-
-				&.column-second {
-					display: none;
-					font-size: 3rem;
-					text-align: center;
-
-					ul li {
-						// position: relative;
-						animation-name: rotateWordH;
-					}
-
-					&.row-second .main {
-						display: inline-block;
-						width: 23rem;
-						text-align: left;
-
-						ul li {
-							font-size: 3rem;
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -312,3 +252,64 @@ header div.wrapper-table {
 			}
 		}
 	}
+
+@media screen and (max-width: bk(ml)) {
+	header .wrapper-table div.cell {
+		&.column-first {
+			@include letter-spacing(0.4rem)
+			width: 35%;
+			animation-delay: 2s !important;
+		}
+
+		&.column-second {
+			padding-left: 0.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: bk(m)) {
+	.screen .section-sep {
+		background-image: none;
+	}
+
+	header .wrapper.wrapper-table {
+		display: block;
+
+		.follow {
+			display: block;
+
+			&:hover {
+				background-color: transparent;
+			}
+
+			div {
+				width: 100%;
+				display: block;
+				text-align: center;
+				padding: 1rem;
+				padding: 4vh 1rem;
+
+				&.column-second {
+					display: none;
+					font-size: 3rem;
+					text-align: center;
+
+					ul li {
+						// position: relative;
+						animation-name: rotateWordH;
+					}
+
+					&.row-second .main {
+						display: inline-block;
+						width: 23rem;
+						text-align: left;
+
+						ul li {
+							font-size: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

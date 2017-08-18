@@ -109,4 +109,12 @@ body.portfolio {
       background-image: url("../resources/img/diviiportfolio-3.png")
     }
   }
+
+  section.picam {
+    background-color: lighten(color(python), 0);
+
+    div.portfolio-screenshot.first {
+      background-image: url("../resources/img/picam-1.png");
+    }
+  }
 }
