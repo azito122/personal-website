@@ -365,8 +365,6 @@ header div.wrapper-table div.row-third.column-second {
     #section_about-me div.resume-download-wrapper ul {
       height: auto;
       padding: 0.3rem 0; }
-      #section_about-me div.resume-download-wrapper ul li a {
-        position: relative; }
     #section_about-me div.resume-download-wrapper a.resume-download {
       background-color: #404040;
       color: #ffffff;
@@ -460,6 +458,16 @@ header div.wrapper-table div.row-third.column-second {
   width: 25rem;
   vertical-align: top;
   padding: 1rem 3rem; }
+  @media screen and (max-width: 1000px) {
+    #section_skillsets .tile {
+      margin: 3rem 0;
+      width: 80%; }
+      #section_skillsets .tile > i {
+        margin-bottom: 1rem !important; }
+      #section_skillsets .tile ul li {
+        width: 48%;
+        padding-left: 2rem !important;
+        display: inline-block; } }
   #section_skillsets .tile > i {
     font-size: 10rem;
     margin-bottom: 3rem; }
@@ -598,6 +606,44 @@ header div.wrapper-table div.row-third.column-second {
         background-color: #ffde57; }
       #section_portfolio .tile.number-game a.repo-link:hover {
         color: #ffde57; }
+  @media screen and (max-width: 1000px) {
+    #section_portfolio {
+      padding-left: 0;
+      padding-right: 0; }
+      #section_portfolio .section-content {
+        width: 100%;
+        margin: 0; }
+        #section_portfolio .section-content .tile {
+          margin: 0;
+          width: 100%;
+          margin-bottom: 13rem; }
+          #section_portfolio .section-content .tile:hover .overlay {
+            background-color: transparent; }
+          #section_portfolio .section-content .tile p.tile-description {
+            width: auto;
+            margin: 0;
+            margin-top: 240px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            opacity: 1;
+            color: #ffffff;
+            background-color: #000000; }
+          #section_portfolio .section-content .tile .tile-links {
+            background-color: #000000;
+            position: relative;
+            height: 5rem;
+            opacity: 1; }
+            #section_portfolio .section-content .tile .tile-links a {
+              color: #ffffff; }
+              #section_portfolio .section-content .tile .tile-links a i {
+                color: #ffffff; }
+              #section_portfolio .section-content .tile .tile-links a:hover {
+                background: rgba(255, 255, 255, 0.3);
+                padding-bottom: 0.5rem; }
+      #section_portfolio .section-title {
+        word-spacing: 1000px; }
+        #section_portfolio .section-title a.icon-link {
+          margin-left: 0; } }
 
 .section-sep {
   display: block;
@@ -640,6 +686,7 @@ section {
   letter-spacing: 0.4rem; }
   @media screen and (max-width: 1000px) {
     .section-title {
+      font-size: 4rem;
       margin: 3rem 0; } }
 
 .section-content {

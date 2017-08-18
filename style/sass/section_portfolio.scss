@@ -118,4 +118,63 @@
 		@include portfolio-tile('picam', 'ras-pi', 'syntree.png');
 		@include portfolio-tile('number-game', 'python', 'syntree.png');
 	}
+
+	@media screen and (max-width: bk(m)) {
+		padding-left: 0;
+		padding-right: 0;
+
+		.section-content {
+			width: 100%;
+			margin: 0;
+
+			.tile {
+				margin: 0;
+				width: 100%;
+				margin-bottom: 13rem;
+
+				&:hover .overlay {
+					background-color: transparent;
+				}
+
+				p.tile-description {
+					width: auto;
+					margin: 0;
+					margin-top: 240px;
+					padding-top: 40px;
+					padding-bottom: 40px;
+					opacity: 1;
+					color: color(text-lightest);
+					background-color: color(shade-darkest);
+				}
+
+				.tile-links {
+					background-color: color(shade-darkest);
+					position: relative;
+					height: 5rem;
+					opacity: 1;
+
+					a {
+						color: color(text-lightest);
+
+						i {
+							color: color(text-lightest);
+						}
+
+						&:hover {
+							background: color-alpha(shade-lightest, thin);
+							padding-bottom: 0.5rem;
+						}
+					}
+				}
+			}
+		}
+
+		.section-title {
+			word-spacing: bk(m);
+
+			a.icon-link {
+				margin-left: 0;
+			}
+		}
+	}
 }

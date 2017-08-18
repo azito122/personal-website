@@ -12,6 +12,21 @@
 		vertical-align: top;
 		padding: 1rem 3rem;
 
+		@media screen and (max-width: bk(m)) {
+			margin: 3rem 0;
+			width: 80%;
+
+			& > i {
+				margin-bottom: 1rem !important;
+			}
+
+			ul li {
+				width: 48%;
+				padding-left: 2rem !important;
+				display: inline-block;
+			}
+		}
+
 		& > i { // Main icon
 			font-size: 10rem;
 			margin-bottom: 3rem;
