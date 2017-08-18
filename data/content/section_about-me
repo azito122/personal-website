@@ -6,7 +6,7 @@
 
 @@content : about-me
 
-@@insert : <div class="resume-download-wrapper">
+@@insert : <div class="resume-download-wrapper no-js">
     <a class="resume-download" href="resources/files/andrew_zito_resume.doc"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
     <ul>
       <li><a href="resources/files/andrew_zito_resume.doc">Single page</a></li>

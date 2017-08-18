@@ -1,36 +1,53 @@
 #section_about-me {
 
-	@media screen and (max-width: bk(m)) {
-			div.resume-download-wrapper {
-				position: relative;
-				display: block;
-				margin: auto;
-				background-color: color(shade-darkest);
-				top: 0;
-				left: 0;
+	@media screen and (max-width: bk(s)) {
+		padding-top: 0;
+		
+		div.resume-download-wrapper {
+			position: relative;
+			display: block;
+			margin: auto;
+			background-color: color(shade-darkest);
+			top: 0;
+			left: 0;
 
-				&:hover {
-					ul {
-						height: auto;
-					}
+			&.no-js {
+				width: 100%;
+				border-radius: 0;
+
+				.resume-download {
+					width: 100%;
+					border-radius: 0 !important;
 				}
 
 				ul {
-					height: auto;
-					padding: 0.3rem 0;
-
-					li a {
-						// position: relative;
-					}
-				}
-
-				a.resume-download {
-					background-color: color(shade-darker);
-					color: color(shade-lightest);
-					border-bottom-left-radius: 8px;
-					border-bottom-right-radius: 8px;
+					width: 100%;
+					padding: 0;
 				}
 			}
+
+			&:hover {
+				ul {
+					height: auto;
+				}
+			}
+
+			ul {
+				height: auto;
+				padding: 0.3rem 0;
+
+				li a {
+					// position: relative;
+				}
+			}
+
+			a.resume-download {
+				background-color: color(shade-darker);
+				color: color(shade-lightest);
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
+		}
 	}
 
 	.content {

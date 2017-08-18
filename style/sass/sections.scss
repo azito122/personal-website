@@ -32,6 +32,10 @@
 			background-color: color-alpha(section-2-accent, thin);
 		}
 	}
+
+	@media screen and (max-width: bk(s)) {
+		display: none;
+	}
 }
 
 section {

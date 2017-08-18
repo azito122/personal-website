@@ -14,17 +14,18 @@
 
 		@media screen and (max-width: bk(m)) {
 			margin: 3rem 0;
-			width: 80%;
+			width: 100%;
 
 			& > i {
 				margin-bottom: 1rem !important;
 			}
 
-			ul li {
-				width: 48%;
-				padding-left: 2rem !important;
-				display: inline-block;
-			}
+			// ul li {
+			// 	max-width: 48%;
+			// 	min-width: 10rem;
+			// 	// padding-left: 2rem !important;
+			// 	display: inline-block;
+			// }
 		}
 
 		& > i { // Main icon
@@ -58,6 +59,7 @@
 
 			li {
 				padding: 1rem 0.5rem;
+				white-space: nowrap;
 
 				&:hover {
 					background-color: lighten(color(section-2), 8);

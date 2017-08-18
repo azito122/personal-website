@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  height: 5rem;
+  min-height: 5rem;
   background-color: color(shade-darkest);
 
   .picture-attribution {
@@ -25,6 +25,17 @@ footer {
 
     &.linkedin:hover i {
       color: color(linkedin);
+    }
+  }
+
+  @media screen and (max-width: bk(s)) {
+    text-align: center;
+
+    .picture-attribution {
+      display: block;
+      float: none;
+      text-align: center;
+      margin: 0;
     }
   }
 }
