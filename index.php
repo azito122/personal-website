@@ -11,7 +11,7 @@
 <header>
 
   <div class="wrapper wrapper-table">
-    <a class="follow" href="#about-me">
+    <a class="follow" href="#section_about-me">
       <div class="cell row-first column-first">
         Andy
       </div>
@@ -20,7 +20,7 @@
         <span class="main">(That's me)</span>
       </div>
     </a>
-    <a class="follow" href="#skillsets">
+    <a class="follow" href="#section_skillsets">
       <div class="cell row-second column-first">
         Codes
       </div>
@@ -36,7 +36,7 @@
           </ul></span>
       </div>
     </a>
-    <a class="follow" href="#portfolio">
+    <a class="follow" href="#section_portfolio">
       <div class="cell row-third column-first">
         Things
       </div>

@@ -1,4 +1,5 @@
 body.portfolio {
+
   section {
     border-bottom: 1rem solid black;
   }
@@ -13,7 +14,7 @@ body.portfolio {
     padding: 1rem 0;
   }
 
-  div.portfolio-screenshot {
+  .portfolio-screenshot {
     display: inline-block;
     vertical-align: middle;
     width: 450px;
@@ -117,4 +118,21 @@ body.portfolio {
       background-image: url("../resources/img/picam-1.png");
     }
   }
+
+  @media screen and (max-width: bk(ms)) {
+		.section-title {
+      font-size: 2rem;
+      @include letter-spacing(0.2rem);
+    }
+
+    .portfolio-screenshots {
+      padding: 0;
+    }
+
+    .portfolio-screenshot {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+	}
 }

@@ -14,3 +14,9 @@
 @@content_wrapper : <div class="tiles-wrapper">
 
 @@content_wrapper_close : </div>
+
+@@insert : <div class="full-portfolio-link-wrapper">
+  <a class="full-portfolio-link" href="portfolio.php">See full portfolio
+    <i class="fa fa-angle-double-right"></i>
+    </a>
+    </div>
