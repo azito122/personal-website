@@ -774,11 +774,68 @@ footer {
         text-align: center;
         margin: 0; } }
 
+body.portfolio .block-menu {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0.4;
+  z-index: 1;
+  text-align: center;
+  transition: opacity 0.3s; }
+  body.portfolio .block-menu .wrapper {
+    display: inline-block;
+    margin: 1.5rem;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    background-color: #ededed; }
+  body.portfolio .block-menu:hover {
+    opacity: 1; }
+  body.portfolio .block-menu a {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 4rem; }
+    body.portfolio .block-menu a:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+    body.portfolio .block-menu a span {
+      display: none; }
+  @media screen and (max-width: 1000px) {
+    body.portfolio .block-menu {
+      position: relative;
+      opacity: 1;
+      top: 0;
+      left: 0; }
+      body.portfolio .block-menu .wrapper {
+        display: table;
+        width: 100%;
+        margin: 0;
+        border: none; }
+        body.portfolio .block-menu .wrapper a {
+          display: table-cell;
+          line-height: normal;
+          padding: 1rem;
+          font-size: 2rem; }
+          body.portfolio .block-menu .wrapper a span {
+            display: block;
+            font-size: 1rem; } }
+
 body.portfolio section {
-  border-bottom: 1rem solid black; }
+  border-bottom: 1rem solid black;
+  min-height: 100%;
+  padding: 3rem 0; }
 
 body.portfolio .section-title {
   margin-bottom: 2rem; }
+  body.portfolio .section-title a {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: normal;
+    margin-top: 0.2rem; }
+    body.portfolio .section-title a .fa-github {
+      display: inline;
+      letter-spacing: 0.5rem; }
+    body.portfolio .section-title a:hover {
+      text-decoration: underline; }
 
 body.portfolio .portfolio-screenshots {
   text-align: center;
