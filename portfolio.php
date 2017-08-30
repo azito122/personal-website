@@ -21,7 +21,7 @@
 
 <section id="section_syntree" class="section-1 syntree">
   <h1 class="section-title">Syntree
-    <a href="https://github.com/azito122/syntree"><i class="fa fa-github"></i>GitHub Repository</a>
+    <a href="https://github.com/azito122/syntree" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
   </h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
@@ -45,7 +45,7 @@
 
 <section id="section_diviiportfolio" class="section-2 diviiportfolio">
   <h1 class="section-title">Academic E-Portfolio
-    <a href="https://github.com/azito122/diviiportfolio"><i class="fa fa-github"></i>GitHub Repository</a>
+    <a href="https://github.com/azito122/diviiportfolio" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
   </h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
@@ -72,7 +72,7 @@
 
 <section id="section_picam" class="section-3 picam">
   <h1 class="section-title">Picam Security Script
-    <a href="https://github.com/azito122/hamp-picam"><i class="fa fa-github"></i>GitHub Repository</a>
+    <a href="https://github.com/azito122/hamp-picam" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
   </h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
@@ -84,7 +84,7 @@
     <div class="technologies-used">Python, Raspberry Pi</div>
     <p class="content">A Raspberry Pi + Picamera (Python library) security camera script.
 
-This script will watch for motion. If it detects motion it will take a picture and upload it to a remote server.</p>
+    This script integrates an existing motion detection script with code that uploads taken photos to a remote directory structure.
   </div>
 </section>
 

@@ -1,8 +1,9 @@
 @@type : section
 
-@@title : Portfolio <a class="icon-link" href="http://github.com/azito122">
-      <i class="fa fa-github"></i>
-    </a>
+@@title : Portfolio
+<div class="github-link">
+  <a href="https://github.com/azito122/syntree" title="GitHub Profile">
+<i class="fa fa-github"></i>GitHub Profile</a></div>
 
 
 @@section_number : 3
@@ -15,7 +16,7 @@
 
 @@content_wrapper_close : </div>
 
-@@insert : <div class="full-portfolio-link-wrapper">
+@@insert : <div class="block full-portfolio-link-wrapper no-js">
   <a class="full-portfolio-link" href="portfolio.php">See full portfolio
     <i class="fa fa-angle-double-right"></i>
     </a>

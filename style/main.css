@@ -16,6 +16,8 @@
   0% {
     opacity: 0;
     transform: translateY(100%); }
+  1.5% {
+    opacity: 0; }
   5% {
     opacity: 1;
     transform: translateY(0%); }
@@ -113,6 +115,36 @@ a {
 
 li {
   list-style: none; }
+
+.github-link {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: normal;
+  margin-top: 0.2rem; }
+  .github-link a:hover {
+    text-decoration: underline; }
+  .github-link .fa-github {
+    display: inline;
+    letter-spacing: 0.5rem; }
+
+.block {
+  position: absolute;
+  border: 3px solid black;
+  border-radius: 7px;
+  transition: background-color 0.3s; }
+  .block a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none !important;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s; }
+  .block:hover {
+    background-color: #404040; }
+    .block:hover a {
+      color: #ffffff; }
 
 .fa-github {
   width: 0.86em; }
@@ -386,36 +418,29 @@ header div.wrapper-table div.row-third.column-second {
 #section_about-me .content {
   line-height: 2rem; }
 
-#section_about-me .resume-download-wrapper {
+#section_about-me .block.resume-download-wrapper {
   width: 13rem;
-  position: absolute;
   top: 2rem;
   left: 2rem;
-  overflow: hidden;
-  border: 3px solid black;
-  border-radius: 7px; }
-  #section_about-me .resume-download-wrapper:hover {
+  overflow: hidden; }
+  #section_about-me .block.resume-download-wrapper:hover {
     background-color: #000000; }
-    #section_about-me .resume-download-wrapper:hover ul {
+    #section_about-me .block.resume-download-wrapper:hover ul {
       height: 6.5rem;
       padding: 0.3rem 0; }
-    #section_about-me .resume-download-wrapper:hover a.resume-download {
+    #section_about-me .block.resume-download-wrapper:hover a.resume-download {
       background-color: #404040;
       color: #ffffff;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px; }
-  #section_about-me .resume-download-wrapper a.resume-download {
+  #section_about-me .block.resume-download-wrapper a.resume-download {
     display: inline-block;
     width: 13rem;
     padding: 0.7rem 0;
-    text-align: center;
-    font-size: 1.3rem;
-    letter-spacing: 0.3rem;
     font-weight: 600;
-    text-transform: uppercase;
     z-index: 100;
     transition: background-color 0.3s, color 0.3s; }
-  #section_about-me .resume-download-wrapper ul {
+  #section_about-me .block.resume-download-wrapper ul {
     position: relative;
     width: 13rem;
     height: 0px;
@@ -424,12 +449,12 @@ header div.wrapper-table div.row-third.column-second {
     border-radius: 5px;
     z-index: 100;
     transition: height 0.3s; }
-    #section_about-me .resume-download-wrapper ul li {
+    #section_about-me .block.resume-download-wrapper ul li {
       position: relative;
       transition: background-color 0.5s;
       width: 100%;
       height: 3rem; }
-      #section_about-me .resume-download-wrapper ul li a {
+      #section_about-me .block.resume-download-wrapper ul li a {
         color: #ffffff;
         position: absolute;
         line-height: 3rem;
@@ -440,10 +465,13 @@ header div.wrapper-table div.row-third.column-second {
         padding: 0 1rem;
         letter-spacing: 0.1rem;
         font-size: 0.9rem;
+        text-align: left;
         font-weight: 200;
         text-transform: uppercase;
         transition: padding-left 0.3s; }
-      #section_about-me .resume-download-wrapper ul li:before {
+        #section_about-me .block.resume-download-wrapper ul li a i.fa-download {
+          margin-right: 0.5rem; }
+      #section_about-me .block.resume-download-wrapper ul li:before {
         content: "";
         position: absolute;
         top: 0;
@@ -453,11 +481,11 @@ header div.wrapper-table div.row-third.column-second {
         background-color: #5c76d1;
         border-radius: 1px;
         transition: width 0.3s; }
-      #section_about-me .resume-download-wrapper ul li:hover {
+      #section_about-me .block.resume-download-wrapper ul li:hover {
         background-color: #1a1a1a; }
-        #section_about-me .resume-download-wrapper ul li:hover a {
+        #section_about-me .block.resume-download-wrapper ul li:hover a {
           padding-left: 1.8rem; }
-        #section_about-me .resume-download-wrapper ul li:hover:before {
+        #section_about-me .block.resume-download-wrapper ul li:hover:before {
           width: 0.8rem; }
 
 #section_skillsets .section-content {
@@ -826,16 +854,6 @@ body.portfolio section {
 
 body.portfolio .section-title {
   margin-bottom: 2rem; }
-  body.portfolio .section-title a {
-    display: block;
-    font-size: 1rem;
-    letter-spacing: normal;
-    margin-top: 0.2rem; }
-    body.portfolio .section-title a .fa-github {
-      display: inline;
-      letter-spacing: 0.5rem; }
-    body.portfolio .section-title a:hover {
-      text-decoration: underline; }
 
 body.portfolio .portfolio-screenshots {
   text-align: center;

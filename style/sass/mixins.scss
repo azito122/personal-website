@@ -138,6 +138,7 @@ $breakpoints: (
 
 @keyframes rotateWord {
 	0% { opacity: 0; transform: translateY(100%) }
+  1.5% { opacity: 0 }
 	5% { opacity: 1; transform: translateY(0%) }
 	21% { opacity: 1; transform: translateY(0%) }
 	24% { opacity: 0 }
