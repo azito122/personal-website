@@ -18,7 +18,8 @@
 	}
 
 	&.second {
-		background-image: url("../resources/img/leaves.jpg");
+		background-image: url("../resources/img/section_sep_leaves.jpg");
+		background-position: top center;
 
 		&:before {
 			background-color: color-alpha(section-1, very-thin);
@@ -26,7 +27,8 @@
 	}
 
 	&.third {
-		background-image: url("../resources/img/trunk.jpeg");
+		background-image: url("../resources/img/section_sep_leaves.jpg");
+		background-position: bottom center;
 
 		&:before {
 			background-color: color-alpha(section-2-accent, thin);

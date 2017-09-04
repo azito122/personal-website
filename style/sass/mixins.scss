@@ -2,9 +2,16 @@
 
 /* Colors */
 $sb: rgb(170, 185, 238); /*section base*/
-$m: rgb(87, 255, 185); /*mix*/
-$mf: 80; /*mix factor*/
-$mfs: 10; /*mix factor step*/
+$m: white; /*mix*/
+$mf: 40; /*mix factor*/
+$mfs: 30; /*mix factor step*/
+
+/* For portfolio page colors */
+$psb: rgb(76, 175, 80); /*section base*/
+$pm: white; /*mix*/
+$pmf: 40; /*mix factor*/
+$pmfs: 10; /*mix factor step*/
+
 
 $colors: (
   'white': #ffffff,
@@ -23,12 +30,17 @@ $colors: (
 	'html': #e34c26,
 	'php': #8892be,
 	'python': #ffde57,
+  'python-secondary': #4584b6,
   'github': #6cc644,
   'ras-pi': #c7053d,
   'linkedin': #0077b5,
-  'section-1': $sb,
-  'section-2': mix($sb, $m, $mf),
-  'section-3': mix($sb, $m, $mf - $mfs),
+  'section-1': mix($sb, $m, $mf),
+  'section-2': mix($sb, $m, $mf + $mfs),
+  'section-3': mix($sb, $m, $mf + 2*$mfs),
+  'portfolio-section-1': mix($psb, $pm, $pmf),
+  'portfolio-section-2': mix($psb, $pm, $pmf + $pmfs),
+  'portfolio-section-3': mix($psb, $pm, $pmf + 2*$pmfs),
+  'portfolio-section-4': mix($psb, $pm, $pmf + 3*$pmfs),
 );
 
 @function accent($color-name) {
@@ -101,6 +113,21 @@ $breakpoints: (
     }
     a.repo-link:hover {
       color: color($color);
+    }
+  }
+}
+
+@mixin portfolio-section ($name, $color) {
+  section.#{($name)} {
+    background-color: color($color);
+    div.portfolio-screenshot.first {
+      background-image: url("../resources/img/#{($name)}_screenshot_1.png");
+    }
+    div.portfolio-screenshot.second {
+      background-image: url("../resources/img/#{($name)}_screenshot_2.png")
+    }
+    div.portfolio-screenshot.third {
+      background-image: url("../resources/img/#{($name)}_screenshot_3.png")
     }
   }
 }

@@ -5,19 +5,18 @@
   <a href="https://github.com/azito122/syntree" title="GitHub Profile">
 <i class="fa fa-github"></i>GitHub Profile</a></div>
 
-
 @@section_number : 3
 
 @@content_of_type : portfolio_tile
 
-@@max_pieces : 3
+@@max_pieces : 4
 
 @@content_wrapper : <div class="tiles-wrapper">
 
 @@content_wrapper_close : </div>
 
 @@insert : <div class="block full-portfolio-link-wrapper no-js">
-  <a class="full-portfolio-link" href="portfolio.php">See full portfolio
+  <a class="full-portfolio-link" href="portfolio.php">Full portfolio
     <i class="fa fa-angle-double-right"></i>
     </a>
     </div>

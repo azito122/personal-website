@@ -1,5 +1,25 @@
 body.portfolio {
 
+  .section-sep {
+    background-image: url("../resources/img/section_sep_trunk.jpg");
+
+    &:before {
+      background-color: color-alpha(section-1, medium) !important;      
+    }
+
+    &.first {
+      background-position: top center;
+    }
+
+    &.second {
+      background-position: center;
+    }
+
+    &.first {
+      background-position: bottom center;
+    }
+  }
+
   .block-menu {
     position: fixed;
     top: 1rem;
@@ -64,7 +84,6 @@ body.portfolio {
   }
 
   section {
-    border-bottom: 1rem solid black;
     min-height: 100%;
     padding: 3rem 0;
   }
@@ -149,40 +168,10 @@ body.portfolio {
     }
   }
 
-  section.syntree {
-    background-color: lighten(color(javascript), 20);
-    div.portfolio-screenshot.first {
-      background-image: url("../resources/img/syntree-1.png");
-    }
-    div.portfolio-screenshot.second {
-      background-image: url("../resources/img/syntree-2.png")
-    }
-    div.portfolio-screenshot.third {
-      background-image: url("../resources/img/syntree-3.png")
-    }
-  }
-
-  section.diviiportfolio {
-    background-color: lighten(color(php), 20);
-
-    div.portfolio-screenshot.first {
-      background-image: url("../resources/img/diviiportfolio-1.png");
-    }
-    div.portfolio-screenshot.second {
-      background-image: url("../resources/img/diviiportfolio-2.png")
-    }
-    div.portfolio-screenshot.third {
-      background-image: url("../resources/img/diviiportfolio-3.png")
-    }
-  }
-
-  section.picam {
-    background-color: lighten(color(python), 0);
-
-    div.portfolio-screenshot.first {
-      background-image: url("../resources/img/picam-1.png");
-    }
-  }
+  @include portfolio-section(syntree, portfolio-section-1);
+  @include portfolio-section(diviiportfolio, portfolio-section-2);
+  @include portfolio-section(picam, portfolio-section-3);
+  @include portfolio-section(monkeys, portfolio-section-4);
 
   @media screen and (max-width: bk(ms)) {
 		.section-title {

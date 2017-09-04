@@ -21,8 +21,10 @@
 
 <section id="section_syntree" class="section-1 syntree">
   <h1 class="section-title">Syntree
-    <a href="https://github.com/azito122/syntree" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
-  </h1>
+    <div class="github-link">
+      <a href="https://github.com/azito122/syntree" title="GitHub Repository">
+    <i class="fa fa-github"></i>GitHub Repository</a></div>
+</h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
       <div class="img portfolio-screenshot first">
@@ -43,9 +45,14 @@
   </div>
 </section>
 
+<div class="section-sep first">
+</div>
+
 <section id="section_diviiportfolio" class="section-2 diviiportfolio">
   <h1 class="section-title">Academic E-Portfolio
-    <a href="https://github.com/azito122/diviiportfolio" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
+    <div class="github-link">
+      <a href="https://github.com/azito122/diviiportfolio" title="GitHub Repository">
+    <i class="fa fa-github"></i>GitHub Repository</a></div>
   </h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
@@ -70,9 +77,14 @@
   </div>
 </section>
 
+<div class="section-sep second">
+</div>
+
 <section id="section_picam" class="section-3 picam">
   <h1 class="section-title">Picam Security Script
-    <a href="https://github.com/azito122/hamp-picam" class="github-link" title="GitHub Repository"><i class="fa fa-github"></i>GitHub Repository</a>
+    <div class="github-link">
+      <a href="https://github.com/azito122/hamp-picam" title="GitHub Repository">
+    <i class="fa fa-github"></i>GitHub Repository</a></div>
   </h1>
   <div cass="section-content">
     <div class="portfolio-screenshots">
@@ -86,6 +98,36 @@
 
     This script integrates an existing motion detection script with code that uploads taken photos to a remote directory structure.
   </div>
+</section>
+
+<div class="section-sep third">
+</div>
+
+<section id="section_monkeys" class="section-4 monkeys">
+  <h1 class="section-title">Monkeys Typing Shakespeare
+    <div class="github-link">
+      <a href="https://github.com/azito122/monkeys_typing_shakespeare" title="GitHub Repository">
+    <i class="fa fa-github"></i>GitHub Repository</a></div>
+  </h1>
+  <div cass="section-content">
+    <div class="portfolio-screenshots">
+      <div class="img portfolio-screenshot first">
+        <span class="screenshot-title">Source Code</span>
+        <a class="site-link" title="Source Code" href="https://github.com/azito122/monkeys_typing_shakespeare/blob/master/monkeys.py"></a>
+      </div>
+      <div class="img portfolio-screenshot second">
+        <span class="screenshot-title">Project Proposal</span>
+        <a class="site-link" title="Project Proposal" href="https://github.com/azito122/monkeys_typing_shakespeare/blob/master/final_project_proposal.pdf"></a>
+      </div>
+      <div class="img portfolio-screenshot third">
+        <span class="screenshot-title">Graphs</span>
+        <a class="site-link" title="Graphs" href="https://github.com/azito122/monkeys_typing_shakespeare/tree/master/graphs"></a>
+      </div>
+    </div>
+    <div class="technologies-used">Python, Numpy, Matplotlib</div>
+    <p class="content">This Python script attempts to 'evolve' English letter frequences via a relatively small scale evolutionary simulation. It iterates generating random strings via weighted random letter choice, and mutates the letter frequencies/weights on each iteration.
+
+    The letter weights/frequencies are judged based on how many words they produce in the random strings, and "better" frequency sets have a higher chance to propagate to the next generation.</div>
 </section>
 
 </body>

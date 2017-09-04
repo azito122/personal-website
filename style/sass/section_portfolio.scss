@@ -151,10 +151,14 @@
 			}
 		}
 
-		@include portfolio-tile('syntree', 'javascript', 'syntree.png');
-		@include portfolio-tile('diviiportfolio', 'css', 'diviiportfolio.png');
-		@include portfolio-tile('picam', 'ras-pi', 'picam.png');
-		@include portfolio-tile('number-game', 'python', 'syntree.png');
+		@include portfolio-tile('syntree', 'javascript', 'syntree_tile.png');
+		@include portfolio-tile('diviiportfolio', 'css', 'diviiportfolio_tile.png');
+		@include portfolio-tile('picam', 'ras-pi', 'picam_tile.png');
+		@include portfolio-tile('monkeys', 'python', 'monkeys_tile.png');
+
+		&.monkeys .tile-title {
+			font-size: 1.2rem;
+		}
 	}
 
 	@media screen and (max-width: bk(m)) {

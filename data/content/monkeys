@@ -1,0 +1,13 @@
+@@type : portfolio_tile
+
+@@title : Monkeys Typing Shakespeare
+
+@@description : Attempting to evolve English letter frequencies.
+
+@@info_link : portfolio.php#section_monkeys
+
+@@source_link : https://github.com/azito122/monkeys_typing_shakespeare
+
+@@primary_language : python
+
+@@weight : 4

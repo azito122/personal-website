@@ -4,6 +4,11 @@
 /*mix*/
 /*mix factor*/
 /*mix factor step*/
+/* For portfolio page colors */
+/*section base*/
+/*mix*/
+/*mix factor*/
+/*mix factor step*/
 /* Other mixins */
 /* Keyframes */
 @keyframes fadeIn {
@@ -142,7 +147,7 @@ li {
     text-transform: uppercase;
     transition: color 0.3s; }
   .block:hover {
-    background-color: #404040; }
+    background-color: #000000; }
     .block:hover a {
       color: #ffffff; }
 
@@ -153,7 +158,7 @@ li {
   position: relative;
   height: 100%;
   min-height: 40rem;
-  background: linear-gradient(#dde3f8, white); }
+  background: linear-gradient(white, #dde3f8); }
   .screen a.down-arrow {
     position: absolute;
     bottom: 0;
@@ -478,7 +483,7 @@ header div.wrapper-table div.row-third.column-second {
         left: 0;
         height: 100%;
         width: 0;
-        background-color: #5c76d1;
+        background-color: #8c9ede;
         border-radius: 1px;
         transition: width 0.3s; }
       #section_about-me .block.resume-download-wrapper ul li:hover {
@@ -528,7 +533,7 @@ header div.wrapper-table div.row-third.column-second {
       padding: 1rem 0.5rem;
       white-space: nowrap; }
       #section_skillsets .tile ul li:hover {
-        background-color: #b9d9ec; }
+        background-color: #e6eafa; }
         #section_skillsets .tile ul li:hover i {
           color: inherit; }
 
@@ -639,7 +644,7 @@ header div.wrapper-table div.row-third.column-second {
           padding-bottom: 1.5rem;
           color: black; }
     #section_portfolio .tile.syntree {
-      background-image: url("../resources/img/syntree.png"); }
+      background-image: url("../resources/img/syntree_tile.png"); }
       #section_portfolio .tile.syntree .overlay {
         background-color: rgba(247, 223, 30, 0.3); }
       #section_portfolio .tile.syntree:hover .overlay {
@@ -647,7 +652,7 @@ header div.wrapper-table div.row-third.column-second {
       #section_portfolio .tile.syntree a.repo-link:hover {
         color: #f7df1e; }
     #section_portfolio .tile.diviiportfolio {
-      background-image: url("../resources/img/diviiportfolio.png"); }
+      background-image: url("../resources/img/diviiportfolio_tile.png"); }
       #section_portfolio .tile.diviiportfolio .overlay {
         background-color: rgba(21, 114, 182, 0.3); }
       #section_portfolio .tile.diviiportfolio:hover .overlay {
@@ -655,21 +660,23 @@ header div.wrapper-table div.row-third.column-second {
       #section_portfolio .tile.diviiportfolio a.repo-link:hover {
         color: #1572b6; }
     #section_portfolio .tile.picam {
-      background-image: url("../resources/img/picam.png"); }
+      background-image: url("../resources/img/picam_tile.png"); }
       #section_portfolio .tile.picam .overlay {
         background-color: rgba(199, 5, 61, 0.3); }
       #section_portfolio .tile.picam:hover .overlay {
         background-color: #c7053d; }
       #section_portfolio .tile.picam a.repo-link:hover {
         color: #c7053d; }
-    #section_portfolio .tile.number-game {
-      background-image: url("../resources/img/syntree.png"); }
-      #section_portfolio .tile.number-game .overlay {
+    #section_portfolio .tile.monkeys {
+      background-image: url("../resources/img/monkeys_tile.png"); }
+      #section_portfolio .tile.monkeys .overlay {
         background-color: rgba(255, 222, 87, 0.3); }
-      #section_portfolio .tile.number-game:hover .overlay {
+      #section_portfolio .tile.monkeys:hover .overlay {
         background-color: #ffde57; }
-      #section_portfolio .tile.number-game a.repo-link:hover {
+      #section_portfolio .tile.monkeys a.repo-link:hover {
         color: #ffde57; }
+    #section_portfolio .tile.monkeys .tile-title {
+      font-size: 1.2rem; }
   @media screen and (max-width: 1000px) {
     #section_portfolio {
       padding-left: 0;
@@ -722,13 +729,15 @@ header div.wrapper-table div.row-third.column-second {
     left: 0;
     top: 0; }
   .section-sep.second {
-    background-image: url("../resources/img/leaves.jpg"); }
+    background-image: url("../resources/img/section_sep_leaves.jpg");
+    background-position: top center; }
     .section-sep.second:before {
-      background-color: rgba(170, 185, 238, 0.1); }
+      background-color: rgba(221, 227, 248, 0.1); }
   .section-sep.third {
-    background-image: url("../resources/img/trunk.jpeg"); }
+    background-image: url("../resources/img/section_sep_leaves.jpg");
+    background-position: bottom center; }
     .section-sep.third:before {
-      background-color: rgba(82, 150, 191, 0.3); }
+      background-color: rgba(117, 138, 215, 0.3); }
   @media screen and (max-width: 480px) {
     .section-sep {
       display: none; } }
@@ -738,22 +747,22 @@ section {
   padding-top: 6rem;
   padding-bottom: 10rem; }
   section.section-1 {
-    background-color: #aab9ee; }
+    background-color: #dde3f8; }
   section.section-2 {
-    background-color: #99c7e3; }
+    background-color: #c4cef3; }
   section.section-3 {
-    background-color: #91cede; }
+    background-color: #aab9ee; }
   @media screen and (max-width: 480px) {
     section {
       padding-top: 1rem;
       padding-bottom: 3rem;
       border-bottom: 5px solid #000000; }
       section.section-1 {
-        background-color: #d5dcf7; }
+        background-color: white; }
       section.section-2 {
-        background-color: #c1ddee; }
+        background-color: #eef1fc; }
       section.section-3 {
-        background-color: #b8dfea; } }
+        background-color: #d5dcf7; } }
 
 .section-title {
   margin-bottom: 6rem;
@@ -802,6 +811,17 @@ footer {
         text-align: center;
         margin: 0; } }
 
+body.portfolio .section-sep {
+  background-image: url("../resources/img/section_sep_trunk.jpg"); }
+  body.portfolio .section-sep:before {
+    background-color: rgba(221, 227, 248, 0.5) !important; }
+  body.portfolio .section-sep.first {
+    background-position: top center; }
+  body.portfolio .section-sep.second {
+    background-position: center; }
+  body.portfolio .section-sep.first {
+    background-position: bottom center; }
+
 body.portfolio .block-menu {
   position: fixed;
   top: 1rem;
@@ -848,7 +868,6 @@ body.portfolio .block-menu {
             font-size: 1rem; } }
 
 body.portfolio section {
-  border-bottom: 1rem solid black;
   min-height: 100%;
   padding: 3rem 0; }
 
@@ -912,27 +931,40 @@ body.portfolio .content {
       text-decoration: underline; }
 
 body.portfolio section.syntree {
-  background-color: #fbed80; }
+  background-color: #b7dfb9; }
   body.portfolio section.syntree div.portfolio-screenshot.first {
-    background-image: url("../resources/img/syntree-1.png"); }
+    background-image: url("../resources/img/syntree_screenshot_1.png"); }
   body.portfolio section.syntree div.portfolio-screenshot.second {
-    background-image: url("../resources/img/syntree-2.png"); }
+    background-image: url("../resources/img/syntree_screenshot_2.png"); }
   body.portfolio section.syntree div.portfolio-screenshot.third {
-    background-image: url("../resources/img/syntree-3.png"); }
+    background-image: url("../resources/img/syntree_screenshot_3.png"); }
 
 body.portfolio section.diviiportfolio {
-  background-color: #cacee2; }
+  background-color: #a6d7a8; }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.first {
-    background-image: url("../resources/img/diviiportfolio-1.png"); }
+    background-image: url("../resources/img/diviiportfolio_screenshot_1.png"); }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.second {
-    background-image: url("../resources/img/diviiportfolio-2.png"); }
+    background-image: url("../resources/img/diviiportfolio_screenshot_2.png"); }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.third {
-    background-image: url("../resources/img/diviiportfolio-3.png"); }
+    background-image: url("../resources/img/diviiportfolio_screenshot_3.png"); }
 
 body.portfolio section.picam {
-  background-color: #ffde57; }
+  background-color: #94cf96; }
   body.portfolio section.picam div.portfolio-screenshot.first {
-    background-image: url("../resources/img/picam-1.png"); }
+    background-image: url("../resources/img/picam_screenshot_1.png"); }
+  body.portfolio section.picam div.portfolio-screenshot.second {
+    background-image: url("../resources/img/picam_screenshot_2.png"); }
+  body.portfolio section.picam div.portfolio-screenshot.third {
+    background-image: url("../resources/img/picam_screenshot_3.png"); }
+
+body.portfolio section.monkeys {
+  background-color: #82c785; }
+  body.portfolio section.monkeys div.portfolio-screenshot.first {
+    background-image: url("../resources/img/monkeys_screenshot_1.png"); }
+  body.portfolio section.monkeys div.portfolio-screenshot.second {
+    background-image: url("../resources/img/monkeys_screenshot_2.png"); }
+  body.portfolio section.monkeys div.portfolio-screenshot.third {
+    background-image: url("../resources/img/monkeys_screenshot_3.png"); }
 
 @media screen and (max-width: 768px) {
   body.portfolio .section-title {
