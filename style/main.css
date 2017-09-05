@@ -132,24 +132,74 @@ li {
     display: inline;
     letter-spacing: 0.5rem; }
 
+.block .block-link, .block-menu-dropdown .dropdown-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none !important;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s; }
+
 .block {
   position: absolute;
   border: 3px solid black;
   border-radius: 7px;
   transition: background-color 0.3s; }
-  .block a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    text-decoration: none !important;
-    font-size: 1.3rem;
-    letter-spacing: 0.3rem;
-    text-align: center;
-    text-transform: uppercase;
-    transition: color 0.3s; }
   .block:hover {
-    background-color: #000000; }
-    .block:hover a {
+    background-color: #000000;
+    color: #ffffff; }
+    .block:hover .block-link {
       color: #ffffff; }
+
+.block-menu-dropdown {
+  z-index: 100; }
+  .block-menu-dropdown .dropdown-items {
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s; }
+    .block-menu-dropdown .dropdown-items li {
+      color: #ffffff;
+      width: 100%; }
+      .block-menu-dropdown .dropdown-items li a {
+        display: inline-block;
+        color: #ffffff;
+        width: 100%;
+        padding: 1rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.9rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        transition: padding 0.3s; }
+        .block-menu-dropdown .dropdown-items li a i {
+          margin-right: 1rem; }
+      .block-menu-dropdown .dropdown-items li:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 3px;
+        height: 100%;
+        width: 0;
+        background-color: #ededed;
+        transition: width 0.3s;
+        border-radius: 2px; }
+      .block-menu-dropdown .dropdown-items li:hover:before {
+        width: 1rem; }
+      .block-menu-dropdown .dropdown-items li:hover a {
+        padding-left: 2rem; }
+  .block-menu-dropdown:hover .dropdown-button {
+    background-color: #404040;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  .block-menu-dropdown:hover .dropdown-items {
+    height: auto;
+    opacity: 1; }
 
 .fa-github {
   width: 0.86em; }
@@ -390,108 +440,16 @@ header div.wrapper-table div.row-third.column-second {
             header .wrapper.wrapper-table .follow div.column-second.row-second .main ul li {
               font-size: 3rem; } }
 
-@media screen and (max-width: 480px) {
-  #section_about-me {
-    padding-top: 0; }
-    #section_about-me div.resume-download-wrapper {
-      position: relative;
-      display: block;
-      margin: auto;
-      background-color: #000000;
-      top: 0;
-      left: 0; }
-      #section_about-me div.resume-download-wrapper.no-js {
-        width: 100%;
-        border-radius: 0; }
-        #section_about-me div.resume-download-wrapper.no-js .resume-download {
-          width: 100%;
-          border-radius: 0 !important; }
-        #section_about-me div.resume-download-wrapper.no-js ul {
-          width: 100%;
-          padding: 0; }
-      #section_about-me div.resume-download-wrapper:hover ul {
-        height: auto; }
-      #section_about-me div.resume-download-wrapper ul {
-        height: auto;
-        padding: 0.3rem 0; }
-      #section_about-me div.resume-download-wrapper a.resume-download {
-        background-color: #404040;
-        color: #ffffff;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px; } }
-
 #section_about-me .content {
   line-height: 2rem; }
 
-#section_about-me .block.resume-download-wrapper {
-  width: 13rem;
-  top: 2rem;
-  left: 2rem;
-  overflow: hidden; }
-  #section_about-me .block.resume-download-wrapper:hover {
-    background-color: #000000; }
-    #section_about-me .block.resume-download-wrapper:hover ul {
-      height: 6.5rem;
-      padding: 0.3rem 0; }
-    #section_about-me .block.resume-download-wrapper:hover a.resume-download {
-      background-color: #404040;
-      color: #ffffff;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px; }
-  #section_about-me .block.resume-download-wrapper a.resume-download {
-    display: inline-block;
-    width: 13rem;
-    padding: 0.7rem 0;
-    font-weight: 600;
-    z-index: 100;
-    transition: background-color 0.3s, color 0.3s; }
-  #section_about-me .block.resume-download-wrapper ul {
-    position: relative;
-    width: 13rem;
-    height: 0px;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 5px;
-    z-index: 100;
-    transition: height 0.3s; }
-    #section_about-me .block.resume-download-wrapper ul li {
-      position: relative;
-      transition: background-color 0.5s;
-      width: 100%;
-      height: 3rem; }
-      #section_about-me .block.resume-download-wrapper ul li a {
-        color: #ffffff;
-        position: absolute;
-        line-height: 3rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0 1rem;
-        letter-spacing: 0.1rem;
-        font-size: 0.9rem;
-        text-align: left;
-        font-weight: 200;
-        text-transform: uppercase;
-        transition: padding-left 0.3s; }
-        #section_about-me .block.resume-download-wrapper ul li a i.fa-download {
-          margin-right: 0.5rem; }
-      #section_about-me .block.resume-download-wrapper ul li:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background-color: #8c9ede;
-        border-radius: 1px;
-        transition: width 0.3s; }
-      #section_about-me .block.resume-download-wrapper ul li:hover {
-        background-color: #1a1a1a; }
-        #section_about-me .block.resume-download-wrapper ul li:hover a {
-          padding-left: 1.8rem; }
-        #section_about-me .block.resume-download-wrapper ul li:hover:before {
-          width: 0.8rem; }
+#section_about-me .block {
+  top: 1rem;
+  left: 1rem; }
+
+@media screen and (max-width: 480px) {
+  #section_about-me {
+    padding-top: 0; } }
 
 #section_skillsets .section-content {
   width: auto;
@@ -786,11 +744,8 @@ section {
 footer {
   position: relative;
   min-height: 5rem;
-  background-color: #000000; }
-  footer .picture-attribution {
-    float: right;
-    margin: 1rem;
-    color: #ffffff; }
+  background-color: #000000;
+  text-align: center; }
   footer .profile-link {
     margin: 1rem;
     display: inline-block;

@@ -6,9 +6,9 @@
 
 @@content : about-me
 
-@@insert : <div class="block block-menu resume-download-wrapper no-js">
-    <a class="resume-download" href="resources/files/andrew_zito_resume.doc"><i class="fa fa-bars" aria-hidden="true"></i> Resume</a>
-    <ul>
+@@insert : <div class="block block-menu block-menu-dropdown resume-download no-js">
+    <div class="dropdown-button" href="resources/files/andrew_zito_resume.doc"><i class="fa fa-bars" aria-hidden="true"></i> Resume</div>
+    <ul class="dropdown-items">
       <li><a href="resources/files/andrew_zito_resume.doc"><i class="fa fa-download"></i>Single page</a></li>
       <li><a href="resources/files/andrew_zito_resume_full.doc"><i class="fa fa-download"></i>Full</a></li>
     </ul>

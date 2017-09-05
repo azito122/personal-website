@@ -1,151 +1,15 @@
 #section_about-me {
 
-	@media screen and (max-width: bk(s)) {
-		padding-top: 0;
-
-		div.resume-download-wrapper {
-			position: relative;
-			display: block;
-			margin: auto;
-			background-color: color(shade-darkest);
-			top: 0;
-			left: 0;
-
-			&.no-js {
-				width: 100%;
-				border-radius: 0;
-
-				.resume-download {
-					width: 100%;
-					border-radius: 0 !important;
-				}
-
-				ul {
-					width: 100%;
-					padding: 0;
-				}
-			}
-
-			&:hover {
-				ul {
-					height: auto;
-				}
-			}
-
-			ul {
-				height: auto;
-				padding: 0.3rem 0;
-
-				li a {
-					// position: relative;
-				}
-			}
-
-			a.resume-download {
-				background-color: color(shade-darker);
-				color: color(shade-lightest);
-				border-bottom-left-radius: 8px;
-				border-bottom-right-radius: 8px;
-			}
-		}
-	}
-
 	.content {
 		line-height: 2rem;
 	}
 
-	.block.resume-download-wrapper {
-		width: 13rem;
-		top: 2rem;
-		left: 2rem;
-		overflow: hidden;
+	.block {
+		top: 1rem;
+		left: 1rem;
+	}
 
-		&:hover {
-			background-color: color(shade-darkest);
-
-			ul {
-				height: 6.5rem;
-				padding: 0.3rem 0;
-			}
-
-			a.resume-download {
-				background-color: color(shade-darker);
-				color: color(shade-lightest);
-				border-bottom-left-radius: 8px;
-				border-bottom-right-radius: 8px;
-			}
-		}
-
-		a.resume-download { // Main button
-			display: inline-block;
-			width: 13rem;
-			padding: 0.7rem 0;
-			font-weight: 600;
-			z-index: 100;
-			transition: background-color 0.3s, color 0.3s;
-		}
-
-		ul { // Dropdown menu
-			position: relative;
-			width: 13rem;
-			height: 0px;
-			background-color: color(shade-darkest);
-			color: color(shade-lightest);
-			border-radius: 5px;
-			z-index: 100;
-			transition: height 0.3s;
-
-			li {
-				position: relative;
-				transition: background-color 0.5s;
-				width: 100%;
-				height: 3rem;
-
-				a {
-					color: color(shade-lightest);
-					position: absolute;
-					line-height: 3rem;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					padding: 0 1rem;
-					letter-spacing: 0.1rem;
-					font-size: 0.9rem;
-					text-align: left;
-					font-weight: 200;
-					text-transform: uppercase;
-					transition: padding-left 0.3s;
-
-					i.fa-download {
-						margin-right: 0.5rem;
-					}
-				}
-
-				&:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 0;
-					background-color: color(section-1-accent);
-					border-radius: 1px;
-					transition: width 0.3s;
-				}
-
-				&:hover {
-					background-color: mix(white, color(shade-darkest), 10%);
-
-					a {
-						padding-left: 1.8rem;
-					}
-
-					&:before {
-						width: 0.8rem;
-					}
-				}
-			}
-		}
+	@media screen and (max-width: bk(s)) {
+		padding-top: 0;
 	}
 }

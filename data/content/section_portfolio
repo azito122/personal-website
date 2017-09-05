@@ -16,7 +16,7 @@
 @@content_wrapper_close : </div>
 
 @@insert : <div class="block full-portfolio-link-wrapper no-js">
-  <a class="full-portfolio-link" href="portfolio.php">Full portfolio
+  <a class="block-link full-portfolio-link" href="portfolio.php">Full portfolio
     <i class="fa fa-angle-double-right"></i>
     </a>
     </div>

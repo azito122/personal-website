@@ -49,34 +49,110 @@ li {
 	}
 }
 
+%block-link {
+	display: inline-block;
+	padding: 1rem 2rem;
+	text-decoration: none !important;
+	font-size: 1.3rem;
+	letter-spacing: 0.3rem;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
 .block {
 	position: absolute;
 	border: 3px solid black;
 	border-radius: 7px;
 	transition: background-color 0.3s;
 
-	a {
-		display: inline-block;
-		padding: 1rem 2rem;
-		text-decoration: none !important;
-		font-size: 1.3rem;
-		letter-spacing: 0.3rem;
-		text-align: center;
-		text-transform: uppercase;
-		transition: color 0.3s;
+	.block-link {
+		@extend %block-link;
 	}
 
 	&:hover {
 		background-color: color(shade-darkest);
+		color: color(text-lightest);
 
-		a {
+		.block-link {
 			color: color(text-lightest);
 		}
 	}
 }
 
-.block-menu {
+.block-menu-dropdown {
+	z-index: 100;
 
+	.dropdown-button {
+		@extend %block-link;
+	}
+
+	.dropdown-items {
+		display: block;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: opacity 0.3s;
+
+		li {
+			color: color(text-lightest);
+			width: 100%;
+
+			a {
+				display: inline-block;
+				color: color(text-lightest);
+				width: 100%;
+				padding: 1rem;
+				letter-spacing: 0.1rem;
+				font-size: 0.9rem;
+				font-weight: 200;
+				text-transform: uppercase;
+				transition: padding 0.3s;
+
+				i {
+					margin-right: 1rem;
+				}
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 3px;
+				height: 100%;
+				width: 0;
+				background-color: color(shade-lighter);
+				transition: width 0.3s;
+				border-radius: 2px;
+			}
+
+			&:hover {
+				&:before {
+					width: 1rem;
+				}
+
+				a {
+					padding-left: 2rem;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		.dropdown-button {
+			background-color: color(shade-darker);
+			border-bottom-left-radius: 7px;
+			border-bottom-right-radius: 7px;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+
+		.dropdown-items {
+			height: auto;
+			opacity: 1;
+		}
+	}
 }
 
 // Fixing Fontawesome icons

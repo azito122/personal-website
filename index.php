@@ -76,9 +76,5 @@
 <?php print($V->render($C->get('section_portfolio'))); ?>
 
 </body>
-<footer>
-  <a class="profile-link github" title="GitHub" href="https://github.com/azito122"><i class="devicon-github-plain"></i></a>
-  <a class="profile-link linkedin" title="Linkedin" href="https://www.linkedin.com/in/andrew-zito/"><i class="fa fa-linkedin-square"></i></a>
-  <a class="picture-attribution" href="http://www.freepik.com/free-vector/forest-banners_793671.htm">Forest Banner courtesy of Freepik</a>
-</footer>
+<?php include 'footer.php' ?>
 </html>
