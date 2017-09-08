@@ -63,15 +63,19 @@ li {
 
 .block {
 	position: absolute;
-	border: 3px solid black;
-	border-radius: 7px;
-	transition: background-color 0.3s;
+
+	.wrapper {
+		display: inline-block;
+		border: 3px solid black;
+		border-radius: 7px;
+		transition: background-color 0.3s;
+	}
 
 	.block-link {
 		@extend %block-link;
 	}
 
-	&:hover {
+	&:hover .wrapper {
 		background-color: color(shade-darkest);
 		color: color(text-lightest);
 
@@ -98,6 +102,7 @@ li {
 		li {
 			color: color(text-lightest);
 			width: 100%;
+			text-align: left;
 
 			a {
 				display: inline-block;

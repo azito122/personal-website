@@ -61,15 +61,15 @@ section {
 		padding-bottom: 3rem;
 		border-bottom: 5px solid color(shade-darkest);
 
-		&.section-1 {
-			background-color: lighten(color(section-1), $mobile-background-factor);
-		}
-		&.section-2 {
-			background-color: lighten(color(section-2), $mobile-background-factor);
-		}
-		&.section-3 {
-			background-color: lighten(color(section-3), $mobile-background-factor);
-		}
+		// &.section-1 {
+		// 	background-color: lighten(color(section-1), $mobile-background-factor);
+		// }
+		// &.section-2 {
+		// 	background-color: lighten(color(section-2), $mobile-background-factor);
+		// }
+		// &.section-3 {
+		// 	background-color: lighten(color(section-3), $mobile-background-factor);
+		// }
 	}
 }
 

@@ -144,14 +144,16 @@ li {
   transition: color 0.3s; }
 
 .block {
-  position: absolute;
-  border: 3px solid black;
-  border-radius: 7px;
-  transition: background-color 0.3s; }
-  .block:hover {
+  position: absolute; }
+  .block .wrapper {
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 7px;
+    transition: background-color 0.3s; }
+  .block:hover .wrapper {
     background-color: #000000;
     color: #ffffff; }
-    .block:hover .block-link {
+    .block:hover .wrapper .block-link {
       color: #ffffff; }
 
 .block-menu-dropdown {
@@ -164,7 +166,8 @@ li {
     transition: opacity 0.3s; }
     .block-menu-dropdown .dropdown-items li {
       color: #ffffff;
-      width: 100%; }
+      width: 100%;
+      text-align: left; }
       .block-menu-dropdown .dropdown-items li a {
         display: inline-block;
         color: #ffffff;
@@ -448,8 +451,24 @@ header div.wrapper-table div.row-third.column-second {
   left: 1rem; }
 
 @media screen and (max-width: 480px) {
-  #section_about-me {
-    padding-top: 0; } }
+  #section_about-me .block {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    text-align: center; }
+  #section_about-me .block.no-js .wrapper {
+    display: block;
+    background-color: #000000;
+    border-radius: 0; }
+  #section_about-me .block.no-js .dropdown-button {
+    display: block;
+    color: #ffffff;
+    background-color: #404040;
+    border-radius: 0; }
+  #section_about-me .block.no-js .dropdown-items {
+    height: auto;
+    opacity: 1; } }
 
 #section_skillsets .section-content {
   width: auto;
@@ -714,13 +733,7 @@ section {
     section {
       padding-top: 1rem;
       padding-bottom: 3rem;
-      border-bottom: 5px solid #000000; }
-      section.section-1 {
-        background-color: white; }
-      section.section-2 {
-        background-color: #eef1fc; }
-      section.section-3 {
-        background-color: #d5dcf7; } }
+      border-bottom: 5px solid #000000; } }
 
 .section-title {
   margin-bottom: 6rem;

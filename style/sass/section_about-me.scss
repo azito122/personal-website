@@ -10,6 +10,32 @@
 	}
 
 	@media screen and (max-width: bk(s)) {
-		padding-top: 0;
+		.block {
+			position: relative;
+			display: block;
+			top: 0;
+			left: 0;
+			text-align: center;
+		}
+
+		.block.no-js {
+			.wrapper {
+				display: block;
+				background-color: color(shade-darkest);
+				border-radius: 0;
+			}
+
+			.dropdown-button {
+				display: block;
+				color: color(shade-lightest);
+				background-color: color(shade-darker);
+				border-radius: 0;
+			}
+
+			.dropdown-items {
+				height: auto;
+				opacity: 1;
+			}
+		}
 	}
 }
