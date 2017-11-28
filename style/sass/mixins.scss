@@ -10,7 +10,7 @@ $mfs: 30; /*mix factor step*/
 $psb: rgb(76, 175, 80); /*section base*/
 $pm: white; /*mix*/
 $pmf: 40; /*mix factor*/
-$pmfs: 10; /*mix factor step*/
+$pmfs: 8; /*mix factor step*/
 
 
 $colors: (
@@ -34,6 +34,7 @@ $colors: (
   'github': #6cc644,
   'ras-pi': #c7053d,
   'linkedin': #0077b5,
+  'drupal': #81ceff,
   'section-1': mix($sb, $m, $mf),
   'section-2': mix($sb, $m, $mf + $mfs),
   'section-3': mix($sb, $m, $mf + 2*$mfs),
@@ -41,6 +42,7 @@ $colors: (
   'portfolio-section-2': mix($psb, $pm, $pmf + $pmfs),
   'portfolio-section-3': mix($psb, $pm, $pmf + 2*$pmfs),
   'portfolio-section-4': mix($psb, $pm, $pmf + 3*$pmfs),
+  'portfolio-section-5': mix($psb, $pm, $pmf + 4*$pmfs),
 );
 
 @function accent($color-name) {

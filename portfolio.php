@@ -19,7 +19,37 @@
   </div>
 </div>
 
-<section id="section_syntree" class="section-1 syntree">
+<section id="section_gkp" class="gkp">
+  <h1 class="section-title">GKP
+    <div class="github-link">
+      <a href="https://github.com/azito122/gkp" title="GitHub Repository">
+    <i class="fa fa-github"></i>GitHub Repository (Theme)</a></div>
+  </h1>
+  <div cass="section-content">
+    <div class="portfolio-screenshots">
+      <div class="img portfolio-screenshot first">
+        <span class="screenshot-title">Source Code</span>
+        <a class="site-link" title="Source Code" href="https://github.com/azito122/gkp"></a>
+      </div>
+      <div class="img portfolio-screenshot second">
+        <span class="screenshot-title">Demo Site</span>
+        <a class="site-link" title="Demo Site" href="http://gkp-demo.andycodesthings.com/"></a>
+      </div>
+      <div class="img portfolio-screenshot third">
+        <span class="screenshot-title">Admin Interface Description</span>
+        <a class="site-link" title="Admin Interface Description" href="./gkp_admin_interface.php"></a>
+      </div>
+    </div>
+    <div class="technologies-used">Drupal 8, PHP, CSS/SASS, JavaScript</div>
+    <p class="content">A friend, whose initials are GKP (hence the project title), asked me to make him a personal website. He is a graduate student in physics and mathematics. This project is primarily a single-use, narrow-scope Drupal 8 theme, whose source code you can see <a href="https://github.com/azito122/gkp" title="GitHub Repository">here</a>.
+
+    There is a certain amount of site configuration involved, of course. You can see a demo site <a href="http://gkp-demo.andycodesthings.com/">here</a>. In addition to the visual elements, the GKP theme comes with the ability to customize colors and some visual properties through a GUI interface. The custom site configuration that I used severely limited the administration interface in order to simplify it for the client, who wanted to be able to edit the site himself but did not need the full scope of Drupal's admin functionality.</div>
+</section>
+
+<div class="section-sep first">
+</div>
+
+<section id="section_syntree" class="syntree">
   <h1 class="section-title">Syntree
     <div class="github-link">
       <a href="https://github.com/azito122/syntree" title="GitHub Repository">
@@ -48,7 +78,7 @@
 <div class="section-sep first">
 </div>
 
-<section id="section_diviiportfolio" class="section-2 diviiportfolio">
+<section id="section_diviiportfolio" class="diviiportfolio">
   <h1 class="section-title">Academic E-Portfolio
     <div class="github-link">
       <a href="https://github.com/azito122/diviiportfolio" title="GitHub Repository">
@@ -80,7 +110,7 @@
 <div class="section-sep second">
 </div>
 
-<section id="section_picam" class="section-3 picam">
+<section id="section_picam" class="picam">
   <h1 class="section-title">Picam Security Script
     <div class="github-link">
       <a href="https://github.com/azito122/hamp-picam" title="GitHub Repository">
@@ -103,7 +133,7 @@
 <div class="section-sep third">
 </div>
 
-<section id="section_monkeys" class="section-4 monkeys">
+<section id="section_monkeys" class="monkeys">
   <h1 class="section-title">Monkeys Typing Shakespeare
     <div class="github-link">
       <a href="https://github.com/azito122/monkeys_typing_shakespeare" title="GitHub Repository">

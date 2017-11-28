@@ -652,6 +652,14 @@ header div.wrapper-table div.row-third.column-second {
         background-color: #ffde57; }
       #section_portfolio .tile.monkeys a.repo-link:hover {
         color: #ffde57; }
+    #section_portfolio .tile.gkp {
+      background-image: url("../resources/img/monkeys_tile.png"); }
+      #section_portfolio .tile.gkp .overlay {
+        background-color: rgba(129, 206, 255, 0.3); }
+      #section_portfolio .tile.gkp:hover .overlay {
+        background-color: #81ceff; }
+      #section_portfolio .tile.gkp a.repo-link:hover {
+        color: #81ceff; }
     #section_portfolio .tile.monkeys .tile-title {
       font-size: 1.2rem; }
   @media screen and (max-width: 1000px) {
@@ -779,6 +787,25 @@ footer {
         text-align: center;
         margin: 0; } }
 
+body.gkp_admin_interface .note {
+  position: absolute;
+  border-radius: 10px;
+  border: 5px solid red;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: -7px 7px 10px 0px rgba(0, 0, 0, 0.5); }
+  body.gkp_admin_interface .note span {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.1rem; }
+
+body.gkp_admin_interface .note-intro {
+  top: 6rem;
+  left: 10rem;
+  width: 50rem; }
+
 body.portfolio .section-sep {
   background-image: url("../resources/img/section_sep_trunk.jpg"); }
   body.portfolio .section-sep:before {
@@ -787,7 +814,7 @@ body.portfolio .section-sep {
     background-position: top center; }
   body.portfolio .section-sep.second {
     background-position: center; }
-  body.portfolio .section-sep.first {
+  body.portfolio .section-sep.third {
     background-position: bottom center; }
 
 body.portfolio .block-menu {
@@ -795,7 +822,7 @@ body.portfolio .block-menu {
   top: 1rem;
   left: 1rem;
   opacity: 0.4;
-  z-index: 1;
+  z-index: 200;
   text-align: center;
   transition: opacity 0.3s; }
   body.portfolio .block-menu .wrapper {
@@ -898,8 +925,17 @@ body.portfolio .content {
     body.portfolio .content a:hover {
       text-decoration: underline; }
 
-body.portfolio section.syntree {
+body.portfolio section.gkp {
   background-color: #b7dfb9; }
+  body.portfolio section.gkp div.portfolio-screenshot.first {
+    background-image: url("../resources/img/gkp_screenshot_1.png"); }
+  body.portfolio section.gkp div.portfolio-screenshot.second {
+    background-image: url("../resources/img/gkp_screenshot_2.png"); }
+  body.portfolio section.gkp div.portfolio-screenshot.third {
+    background-image: url("../resources/img/gkp_screenshot_3.png"); }
+
+body.portfolio section.syntree {
+  background-color: #a9d9ab; }
   body.portfolio section.syntree div.portfolio-screenshot.first {
     background-image: url("../resources/img/syntree_screenshot_1.png"); }
   body.portfolio section.syntree div.portfolio-screenshot.second {
@@ -908,7 +944,7 @@ body.portfolio section.syntree {
     background-image: url("../resources/img/syntree_screenshot_3.png"); }
 
 body.portfolio section.diviiportfolio {
-  background-color: #a6d7a8; }
+  background-color: #9bd29d; }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.first {
     background-image: url("../resources/img/diviiportfolio_screenshot_1.png"); }
   body.portfolio section.diviiportfolio div.portfolio-screenshot.second {
@@ -917,7 +953,7 @@ body.portfolio section.diviiportfolio {
     background-image: url("../resources/img/diviiportfolio_screenshot_3.png"); }
 
 body.portfolio section.picam {
-  background-color: #94cf96; }
+  background-color: #8ccc8f; }
   body.portfolio section.picam div.portfolio-screenshot.first {
     background-image: url("../resources/img/picam_screenshot_1.png"); }
   body.portfolio section.picam div.portfolio-screenshot.second {
@@ -926,7 +962,7 @@ body.portfolio section.picam {
     background-image: url("../resources/img/picam_screenshot_3.png"); }
 
 body.portfolio section.monkeys {
-  background-color: #82c785; }
+  background-color: #7ec581; }
   body.portfolio section.monkeys div.portfolio-screenshot.first {
     background-image: url("../resources/img/monkeys_screenshot_1.png"); }
   body.portfolio section.monkeys div.portfolio-screenshot.second {

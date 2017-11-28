@@ -1,0 +1,15 @@
+@@type : portfolio_tile
+
+@@title : GKP
+
+@@description : A personal site for a graduate student (Drupal site/theme)
+
+@@info_link : portfolio.php#section_gkp
+
+@@visit_link : http://gkp-demo.andycodesthings.com
+
+@@source_link : https://github.com/azito122/gkp
+
+@@primary_language : css
+
+@@weight : 0
