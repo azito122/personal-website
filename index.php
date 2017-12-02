@@ -3,6 +3,7 @@
 <html>
 
 <?php include 'head.php' ?>
+</head>
 
 <body class="index">
 

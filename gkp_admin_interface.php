@@ -3,6 +3,8 @@
 <html>
 
 <?php include 'head.php' ?>
+<meta name="viewport" content="width=1024">
+</head>
 
 <body class="portfolio gkp_admin_interface">
 
