@@ -1,25 +1,44 @@
 body.gkp_admin_interface {
+  overflow-x: scroll;
+
+  &>div.wrapper {
+    min-width: 1024px;
+  }
+
+  .block-menu {
+    @media screen and (max-width: bk(m)) {
+      min-width: 1024px;
+    }
+  }
+
+  footer {
+    display: none;
+  }
+
   .note {
     position: absolute;
+    display: inline-block;
     border-radius: 10px;
     border: 5px solid red;
     background-color: color('white');
     z-index: 100;
     box-shadow: -7px 7px 10px 0px rgba(0,0,0,0.50);
 
+    a {
+      color: blue;
+      &:hover {
+        color: darkblue;
+        text-decoration: underline;
+      }
+    }
+
     span {
       display: block;
       background-color: color('white');
       border-radius: 10px;
       padding: 1rem;
-      font-size: 1.1rem;
+      // font-size: 1.1rem;
     }
-  }
-
-  .note-intro {
-    top: 6rem;
-    left: 10rem;
-    width: 50rem;
   }
 }
 

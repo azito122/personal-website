@@ -787,24 +787,33 @@ footer {
         text-align: center;
         margin: 0; } }
 
-body.gkp_admin_interface .note {
-  position: absolute;
-  border-radius: 10px;
-  border: 5px solid red;
-  background-color: #ffffff;
-  z-index: 100;
-  box-shadow: -7px 7px 10px 0px rgba(0, 0, 0, 0.5); }
-  body.gkp_admin_interface .note span {
-    display: block;
-    background-color: #ffffff;
+body.gkp_admin_interface {
+  overflow-x: scroll; }
+  body.gkp_admin_interface > div.wrapper {
+    min-width: 1024px; }
+  @media screen and (max-width: 1000px) {
+    body.gkp_admin_interface .block-menu {
+      min-width: 1024px; } }
+  body.gkp_admin_interface footer {
+    display: none; }
+  body.gkp_admin_interface .note {
+    position: absolute;
+    display: inline-block;
     border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.1rem; }
-
-body.gkp_admin_interface .note-intro {
-  top: 6rem;
-  left: 10rem;
-  width: 50rem; }
+    border: 5px solid red;
+    background-color: #ffffff;
+    z-index: 100;
+    box-shadow: -7px 7px 10px 0px rgba(0, 0, 0, 0.5); }
+    body.gkp_admin_interface .note a {
+      color: blue; }
+      body.gkp_admin_interface .note a:hover {
+        color: darkblue;
+        text-decoration: underline; }
+    body.gkp_admin_interface .note span {
+      display: block;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1rem; }
 
 body.portfolio .section-sep {
   background-image: url("../resources/img/section_sep_trunk.jpg"); }

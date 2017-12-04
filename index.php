@@ -78,4 +78,5 @@
 
 </body>
 <?php include 'footer.php' ?>
+</footer>
 </html>
